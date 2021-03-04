@@ -8,7 +8,9 @@ import { DashbordRoutingModule } from './components/dashbord/dashbord-routing.mo
 import {DashbordComponent } from './components/dashbord/dashbord.component';
 import { SocietelisteRoutingModule } from './components/societeliste/societeliste-routing.module';
 import {SocietelisteComponent } from './components/societeliste/societeliste.component';
-
+import {EmployeeListeComponent} from './components/employee-liste/employee-liste.component'
+import { ForgetPasswordRoutingModule } from './components/forget-password/forget-password-routing.module';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 const routes: Routes = [
   {
   path:'',
@@ -31,8 +33,15 @@ const routes: Routes = [
 {
   path: 'societeliste',
   component: SocietelisteComponent
+},
+{
+  path: 'employee-liste',
+  component: EmployeeListeComponent
+},
+{
+  path: 'forget-password',
+  component: ForgetPasswordComponent
 }
-
 ];
 
 @NgModule({

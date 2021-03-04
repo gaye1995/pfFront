@@ -16,11 +16,18 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatListModule } from '@angular/material/list';
 import { RegisterComponent } from './components/register/register.component';
 import { DashbordComponent } from './components/dashbord/dashbord.component';
-import { HeaderbarComponent } from './headerbar/headerbar.component';
+import { HeaderbarComponent } from './components/headerbar/headerbar.component';
 import { SocietelisteComponent } from './components/societeliste/societeliste.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatMenuModule} from '@angular/material/menu';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { EmployeeListeComponent } from './components/employee-liste/employee-liste.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
+import {MatTreeModule} from '@angular/material/tree';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -30,6 +37,8 @@ import {MatMenuModule} from '@angular/material/menu';
     DashbordComponent,
     HeaderbarComponent,
     SocietelisteComponent,
+    EmployeeListeComponent,
+    ForgetPasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +58,14 @@ import {MatMenuModule} from '@angular/material/menu';
     MatFormFieldModule,
     MatTableModule,
     MatMenuModule,
+    MatDialogModule,
+    MatPaginatorModule,
+    FlexLayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatTreeModule,
+    MatSelectModule,
+    MatExpansionModule,
   ],
   
   providers: [],

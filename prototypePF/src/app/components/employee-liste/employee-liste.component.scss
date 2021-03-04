@@ -1,0 +1,80 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.example-container {
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid #555;
+}
+table {
+    width: 100%;
+  }
+  .companyName{
+    font-size: 150%;
+}
+div {
+    overflow: inherit;
+}
+a{
+    text-decoration: none;
+    font-size: 110%;
+    white-space: normal;
+}
+button{
+    font-size: 110%;
+    min-width: min-content;
+}
+.example-icon {
+    padding: 0 14px;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .mat-sidenav-content{
+      font-size: 200%;
+      text-align: center;
+  }
+  .example-tree-invisible {
+    display: none;
+  }
+  
+  .example-tree ul,
+  .example-tree li {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+  }
+  .main-content {
+    padding:20px;
+}
+mat-sidenav {
+    width: 280px;
+    padding:15px;
+}
+.mat-drawer { 
+    background-color: #023075;
+    color:#fff
+}
+.main-content {
+    padding:20px;
+}
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+.example-container {
+    width: 400px;
+    height: 200px;
+    margin: 12px;
+    border: 1px solid #555;
+  }
+  
+  mat-drawer-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  
