@@ -4,7 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { NgxElectronModule } from 'ngx-electron';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -14,9 +14,9 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatListModule } from '@angular/material/list';
-import { RegisterComponent } from './components/register/register.component';
+import { RegisterComponent } from './auth/register/register.component';
 import { DashbordComponent } from './components/dashbord/dashbord.component';
-import { HeaderbarComponent } from './components/headerbar/headerbar.component';
+import { HeaderbarComponent } from './nav/headerbar/headerbar.component';
 import { SocietelisteComponent } from './components/societeliste/societeliste.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatMenuModule} from '@angular/material/menu';
@@ -25,9 +25,20 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { EmployeeListeComponent } from './components/employee-liste/employee-liste.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatTreeModule} from '@angular/material/tree';
-import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { ForgetPasswordComponent } from './auth/forget-password/forget-password.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { FinancesComponent } from './components/finances/finances.component';
+import { ComptaComponent } from './components/compta/compta.component';
+import { FacturesComponent } from './components/factures/factures.component';
+import { NoteDeFraisComponent } from './components/note-de-frais/note-de-frais.component';
+import { ChartsModule } from '@progress/kendo-angular-charts';
+import 'hammerjs';
+import { SidnavlisteComponent } from './nav/sidnavliste/sidnavliste.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+
+
 
 @NgModule({
   declarations: [
@@ -39,8 +50,14 @@ import {MatExpansionModule} from '@angular/material/expansion';
     SocietelisteComponent,
     EmployeeListeComponent,
     ForgetPasswordComponent,
+    FinancesComponent,
+    ComptaComponent,
+    FacturesComponent,
+    NoteDeFraisComponent,
+    SidnavlisteComponent,
   ],
   imports: [
+    MatDatepickerModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -66,6 +83,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatTreeModule,
     MatSelectModule,
     MatExpansionModule,
+    ChartsModule,
+    MatNativeDateModule,
   ],
   
   providers: [],

@@ -1,0 +1,130 @@
+
+
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="side"  #sidenav opened position="start"> 
+        <span class="toolbar-spacer"></span>
+    <mat-card-actions class="mb-2 center">
+        <mat-accordion>
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Bilan Compte de résultat Balance
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+                    <mat-card-actions class="mb-2 center">
+                        <button mat-button >Bilan synthétique</button>
+                    </mat-card-actions>
+                    <mat-card-actions class="mb-2 center">
+                        <button mat-button >Compte de résultat synthétique</button>
+                    </mat-card-actions>
+                    <mat-card-actions class="mb-2 center">
+                        <button mat-button>Balance Général</button>
+                    </mat-card-actions>
+                    <mat-card-actions class="mb-2 center">
+                        <button mat-button >Bilan Général</button>
+                    </mat-card-actions>  
+                </mat-expansion-panel>
+          </mat-accordion>
+          
+    </mat-card-actions>
+
+    <mat-card-actions class="mb-2 center">
+        <mat-accordion>
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Clients
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+                    <mat-card-actions class="mb-2 center">
+                        <button mat-button >Encours Clients selon facturation </button>
+                    </mat-card-actions>
+                    <mat-card-actions class="mb-2 center">
+                        <button mat-button >Statistique vente/clients/mois</button>
+                    </mat-card-actions>
+                    <mat-card-actions class="mb-2 center">
+                        <button mat-button>Balance Général</button>
+                    </mat-card-actions>
+                </mat-expansion-panel>
+          </mat-accordion> 
+    </mat-card-actions>
+    <mat-card-actions class="mb-2 center">
+        <mat-accordion>
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Banques /  Caisse
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+                    <mat-card-actions class="mb-2 center">
+                        <button mat-button >Soldes comptes bancaires </button>
+                    </mat-card-actions>
+                    <mat-card-actions class="mb-2 center">
+                        <button mat-button >listes opérations bancaires</button>
+                    </mat-card-actions>
+                    <mat-card-actions class="mb-2 center">
+                        <button mat-button>Solde Caisse</button>
+                    </mat-card-actions>
+                    <mat-card-actions class="mb-2 center">
+                        <button mat-button>Opération Caisse</button>
+                    </mat-card-actions>
+                </mat-expansion-panel>
+          </mat-accordion>   
+        </mat-card-actions>
+    <mat-card-actions class="mb-2 center">
+        <button mat-button>Clocture</button>
+    </mat-card-actions>
+    <mat-card-actions class="mb-2 center">
+        <button mat-button >societe</button>
+    </mat-card-actions>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <span class="toolbar-spacer"></span>
+        <button mat-button (click)="sidenav.toggle()">Finances</button>
+        <button mat-button >Compta</button>
+        <button mat-button click)="sidenav.toggle()">Factures</button>
+        <button mat-button >Note de frais</button>
+        <button mat-button>Clocture</button>
+        <button mat-button >societe</button>
+      </mat-toolbar>
+       <div class="main-content">
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSource">
+          
+              <!-- Position Column -->
+              <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef> No. </th>
+                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+              </ng-container>
+          
+              <!-- Name Column -->
+              <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+              </ng-container>
+          
+              <!-- Weight Column -->
+              <ng-container matColumnDef="weight">
+                <th mat-header-cell *matHeaderCellDef> Weight </th>
+                <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+              </ng-container>
+          
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="symbol">
+                <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+              </ng-container>
+          
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+          
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+          </div>
+          
+    </div> 
+      <router-outlet></router-outlet> 
+     </mat-sidenav-content> 
+  </mat-sidenav-container> 
+  

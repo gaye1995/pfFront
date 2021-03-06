@@ -1,44 +1,10 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
-
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
-mat-grid-tile {
-    background: lightblue;
-  }
-mat-sidenav {
-    width: 280px;
-    padding:15px;
-    color: #fff;
+.example-container {
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid #555;
 }
-.mat-expansion-panel-header + .mat-panel-title{
-  color:#fff
-}
-.mat-expansion-panel{
-  background-color: #355270;
-  color:#fff
-}
-.mat-toolbar{
-  background-color: #2B3D4F;
-  color:#fff
-}
-.mat-panel-title{
-  color:#fff
-}
-.mat-drawer { 
-    background-color: #355270;
-    color:#fff
-}
-.main-content {
-    padding:20px;
-}
-.toolbar-spacer {
-    flex: 1 1 auto;
-}
-.mat-accordion{
-  color: rgb(207, 188, 188);
-}
-
 table {
     width: 100%;
   }
@@ -64,39 +30,72 @@ button{
   .example-spacer {
     flex: 1 1 auto;
   }
- 
+  .mat-sidenav-content{
+      font-size: 200%;
+      text-align: center;
+  }
   .example-tree-invisible {
     display: none;
   }
   
-.example-tree ul,
-.example-tree li {
+  .example-tree ul,
+  .example-tree li {
     margin-top: 0;
     margin-bottom: 0;
     list-style-type: none;
   }
-
-
+  .main-content {
+    padding:20px;
+}
+mat-sidenav {
+    width: 280px;
+    padding:15px;
+}
+.mat-drawer { 
+    background-color: #023075;
+    color:#fff
+}
+.main-content {
+    padding:20px;
+}
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+.example-container {
+    width: 400px;
+    height: 200px;
+    margin: 12px;
+    border: 1px solid #555;
+  }
+  
+  mat-drawer-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
   :host {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
   .select-style {
-    padding: 10px 10px;
-    padding: 10;
-    margin: 10;
+    padding: 0;
+    margin: 0;
     border: 1px solid #ccc;
-    width: 150px;
-    border-radius: 15px;
+    width: 120px;
+    border-radius: 3px;
     overflow: hidden;
     background-color: #fff;
     background: #fff;
     position: relative;
 }
 .select-style select {
-    padding: 10px 10px;
-    width: 170%;
+    padding: 5px 8px;
+    width: 130%;
     border: none;
     box-shadow: none;
     background-color: transparent;
@@ -116,7 +115,7 @@ button{
     pointer-events: none;
     border-color: rgba(0, 0, 0, 0);
     border-top-color: #000000;
-    border-width: 10px;
+    border-width: 5px;
     margin-top: -2px;
     z-index: 100;
 }

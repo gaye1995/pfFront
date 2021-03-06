@@ -1,0 +1,23 @@
+<mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>First campaign</mat-label>
+    <mat-date-range-input
+    >
+      <input matStartDate placeholder="Start date" formControlName="start">
+      <input matEndDate placeholder="End date" formControlName="end">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+    <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+  </mat-form-field>
+  
+  
+<mat-list>
+    <mat-list-item>note de frais 1</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>note de frais 2</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>note de frais 3</mat-list-item>
+    <mat-list-item>note de frais 3</mat-list-item>
+    <mat-list-item>note de frais 3</mat-list-item>
+    <mat-list-item>note de frais 3</mat-list-item>
+  </mat-list>
+  

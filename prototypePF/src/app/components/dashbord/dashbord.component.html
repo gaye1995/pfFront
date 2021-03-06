@@ -1,28 +1,100 @@
-<app-headerbar></app-headerbar>
-<div>
-<mat-grid-list cols="3" rowHeight="3:2">
-    <mat-grid-tile>Mon espace personelle</mat-grid-tile>
-  </mat-grid-list>
-</div>
-<div>
-</div> 
-<!-- 
+
+
 <mat-sidenav-container fullscreen>
-  <mat-sidenav mode="side" #sidenav opened position="start">
-    left panel
+  <mat-sidenav mode="side"  #sidenav opened position="start"> 
+      <span class="toolbar-spacer"></span>
+  <mat-card-actions class="mb-2 center">
+      <mat-accordion>
+          <mat-expansion-panel hideToggle>
+              <mat-expansion-panel-header>
+              <mat-panel-title>
+                  Bilan Compte de résultat Balance
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+                  <mat-card-actions class="mb-2 center">
+                      <button mat-button >Bilan synthétique</button>
+                  </mat-card-actions>
+                  <mat-card-actions class="mb-2 center">
+                      <button mat-button >Compte de résultat synthétique</button>
+                  </mat-card-actions>
+                  <mat-card-actions class="mb-2 center">
+                      <button mat-button>Balance Général</button>
+                  </mat-card-actions>
+                  <mat-card-actions class="mb-2 center">
+                      <button mat-button >Bilan Général</button>
+                  </mat-card-actions>  
+              </mat-expansion-panel>
+        </mat-accordion>
+        
+  </mat-card-actions>
+  <mat-card-actions class="mb-2 center">
+      <mat-accordion>
+          <mat-expansion-panel hideToggle>
+              <mat-expansion-panel-header>
+              <mat-panel-title>
+                  Clients
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+                  <mat-card-actions class="mb-2 center">
+                    <button mat-button [routerLink]="['/employee-liste']" >Statistique vente/clients/mois</button>
+                  </mat-card-actions>
+                  <mat-card-actions class="mb-2 center">
+                      <button mat-button >Statistique vente/clients/mois</button>
+                  </mat-card-actions>
+                  <mat-card-actions class="mb-2 center">
+                      <button mat-button>Balance Général</button>
+                  </mat-card-actions>
+              </mat-expansion-panel>
+        </mat-accordion> 
+  </mat-card-actions>
+  <mat-card-actions class="mb-2 center">
+      <mat-accordion>
+          <mat-expansion-panel hideToggle>
+              <mat-expansion-panel-header>
+              <mat-panel-title>
+                  Banques /  Caisse
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+                  <mat-card-actions class="mb-2 center">
+                      <button mat-button >Soldes comptes bancaires </button>
+                  </mat-card-actions>
+                  <mat-card-actions class="mb-2 center">
+                      <button mat-button >listes opérations bancaires</button>
+                  </mat-card-actions>
+                  <mat-card-actions class="mb-2 center">
+                      <button mat-button>Solde Caisse</button>
+                  </mat-card-actions>
+                  <mat-card-actions class="mb-2 center">
+                      <button mat-button>Opération Caisse</button>
+                  </mat-card-actions>
+              </mat-expansion-panel>
+        </mat-accordion>   
+      </mat-card-actions>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button mat-icon-button (click)="sidenav.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-      My Application
+    <mat-toolbar >
       <span class="toolbar-spacer"></span>
-      My Account
+      <button mat-button (click)="sidenav.toggle()">Finances</button>
+      <button mat-button (click)="sidenav.toggle()">Compta</button>
+      <button mat-button (click)="sidenav.toggle()"  >Factures</button>
+      <button mat-button (click)="sidenav.toggle()">Note de frais</button>
+      <button mat-button (click)="sidenav.toggle()">Clocture</button>
+      <button mat-button (click)="sidenav.toggle()">societe</button>
     </mat-toolbar>
-    <div class="main-content">
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </div>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container> -->
+     <div class="main-content">
+      <kendo-chart [categoryAxis]='{ categories: categories }'>
+        <kendo-chart-title text='Gross domestic product growth /GDP annual %/'></kendo-chart-title>
+        <kendo-chart-legend position='bottom' orientation='horizontal'></kendo-chart-legend>
+        <kendo-chart-tooltip format='{0}%'></kendo-chart-tooltip>
+        <kendo-chart-series>
+            <kendo-chart-series-item *ngFor='let item of series'
+                [data]='item.data' [name]='item.name'>
+            </kendo-chart-series-item>
+        </kendo-chart-series>
+      </kendo-chart>
+   </div> 
+    <router-outlet></router-outlet> 
+   </mat-sidenav-content> 
+</mat-sidenav-container> 
+
+
