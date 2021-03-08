@@ -1,130 +1,33 @@
-
-<!-- 
-<mat-sidenav-container fullscreen>
-    <mat-sidenav mode="side"  #sidenav opened position="start"> 
-        <span class="toolbar-spacer"></span>
-    <mat-card-actions class="mb-2 center">
-        <mat-accordion>
-            <mat-expansion-panel hideToggle>
-                <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Bilan Compte de résultat Balance
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button >Bilan synthétique</button>
-                    </mat-card-actions>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button >Compte de résultat synthétique</button>
-                    </mat-card-actions>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button>Balance Général</button>
-                    </mat-card-actions>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button >Bilan Général</button>
-                    </mat-card-actions>  
-                </mat-expansion-panel>
-          </mat-accordion>
-          
-    </mat-card-actions>
-    <mat-card-actions class="mb-2 center">
-        <mat-accordion>
-            <mat-expansion-panel hideToggle>
-                <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Clients
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button >Encours Clients selon facturation </button>
-                    </mat-card-actions>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button >Statistique vente/clients/mois</button>
-                    </mat-card-actions>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button>Balance Général</button>
-                    </mat-card-actions>
-                </mat-expansion-panel>
-          </mat-accordion> 
-    </mat-card-actions>
-    <mat-card-actions class="mb-2 center">
-        <mat-accordion>
-            <mat-expansion-panel hideToggle>
-                <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Banques /  Caisse
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button >Soldes comptes bancaires </button>
-                    </mat-card-actions>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button >listes opérations bancaires</button>
-                    </mat-card-actions>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button>Solde Caisse</button>
-                    </mat-card-actions>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button>Opération Caisse</button>
-                    </mat-card-actions>
-                </mat-expansion-panel>
-          </mat-accordion>   
-        </mat-card-actions>
-    <mat-card-actions class="mb-2 center">
-        <button mat-button>Clocture</button>
-    </mat-card-actions>
-    <mat-card-actions class="mb-2 center">
-        <button mat-button >societe</button>
-    </mat-card-actions>
-    </mat-sidenav>
-    <mat-sidenav-content> -->
-        <mat-toolbar color="primary">
-            <span class="toolbar-spacer"></span>
-            <div fxHide.gt-xs>
-            <button mat-button ></button>
-            </div>
-            <button mat-button >Compta</button>
-            <button mat-button >Factures</button>
-            <button mat-button >Note de frais</button>
-            <button mat-button>Clocture</button>
-            <button mat-button >societe</button>
-          </mat-toolbar>
-        <!-- </mat-sidenav-content>
-        </mat-sidenav-container fullscreen> -->
-    
-        <mat-toolbar>
-            <mat-toolbar-row>
-                <button mat-icon-button (click)="toggleSideBar()">
-                    <mat-icon>menu</mat-icon>
+<mat-toolbar > 
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="toggleSideBar()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <img src="assets/img/logo.PNG" alt="Soufiane FADIL">
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+            <ul fxLayout="row" fxLayoutGap="20px">
+              <li>
+                <button mat-icon-button>
+                    <mat-icon>settings</mat-icon>
                 </button>
-        
-                <span> APP LOGO </span>
-        
-                <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
-                    <ul fxLayout="row" fxLayoutGap="20px">
-                        <li>
-                            <button mat-icon-button>
-                                <mat-icon>settings</mat-icon>
-                            </button>
-                        </li>
-                        <li>
-                            <button mat-icon-button>
-                                <mat-icon>help_outline</mat-icon>
-                            </button>
-                        </li>
-                        <li>
-                            <button mat-button [matMenuTriggerFor]="menu">
-                                <mat-icon>person_outline</mat-icon>
-                            </button>
-                            <mat-menu #menu="matMenu">
-                                <button mat-menu-item>
-                                    <mat-icon>exit_to_app</mat-icon>
-                                    Sign out
-                                </button>
-                            </mat-menu>
-        
-                        </li>
-                    </ul>
-                </div>
-            </mat-toolbar-row>
-        </mat-toolbar>
+                </li>
+                <li>
+                    <button mat-icon-button>
+                        <mat-icon>help_outline</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <button mat-button [matMenuTriggerFor]="menu">
+                        <mat-icon>person_outline</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                            <mat-icon>exit_to_app</mat-icon>
+                            Sign out
+                        </button>
+                    </mat-menu>
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

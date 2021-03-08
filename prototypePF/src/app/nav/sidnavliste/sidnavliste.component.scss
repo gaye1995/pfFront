@@ -3,6 +3,11 @@
       vertical-align: middle;
       margin-right: 20px;
     }
+    .mat-nav-list{
+      background-color: #355270;
+      color:#fff   
+    }
+   
     .profile-card {
       text-align: center;
       padding: 0 20px 20px 20px;
@@ -13,4 +18,7 @@
         border-radius: 50%;
       }
     }
+  }
+  .mat-form-field + .mat-form-field {
+    margin-left: 8px;
   }

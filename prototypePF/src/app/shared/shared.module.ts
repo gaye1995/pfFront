@@ -11,6 +11,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 // import { AreaComponent } from './widgets/area/area.component';
 // import { HighchartsChartModule } from 'highcharts-angular';
@@ -32,6 +33,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatListModule,
     MatDividerModule,
     FlexLayoutModule,
+    MatExpansionModule,
     RouterModule,
     MatButtonModule,
     MatIconModule,
