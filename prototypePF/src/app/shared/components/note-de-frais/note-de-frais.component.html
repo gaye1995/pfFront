@@ -1,4 +1,4 @@
-
+<!-- 
 
 <mat-sidenav-container fullscreen>
     <mat-sidenav mode="side"  #sidenav opened position="start"> 
@@ -78,7 +78,7 @@
     </mat-card-actions>
     </mat-sidenav>
     <mat-sidenav-content>
-      <mat-toolbar>
+      <mat-toolbar >
         <button mat-button (click)="navTo('/dashbord')" >Dashbord</button>
         <span class="toolbar-spacer"></span>
         <button mat-button (click)="navTo('/finances')" >Finances</button>
@@ -87,10 +87,30 @@
         <button mat-button (click)="navTo('/note-de-frais')" >Note de frais</button>
         <button mat-button (click)="navTo('/clocture')">Clocture</button>
         <button mat-button (click)="navTo('societeliste')" >societe</button>
-      </mat-toolbar>
+      </mat-toolbar> -->
        <div class="main-content">
+        <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Début - Fin</mat-label>
+            <mat-date-range-input
+            [formGroup]="campaignOne"
+            [rangePicker]="campaignOnePicker"
+            [comparisonStart]="campaignTwo.value.start"
+            [comparisonEnd]="campaignTwo.value.end">
+            <input matStartDate placeholder="Start date" formControlName="start">
+            <input matEndDate placeholder="End date" formControlName="end">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+            <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+        </mat-form-field>
+        <mat-list>
+            <mat-list-item>Item 1</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Item 2</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Item 3</mat-list-item>
+        </mat-list>
     </div> 
-      <router-outlet></router-outlet> 
+      <!-- <router-outlet></router-outlet> 
      </mat-sidenav-content> 
-  </mat-sidenav-container> 
+  </mat-sidenav-container>  -->
   

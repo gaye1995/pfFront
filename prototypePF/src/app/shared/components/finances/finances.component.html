@@ -1,5 +1,4 @@
-<p>devisliste works!</p>
-
+<!-- 
 
 <mat-sidenav-container fullscreen>
     <mat-sidenav mode="side"  #sidenav opened position="start"> 
@@ -74,62 +73,19 @@
     </mat-sidenav>
     <mat-sidenav-content>
       <mat-toolbar >
-          <button mat-button (click)="navTo('/dashbord')">Dashbord</button>
-          <span class="toolbar-spacer"></span>
-          <button mat-button (click)="navTo('/finances')" >Finances</button>
-          <button mat-button (click)="navTo('/compta')">Compta</button>
-          <button mat-button (click)="sidenav.toggle()">Factures</button>
-          <button mat-button (click)="navTo('/note-de-frais')" >Note de frais</button>
-          <button mat-button (click)="navTo('/clocture')">Clocture</button>
-          <button mat-button (click)="navTo('societeliste')" >societe</button>
-        </mat-toolbar>
-        
+        <button mat-button (click)="navTo('/dashbord')">Dashbord</button>
+        <span class="toolbar-spacer"></span>
+        <button mat-button (click)="sidenav.toggle()" >Finances</button>
+        <button mat-button (click)="navTo('/compta')">Compta</button>
+        <button mat-button (click)="navTo('/factures')">Factures</button>
+        <button mat-button (click)="navTo('/note-de-frais')" >Note de frais</button>
+        <button mat-button (click)="navTo('/clocture')">Clocture</button>
+        <button mat-button (click)="navTo('societeliste')" >societe</button>
+      </mat-toolbar> -->
        <div class="main-content">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                    <option>Tous les Factures</option>
-                    <option>Les Factures nom payée</option>
-                    <option>Les Factures payée</option>
-                    <option>Les Factures payée à partiel</option>
-                    </select>
-                </div>
-            </div>
-        </div>   
-          <table class="table">
-            <thead class="table table-striped">
-              <tr>
-                <th scope="col">N° Factures</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-      </div> 
-        <router-outlet></router-outlet> 
+           <p>Finances</p>
+        </div> 
+      <!-- <router-outlet></router-outlet> 
      </mat-sidenav-content> 
-  </mat-sidenav-container> 
+  </mat-sidenav-container>  -->
   
