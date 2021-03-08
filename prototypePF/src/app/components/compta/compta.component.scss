@@ -1,4 +1,5 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 mat-grid-tile {
     background: lightblue;
   }
@@ -89,33 +90,4 @@ button{
     background-color: #fff;
     background: #fff;
     position: relative;
-}
-.select-style select {
-    padding: 10px 10px;
-    width: 170%;
-    border: none;
-    box-shadow: none;
-    background-color: transparent;
-    background-image: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-.select-style:after {
-    top: 50%;
-    left: 85%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(0, 0, 0, 0);
-    border-top-color: #000000;
-    border-width: 10px;
-    margin-top: -2px;
-    z-index: 100;
-}
-.select-style select:focus {
-    outline: none;
 }

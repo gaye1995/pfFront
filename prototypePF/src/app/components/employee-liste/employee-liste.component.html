@@ -81,12 +81,24 @@
       <button mat-button (click)="sidenav.toggle()">Clocture</button>
       <button mat-button (click)="sidenav.toggle()">societe</button>
     </mat-toolbar>
-        <div class="select-style ">
-          <select>
-            <option value="one">Tous les employées</option>
-            <option value="two">Gérant</option>
-          </select>
+    <h1>Liste des employées</h1>
+    <div class="col-sm-6">
+        <div class="col-sm-6" rowHeight="2:1">
+          <div class="select-style">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Tous les employées</option>
+              <option value="1">Tous les employées</option>
+              <option value="2">Gérants</option>
+            </select>
         </div>
+        </div>
+        <div class="col-sm-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Outline form field</mat-label>
+            <input matInput placeholder="Nom">
+          </mat-form-field>
+        </div>
+    </div>
      <div class="main-content">
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
         <!-- Position Column -->

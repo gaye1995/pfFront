@@ -37,6 +37,14 @@ import 'hammerjs';
 import { SidnavlisteComponent } from './nav/sidnavliste/sidnavliste.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { DevislisteComponent } from './components/devisliste/devisliste.component';
+import { FooterbarComponent } from './footerbar/footerbar.component';
+
 
 
 
@@ -55,14 +63,21 @@ import {MatNativeDateModule} from '@angular/material/core';
     FacturesComponent,
     NoteDeFraisComponent,
     SidnavlisteComponent,
+    DevislisteComponent,
+    FooterbarComponent,
   ],
   imports: [
     MatDatepickerModule,
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     NgxElectronModule,
     BrowserAnimationsModule,
+    ModalModule,
+    FormsModule,
+    BsDropdownModule,
+    TooltipModule,
     // Material
     MatSidenavModule,
     MatButtonModule,
@@ -85,6 +100,7 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatExpansionModule,
     ChartsModule,
     MatNativeDateModule,
+    NgbModule,
   ],
   
   providers: [],

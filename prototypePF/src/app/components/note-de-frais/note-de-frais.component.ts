@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl} from '@angular/forms';
+import { Router } from '@angular/router';
 interface Food {
   value: string;
   viewValue: string;
@@ -17,7 +18,7 @@ export class NoteDeFraisComponent implements OnInit {
   ];
   campaignOne: FormGroup;
   campaignTwo: FormGroup;
-  constructor() {   const today = new Date();
+  constructor(private router: Router) {   const today = new Date();
     const month = today.getMonth();
     const year = today.getFullYear();
 
@@ -33,5 +34,7 @@ export class NoteDeFraisComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  navTo(path:string) {
+    this.router.navigate([path]);
+}
 }

@@ -1,5 +1,6 @@
+<p>devisliste works!</p>
 
-<!-- 
+
 <mat-sidenav-container fullscreen>
     <mat-sidenav mode="side"  #sidenav opened position="start"> 
         <span class="toolbar-spacer"></span>
@@ -36,7 +37,7 @@
                 </mat-panel-title>
               </mat-expansion-panel-header>
                     <mat-card-actions class="mb-2 center">
-                        <button mat-button >Encours Clients selon facturation </button>
+                      <button mat-button [routerLink]="['/employee-liste']" >Statistique vente/clients/mois</button>
                     </mat-card-actions>
                     <mat-card-actions class="mb-2 center">
                         <button mat-button >Statistique vente/clients/mois</button>
@@ -70,61 +71,65 @@
                 </mat-expansion-panel>
           </mat-accordion>   
         </mat-card-actions>
-    <mat-card-actions class="mb-2 center">
-        <button mat-button>Clocture</button>
-    </mat-card-actions>
-    <mat-card-actions class="mb-2 center">
-        <button mat-button >societe</button>
-    </mat-card-actions>
     </mat-sidenav>
-    <mat-sidenav-content> -->
-        <mat-toolbar color="primary">
-            <span class="toolbar-spacer"></span>
-            <div fxHide.gt-xs>
-            <button mat-button ></button>
-            </div>
-            <button mat-button >Compta</button>
-            <button mat-button >Factures</button>
-            <button mat-button >Note de frais</button>
-            <button mat-button>Clocture</button>
-            <button mat-button >societe</button>
-          </mat-toolbar>
-        <!-- </mat-sidenav-content>
-        </mat-sidenav-container fullscreen> -->
-    
-        <mat-toolbar color="primary">
-            <mat-toolbar-row>
-                <button mat-icon-button (click)="toggleSideBar()">
-                    <mat-icon>menu</mat-icon>
-                </button>
-        
-                <span> APP LOGO </span>
-        
-                <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
-                    <ul fxLayout="row" fxLayoutGap="20px">
-                        <li>
-                            <button mat-icon-button>
-                                <mat-icon>settings</mat-icon>
-                            </button>
-                        </li>
-                        <li>
-                            <button mat-icon-button>
-                                <mat-icon>help_outline</mat-icon>
-                            </button>
-                        </li>
-                        <li>
-                            <button mat-button [matMenuTriggerFor]="menu">
-                                <mat-icon>person_outline</mat-icon>
-                            </button>
-                            <mat-menu #menu="matMenu">
-                                <button mat-menu-item>
-                                    <mat-icon>exit_to_app</mat-icon>
-                                    Sign out
-                                </button>
-                            </mat-menu>
-        
-                        </li>
-                    </ul>
-                </div>
-            </mat-toolbar-row>
+    <mat-sidenav-content>
+      <mat-toolbar >
+          <button mat-button (click)="navTo('/dashbord')">Dashbord</button>
+          <span class="toolbar-spacer"></span>
+          <button mat-button (click)="navTo('/finances')" >Finances</button>
+          <button mat-button (click)="navTo('/compta')">Compta</button>
+          <button mat-button (click)="sidenav.toggle()">Factures</button>
+          <button mat-button (click)="navTo('/note-de-frais')" >Note de frais</button>
+          <button mat-button (click)="navTo('/clocture')">Clocture</button>
+          <button mat-button (click)="navTo('societeliste')" >societe</button>
         </mat-toolbar>
+        
+       <div class="main-content">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Tous les Factures</option>
+                    <option>Les Factures nom payée</option>
+                    <option>Les Factures payée</option>
+                    <option>Les Factures payée à partiel</option>
+                    </select>
+                </div>
+            </div>
+        </div>   
+          <table class="table">
+            <thead class="table table-striped">
+              <tr>
+                <th scope="col">N° Factures</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+      </div> 
+        <router-outlet></router-outlet> 
+     </mat-sidenav-content> 
+  </mat-sidenav-container> 
+  

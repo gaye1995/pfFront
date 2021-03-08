@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FlatTreeControl} from '@angular/cdk/tree';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
+import { Router } from '@angular/router';
 
 // Mes interfaces de donnéee
 export interface PeriodicElement {
@@ -80,11 +81,14 @@ export class FacturesComponent implements OnInit {
   dataSource1 = TREE_DATA;
 
 
-  constructor() {     
+  constructor(private router: Router) {     
   }
 
   ngOnInit(): void {
   }
+  navTo(path:string) {
+    this.router.navigate([path]);
+}
 
 }
 

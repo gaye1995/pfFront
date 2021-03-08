@@ -18,7 +18,7 @@ import { NoteDeFraisComponent } from './components/note-de-frais/note-de-frais.c
 import { FacturesRoutingModule } from './components/factures/factures-routing.module';
 import { NoteDeFraisRoutingModule } from './components/note-de-frais/note-de-frais-routing.module';
 import { FinancesRoutingModule } from './components/finances/finances-routing.module';
-const routes: Routes = [
+export const routes: Routes = [
   {
   path:'',
   redirectTo : 'login',

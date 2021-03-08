@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-compta',
-  templateUrl: './compta.component.html',
-  styleUrls: ['./compta.component.scss']
+  selector: 'app-devisliste',
+  templateUrl: './devisliste.component.html',
+  styleUrls: ['./devisliste.component.scss']
 })
-export class ComptaComponent implements OnInit {
+export class DevislisteComponent implements OnInit {
 
   constructor(private router: Router) { }
 
@@ -14,6 +14,5 @@ export class ComptaComponent implements OnInit {
   }
   navTo(path:string) {
     this.router.navigate([path]);
-  }
-
+}
 }

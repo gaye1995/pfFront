@@ -1,4 +1,4 @@
-    <mat-sidenav-container>
+    <!-- <mat-sidenav-container>
       <mat-sidenav #sidenav role="navigation">
         <span class="toolbar-spacer"></span>
         <mat-card-actions class="mb-2 center">
@@ -70,9 +70,43 @@
             </mat-card-actions>
             </mat-sidenav>
       <mat-sidenav-content>
-        <!--in here all the content must reside. We will add a navigation header as well-->
-        <main>
+        in here all the content must reside. We will add a navigation header as well-->
+        <!-- <main>
           <router-outlet></router-outlet>
         </main>
       </mat-sidenav-content>
     </mat-sidenav-container>
+  -->
+
+    <mat-nav-list>
+        <div class="profile-card">
+            <div class="header">
+                <h2>Soufiane FADIL</h2>
+                <h4>example@email.com</h4>
+            </div>
+            <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Soufiane FADIL">
+        </div>
+    
+        <mat-divider></mat-divider>
+    
+        <h2 matSubheader>Pages</h2>
+    
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/finances">Finances</a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/societeliste">societeliste</a>
+    
+        <mat-divider></mat-divider>
+    
+        <h2 matSubheader>Tools</h2>
+    
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/compta">
+            <mat-icon>import_contacts</mat-icon>
+            Contacts
+        </a>
+    
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/note-de-frais">
+            <mat-icon>contact_phone</mat-icon>
+            Leads
+        </a>
+    
+    </mat-nav-list>

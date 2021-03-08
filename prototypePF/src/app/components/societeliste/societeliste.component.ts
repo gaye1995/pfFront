@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -27,10 +28,13 @@ export class SocietelisteComponent implements OnInit {
   dataSource = ELEMENT_DATA;
 
   
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
+  navTo(path:string) {
+    this.router.navigate([path]);
+}
 
 
 

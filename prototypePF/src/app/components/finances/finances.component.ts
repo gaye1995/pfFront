@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 // const TREE_DATA: FoodNode[] = [
 //   {
 //     name: 'Fruit',
@@ -57,9 +58,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class FinancesComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'symbol1', 'symbol2', 'symbol3'];
   dataSource = ELEMENT_DATA;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-
+  navTo(path:string) {
+    this.router.navigate([path]);
+}
 }

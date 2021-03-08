@@ -78,14 +78,15 @@
     </mat-card-actions>
     </mat-sidenav>
     <mat-sidenav-content>
-      <mat-toolbar color="primary">
+      <mat-toolbar>
+        <button mat-button (click)="navTo('/dashbord')" >Dashbord</button>
         <span class="toolbar-spacer"></span>
-        <button mat-button (>Finances</button>
-        <button mat-button click)="sidenav.toggle()">Compta</button>
-        <button mat-button >Factures</button>
-        <button mat-button >Note de frais</button>
-        <button mat-button>Clocture</button>
-        <button mat-button >societe</button>
+        <button mat-button (click)="navTo('/finances')" >Finances</button>
+        <button mat-button (click)="sidenav.toggle()">Compta</button>
+        <button mat-button (click)="navTo('/factures')">Factures</button>
+        <button mat-button (click)="navTo('/note-de-frais')" >Note de frais</button>
+        <button mat-button (click)="navTo('/clocture')">Clocture</button>
+        <button mat-button (click)="navTo('societeliste')" >societe</button>
       </mat-toolbar>
        <div class="main-content">
     </div> 

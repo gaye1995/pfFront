@@ -1,8 +1,5 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
 mat-grid-tile {
     background: lightblue;
   }
@@ -82,7 +79,7 @@ button{
     flex-direction: column;
     align-items: flex-start;
   }
-  .select-style {
+  .form-select{
     padding: 10px 10px;
     padding: 10;
     margin: 10;
