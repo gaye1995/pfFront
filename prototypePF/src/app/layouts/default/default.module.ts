@@ -18,6 +18,7 @@ import { ForgetPasswordComponent } from '../../shared/auth/forget-password/forge
 import { DevislisteComponent } from 'src/app/shared/components/devisliste/devisliste.component';
 import { FinancesComponent } from '../../shared/components/finances/finances.component';
 import { ComptaComponent } from '../../shared/components/compta/compta.component';
+import {DashbordService} from '../../shared/components/dashbord.service';
 import { FacturesComponent } from '../../shared/components/factures/factures.component';
 import { NoteDeFraisComponent } from '../../shared/components/note-de-frais/note-de-frais.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -41,7 +42,6 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
-
 @NgModule({
   declarations: [
     DefaultComponent,
@@ -54,9 +54,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     ForgetPasswordComponent,
     FinancesComponent,
     ComptaComponent,
-    FacturesComponent,
-    NoteDeFraisComponent,
-
+     FacturesComponent,
+     NoteDeFraisComponent,
   ],
   imports: [
     CommonModule,
@@ -95,6 +94,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
       ReactiveFormsModule,
       BsDropdownModule,
   
+  ],
+  providers: [
+    DashbordService,
+
   ]
 })
 export class DefaultModule { }

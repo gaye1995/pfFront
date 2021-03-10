@@ -12,9 +12,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { AreacompteComponent } from './widgets/areacompte/areacompte.component';
+import { SubheadclientsComponent } from '../nav/subheadclients/subheadclients.component';
 
-// import { AreaComponent } from './widgets/area/area.component';
-// import { HighchartsChartModule } from 'highcharts-angular';
 // import { CardComponent } from './widgets/card/card.component';
 // import { PieComponent } from './widgets/pie/pie.component';
 
@@ -22,15 +23,17 @@ import {MatExpansionModule} from '@angular/material/expansion';
 @NgModule({
   declarations: [
     HeaderbarComponent,
+    SubheadclientsComponent,
     FooterbarComponent,
     SidnavlisteComponent,
-    // AreaComponent,
+     AreacompteComponent,
     // CardComponent,
     // PieComponent
   ],
   imports: [
     CommonModule,
     MatListModule,
+    HighchartsChartModule,
     MatDividerModule,
     FlexLayoutModule,
     MatExpansionModule,
@@ -45,7 +48,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     HeaderbarComponent,
     FooterbarComponent,
     SidnavlisteComponent,
-    // AreaComponent,
+    AreacompteComponent,
+    SubheadclientsComponent,
     // CardComponent,
     // PieComponent
   ]

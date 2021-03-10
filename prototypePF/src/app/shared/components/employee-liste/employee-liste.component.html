@@ -1,112 +1,19 @@
-<!-- 
-
-<mat-sidenav-container fullscreen>
-  <mat-sidenav mode="side"  #sidenav opened position="start"> 
-      <span class="toolbar-spacer"></span>
-  <mat-card-actions class="mb-2 center">
-      <mat-accordion>
-          <mat-expansion-panel hideToggle>
-              <mat-expansion-panel-header>
-              <mat-panel-title>
-                  Bilan Compte de résultat Balance
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-                  <mat-card-actions class="mb-2 center">
-                      <button mat-button >Bilan synthétique</button>
-                  </mat-card-actions>
-                  <mat-card-actions class="mb-2 center">
-                      <button mat-button >Compte de résultat synthétique</button>
-                  </mat-card-actions>
-                  <mat-card-actions class="mb-2 center">
-                      <button mat-button>Balance Général</button>
-                  </mat-card-actions>
-                  <mat-card-actions class="mb-2 center">
-                      <button mat-button >Bilan Général</button>
-                  </mat-card-actions>  
-              </mat-expansion-panel>
-        </mat-accordion>
-        
-  </mat-card-actions>
-  <mat-card-actions class="mb-2 center">
-      <mat-accordion>
-          <mat-expansion-panel hideToggle>
-              <mat-expansion-panel-header>
-              <mat-panel-title>
-                  Clients
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-                  <mat-card-actions class="mb-2 center">
-                    <button mat-button [routerLink]="['/employee-liste']" >Statistique vente/clients/mois</button>
-                  </mat-card-actions>
-                  <mat-card-actions class="mb-2 center">
-                      <button mat-button >Statistique vente/clients/mois</button>
-                  </mat-card-actions>
-                  <mat-card-actions class="mb-2 center">
-                      <button mat-button>Balance Général</button>
-                  </mat-card-actions>
-              </mat-expansion-panel>
-        </mat-accordion> 
-  </mat-card-actions>
-  <mat-card-actions class="mb-2 center">
-      <mat-accordion>
-          <mat-expansion-panel hideToggle>
-              <mat-expansion-panel-header>
-              <mat-panel-title>
-                  Banques /  Caisse
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-                  <mat-card-actions class="mb-2 center">
-                      <button mat-button >Soldes comptes bancaires </button>
-                  </mat-card-actions>
-                  <mat-card-actions class="mb-2 center">
-                      <button mat-button >listes opérations bancaires</button>
-                  </mat-card-actions>
-                  <mat-card-actions class="mb-2 center">
-                      <button mat-button>Solde Caisse</button>
-                  </mat-card-actions>
-                  <mat-card-actions class="mb-2 center">
-                      <button mat-button>Opération Caisse</button>
-                  </mat-card-actions>
-              </mat-expansion-panel>
-        </mat-accordion>   
-      </mat-card-actions>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar >
-      <span class="toolbar-spacer"></span>
-      <button mat-button (click)="sidenav.toggle()">Finances</button>
-      <button mat-button (click)="sidenav.toggle()">Compta</button>
-      <button mat-button (click)="sidenav.toggle()"  >Factures</button>
-      <button mat-button (click)="sidenav.toggle()">Note de frais</button>
-      <button mat-button (click)="sidenav.toggle()">Clocture</button>
-      <button mat-button (click)="sidenav.toggle()">societe</button>
-    </mat-toolbar>
-    <h1>Liste des employées</h1>
-    <div class="col-sm-6">
-        <div class="col-sm-6" rowHeight="2:1">
-          <div class="select-style">
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Tous les employées</option>
-              <option value="1">Tous les employées</option>
-              <option value="2">Gérants</option>
-            </select>
-        </div>
-        </div>
-        <div class="col-sm-6">
-          <mat-form-field appearance="outline">
-            <mat-label>Outline form field</mat-label>
-            <input matInput placeholder="Nom">
-          </mat-form-field>
-        </div>
-    </div> -->
-     <div class="main-content">
-      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<div class="container">
+      <table mat-table [dataSource]="dataSource" class="table  table-striped table-hover bg-light shadow">
         <!-- Position Column -->
       <ng-container matColumnDef="position">
         <th mat-header-cell *matHeaderCellDef > Nom. </th>
         <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        <td>
+          <div class="float-right">
+              <div id="toolbar">
+                  <button id="remove" class="btn btn-danger" disabled>
+                    <i class="fa fa-trash"></i> Delete
+                  </button>
+                </div>
+          </div>
+      </td>
       </ng-container>
-    
       <!-- Name Column -->
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> prénom </th>
@@ -143,5 +50,8 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>    
-  </div> 
-
+    <mat-paginator [length]="100"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+</div>

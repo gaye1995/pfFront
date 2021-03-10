@@ -13,10 +13,8 @@ import { ComptaComponent } from '././shared/components/compta/compta.component';
 import { FinancesComponent } from '././shared/components/finances/finances.component';
 import { FacturesComponent } from '././shared/components/factures/factures.component';
 import { NoteDeFraisComponent } from '././shared/components/note-de-frais/note-de-frais.component';
-import { FacturesRoutingModule } from '././shared/components/factures/factures-routing.module';
-import { NoteDeFraisRoutingModule } from '././shared/components/note-de-frais/note-de-frais-routing.module';
-import { FinancesRoutingModule } from '././shared/components/finances/finances-routing.module';
 import { DefaultComponent } from './layouts/default/default.component';
+import { ClientsComponent } from './shared/components/clients/clients.component';
 export const routes: Routes = [
   {
     path: '',
@@ -31,6 +29,10 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'clients',
+    component: ClientsComponent
   },
   {
     path: 'register',

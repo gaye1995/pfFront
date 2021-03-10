@@ -4,19 +4,24 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import 'hammerjs';
-import { DefaultModule } from './layouts/default/default.module';
+import {DefaultModule} from './layouts/default/default.module';
+// import { SubheadclientsComponent } from './nav/subheadclients/subheadclients.component';
+// import { ClientsModule } from './shared/components/clients/clients.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    // SubheadclientsComponent,
+  
   ],
   imports: [
-    DefaultModule,
+    // ClientsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    DefaultModule
     
   ],
   

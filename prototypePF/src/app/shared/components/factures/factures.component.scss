@@ -1,39 +1,4 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-mat-grid-tile {
-    background: lightblue;
-  }
-mat-sidenav {
-    width: 280px;
-    padding:15px;
-    color: #fff;
-}
-.mat-expansion-panel-header + .mat-panel-title{
-  color:#fff
-}
-.mat-expansion-panel{
-  background-color: #355270;
-  color:#fff
-}
-.mat-toolbar{
-  background-color: #2B3D4F;
-  color:#fff
-}
-.mat-panel-title{
-  color:#fff
-}
-.mat-drawer { 
-    background-color: #355270;
-    color:#fff
-}
-.main-content {
-    padding:20px;
-}
-.toolbar-spacer {
-    flex: 1 1 auto;
-}
-.mat-accordion{
-  color: rgb(207, 188, 188);
-}
 
 table {
     width: 100%;
