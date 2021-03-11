@@ -5,8 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import 'hammerjs';
 import {DefaultModule} from './layouts/default/default.module';
-import { FacturesComponent } from './shared/components/factures/factures.component';
-import { ClientsModule } from './shared/components/clients/clients.module';
+import { ClientsModule } from './shared/components/donneesclient/clients/clients.module';
 
 
 

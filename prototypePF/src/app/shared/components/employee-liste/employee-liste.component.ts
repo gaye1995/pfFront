@@ -33,7 +33,7 @@ import { Router } from '@angular/router';
 export interface PeriodicElement {
   name: string;
   position: number;
-  weight: number;
+  weight: string;
   symbol: string;
   symbol1: string;
   symbol2: string;
@@ -42,16 +42,16 @@ export interface PeriodicElement {
 
 }
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
+  {position: 1, name: 'Mboup Gaye', weight: "15 rue de l'arche", symbol: 'paris',symbol1: "75009",symbol2: "XXXXXX@gmail.com",symbol3: "salarié",symbol4: "za"},
+  {position: 2, name: 'Mboup Gaye', weight: "15 rue de l'arche", symbol: 'paris',symbol1: "75009",symbol2: "XXXXXX@gmail.com",symbol3: "salarié",symbol4: "za"},
+  {position: 3, name: 'Mboup Gaye', weight: "15 rue de l'arche", symbol: 'paris',symbol1: "75009",symbol2: "XXXXXX@gmail.com",symbol3: "salarié",symbol4: "za"},
+  {position: 4, name: 'Mboup Gaye', weight: "15 rue de l'arche", symbol: 'paris',symbol1: "75009",symbol2: "XXXXXX@gmail.com",symbol3: "salarié",symbol4: "za"},
+  {position: 5, name: 'Mboup Gaye', weight: "15 rue de l'arche", symbol: 'paris',symbol1: "75009",symbol2: "XXXXXX@gmail.com",symbol3: "salarié",symbol4: "za"},
+  {position: 6, name: 'Mboup Gaye', weight: "15 rue de l'arche", symbol: 'paris',symbol1: "75009",symbol2: "XXXXXX@gmail.com",symbol3: "salarié",symbol4: "za"},
+  {position: 7, name: 'Mboup Gaye', weight: "15 rue de l'arche", symbol: 'paris',symbol1: "75009",symbol2: "XXXXXX@gmail.com",symbol3: "salarié",symbol4: "za"},
+  {position: 8, name: 'Mboup Gaye', weight: "15 rue de l'arche", symbol: 'paris',symbol1: "75009",symbol2: "XXXXXX@gmail.com",symbol3: "salarié",symbol4: "za"},
+  {position: 9, name: 'Mboup Gaye', weight: "15 rue de l'arche", symbol: 'paris',symbol1: "75009",symbol2: "XXXXXX@gmail.com",symbol3: "salarié",symbol4: "za"},
+  {position: 10, name: 'Mboup Gaye', weight:"15 rue de l'arche", symbol: 'paris',symbol1: "75009",symbol2: "XXXXXX@gmail.com",symbol3: "salarié",symbol4: "za"},
 ];
 @Component({
   selector: 'app-employee-liste',

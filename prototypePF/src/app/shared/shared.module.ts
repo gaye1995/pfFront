@@ -26,6 +26,7 @@ import { AreacompteComponent } from './widgets/areacompte/areacompte.component';
     SidnavlisteComponent,
      AreacompteComponent,
      
+     
     // CardComponent,
     // PieComponent
   ],
