@@ -1,11 +1,9 @@
 <app-headerbar (toggleSideBarForMe)="sideBarToggler()"></app-headerbar>
-
 <mat-drawer-container>
     <mat-drawer mode="side" [opened]="sideBarOpen">
         <app-sidnavliste></app-sidnavliste>
     </mat-drawer>
     <mat-drawer-content>
-        <!-- <app-subheadclients (toggleSideBarForMe)="sideBarToggler1()" ></app-subheadclients> -->
         <router-outlet></router-outlet>
     </mat-drawer-content>
 </mat-drawer-container>

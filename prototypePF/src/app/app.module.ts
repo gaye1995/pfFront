@@ -5,19 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import 'hammerjs';
 import {DefaultModule} from './layouts/default/default.module';
-// import { SubheadclientsComponent } from './nav/subheadclients/subheadclients.component';
-// import { ClientsModule } from './shared/components/clients/clients.module';
+import { FacturesComponent } from './shared/components/factures/factures.component';
+import { ClientsModule } from './shared/components/clients/clients.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    // SubheadclientsComponent,
-  
   ],
   imports: [
-    // ClientsModule,
+    ClientsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

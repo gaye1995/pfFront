@@ -1,5 +1,12 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.select,
+#locale {
+  width: 100%;
+}
+.like {
+  margin-right: 10px;
+}
 .mat-drawer { 
     background-color: #023075;
     color:#fff
@@ -18,13 +25,8 @@
 ul li {
   list-style: none;
 }
-  // .mat-icon {
-  //   vertical-align: middle;
-  //   margin-right: 20px;
-  // }
-    img {
-      width: 50px;
-      height: 50px;
-      object-fit: cover;
-      border-radius: 10%;
-    }
+  .mat-icon {
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+   

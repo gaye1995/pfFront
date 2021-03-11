@@ -14,7 +14,6 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { AreacompteComponent } from './widgets/areacompte/areacompte.component';
-import { SubheadclientsComponent } from '../nav/subheadclients/subheadclients.component';
 
 // import { CardComponent } from './widgets/card/card.component';
 // import { PieComponent } from './widgets/pie/pie.component';
@@ -23,10 +22,10 @@ import { SubheadclientsComponent } from '../nav/subheadclients/subheadclients.co
 @NgModule({
   declarations: [
     HeaderbarComponent,
-    SubheadclientsComponent,
     FooterbarComponent,
     SidnavlisteComponent,
      AreacompteComponent,
+     
     // CardComponent,
     // PieComponent
   ],
@@ -49,7 +48,7 @@ import { SubheadclientsComponent } from '../nav/subheadclients/subheadclients.co
     FooterbarComponent,
     SidnavlisteComponent,
     AreacompteComponent,
-    SubheadclientsComponent,
+    // SubheadclientsComponent,
     // CardComponent,
     // PieComponent
   ]

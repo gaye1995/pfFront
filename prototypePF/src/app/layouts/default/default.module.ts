@@ -12,15 +12,11 @@ import { ChartsModule } from '@progress/kendo-angular-charts';
 import { RegisterComponent } from '../../shared/auth/register/register.component';
 import { DashbordComponent } from '../../shared/components/dashbord/dashbord.component';
 import { SocietelisteComponent } from '../../shared/components/societeliste/societeliste.component';
-import { EmployeeListeComponent } from '../../shared/components/employee-liste/employee-liste.component';
 import { LoginComponent } from '../../shared/auth/login/login.component';
 import { ForgetPasswordComponent } from '../../shared/auth/forget-password/forget-password.component';
-import { DevislisteComponent } from 'src/app/shared/components/devisliste/devisliste.component';
 import { FinancesComponent } from '../../shared/components/finances/finances.component';
 import { ComptaComponent } from '../../shared/components/compta/compta.component';
 import {DashbordService} from '../../shared/components/dashbord.service';
-import { FacturesComponent } from '../../shared/components/factures/factures.component';
-import { NoteDeFraisComponent } from '../../shared/components/note-de-frais/note-de-frais.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDividerModule } from '@angular/material/divider';
 import { RouterModule } from '@angular/router';
@@ -42,20 +38,18 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 @NgModule({
   declarations: [
     DefaultComponent,
     LoginComponent,
     RegisterComponent,
     DashbordComponent,
-    DevislisteComponent,
     SocietelisteComponent,
-    EmployeeListeComponent,
     ForgetPasswordComponent,
     FinancesComponent,
     ComptaComponent,
-     FacturesComponent,
-     NoteDeFraisComponent,
+ 
   ],
   imports: [
     CommonModule,
@@ -63,6 +57,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatNativeDateModule,
     MatDatepickerModule,
     MatToolbarModule,
+    MatCheckboxModule,
     MatMenuModule,
     MatTableModule,
     ModalModule,

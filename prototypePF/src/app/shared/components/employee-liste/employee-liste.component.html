@@ -1,4 +1,18 @@
-<div class="container">
+  <div class="container mb-4">
+    <div class="row">
+      <div class="col-md-8">
+          <span class="h3">Liste des employées</span> 
+      </div>
+      <div class="col-md-4 ">
+          <form class="form-inline float-right">
+              <input class="form-control" type="search" placeholder="Rechercher un devis" aria-label="Rechercher">
+              <button class="btn my-2 my-sm-0 text-light bg_bouton_principal" type="submit"><i class="fas fa-search"></i></button>
+            </form>  
+      </div>
+    </div>  
+  </div>
+<div class="mat-elevation-z8">
+  <app-subheadclients></app-subheadclients>
       <table mat-table [dataSource]="dataSource" class="table  table-striped table-hover bg-light shadow">
         <!-- Position Column -->
       <ng-container matColumnDef="position">

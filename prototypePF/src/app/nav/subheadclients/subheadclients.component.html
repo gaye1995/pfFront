@@ -1,42 +1,70 @@
-<div class="container">
+<!-- 
     <mat-toolbar > 
         <mat-toolbar-row>
             <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
                 <ul fxLayout="row" fxLayoutGap="20px">
                     <li>
-                        <button mat-menu-item>
-                            Gérants
-                        </button>
+                        <a mat-list-item routerLinkActive="list-item-active" routerLink="/Gérants"> Gérants</a>
                     </li>
                     <li>
-                        <button mat-menu-item routerLinkActive="list-item-active" routerLink="/factures">
-                            Factures
-                        </button>
+                        <a mat-list-item routerLinkActive="list-item-active" routerLink="/factures"> Factures</a>
                     </li>
                     <li>
-                         <button mat-menu-item>
-                            Devis
-                        </button>
+                        <a mat-list-item routerLinkActive="list-item-active" routerLink="/Paiements">Paiements</a>
                     </li>
                     <li>
-                        <button mat-menu-item>
-                           Paiements
-                       </button>
-                   </li>
-                    <li>
-                        <button mat-button [matMenuTriggerFor]="menu">
-                            <mat-icon>person_outline</mat-icon>
-                        </button>
-                        <mat-menu #menu="matMenu">
-                            <button mat-menu-item>
-                                <mat-icon>exit_to_app</mat-icon>
-                                Profile 
-                            </button>
-                        </mat-menu>
+                        <a mat-list-item routerLinkActive="list-item-active" routerLink="/devisliste">Devis</a>
                     </li>
                 </ul>
             </div>
         </mat-toolbar-row>
-    </mat-toolbar>
-    <mat-nav-list>
-    </mat-nav-list>
+    </mat-toolbar> -->
+   <div class="body">
+    <mat-tab-group #tabGroup (selectedTabChange)="handleTabChange($event)">
+        <mat-tab aria-label="Containers">
+            <ng-template mat-tab-label>
+              <span matTooltip="General containers, like tables/dialogs">Liste Clients</span>
+            </ng-template>
+            <app-liste-clients >
+            </app-liste-clients>
+          </mat-tab>
+        <mat-tab aria-label="Containers">
+            <ng-template mat-tab-label>
+              <span matTooltip="General containers, like tables/dialogs">Paiements</span>
+            </ng-template>
+            <app-factures >
+            </app-factures>
+          </mat-tab>
+          <mat-tab aria-label="Containers">
+        <ng-template mat-tab-label>
+          <span matTooltip="Example of controls in use">
+            Gérants
+          </span>
+        </ng-template>
+        <app-gerant></app-gerant>
+      </mat-tab>
+      <mat-tab aria-label="Containers">
+        <ng-template mat-tab-label>
+          <span matTooltip="General containers, like tables/dialogs">factures</span>
+        </ng-template>
+        <app-factures *ngIf="activeTab === 'Containers'">
+        </app-factures>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span matTooltip="Preview of factures ">
+            devis
+          </span>
+        </ng-template>
+        <app-devisliste></app-devisliste>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span matTooltip="Preview of devisliste">
+            Note de frais
+          </span>
+        </ng-template>
+        <app-note-de-frais></app-note-de-frais>
+      </mat-tab>
+    </mat-tab-group>
+  </div>

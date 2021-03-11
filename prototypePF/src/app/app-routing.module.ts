@@ -15,6 +15,7 @@ import { FacturesComponent } from '././shared/components/factures/factures.compo
 import { NoteDeFraisComponent } from '././shared/components/note-de-frais/note-de-frais.component';
 import { DefaultComponent } from './layouts/default/default.component';
 import { ClientsComponent } from './shared/components/clients/clients.component';
+import { ListeClientsComponent } from './shared/components/liste-clients/liste-clients.component';
 export const routes: Routes = [
   {
     path: '',
@@ -66,6 +67,11 @@ export const routes: Routes = [
   {
     path: 'note-de-frais',
     component: NoteDeFraisComponent
+  }
+  ,
+  {
+    path: 'liste-clients',
+    component: ListeClientsComponent
   }]}];
 
 @NgModule({

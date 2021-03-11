@@ -1,16 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+import {SelectionModel} from '@angular/cdk/collections';
 import {FlatTreeControl} from '@angular/cdk/tree';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 import { Router } from '@angular/router';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatTableDataSource} from '@angular/material/table';
 
 // Mes interfaces de donnéee
 export interface PeriodicElement {
-  status: string;
-  N_facture: string;
-  Date_echeance: string;
-  symbol: number;
-  symbol1: number;
+  name: string;
+  position: number;
+  weight: number;
+  symbol: string;
+  symbol1: string;
   symbol2: string;
+  symbol3: string;
+  symbol4: string;
+
 }
 
 interface DonneeFacture {
@@ -25,16 +31,16 @@ interface ExampleFlatNode {
 }
 //  Mes tableau de données
 const ELEMENT_DATA: PeriodicElement[] = [
-  {N_facture: 'Facture_45874e', status: 'fatima ly', Date_echeance: '6/15/15, 9:03 AM', symbol: 3409.34,symbol1: 3429.34,symbol2: "ze"},
-  {N_facture: 'Facture_45874e', status: 'Helium ly', Date_echeance: '6/15/15, 9:03 AM', symbol: 3409.34,symbol1: 3429.34,symbol2: "ze"},
-  {N_facture: 'Facture_45874e', status: 'Lithium ly', Date_echeance: '6/15/15, 9:03 AM', symbol: 3409.34,symbol1: 3429.34,symbol2: "ze"},
-  {N_facture: 'Facture_45874e', status: 'Beryllium ly', Date_echeance: '6/15/15, 9:03 AM', symbol: 3409.34,symbol1: 3429.34,symbol2: "ze"},
-  {N_facture: 'Facture_45874e', status: 'Boron ly', Date_echeance: '6/15/15, 9:03 AM', symbol: 3409.34,symbol1: 3429.34,symbol2: "ze",},
-  {N_facture: 'Facture_45874e', status: 'Carbon ly', Date_echeance: '6/15/15, 9:03 AM', symbol: 3409.34,symbol1: 3429.34,symbol2: "ze",},
-  {N_facture: 'Facture_45874e', status: 'Nitrogen ly', Date_echeance: '6/15/15, 9:03 AM', symbol: 3409.34,symbol1: 3429.34,symbol2: "ze"},
-  {N_facture: 'Facture_45874e', status: 'Oxygen ly', Date_echeance: '6/15/15, 9:03 AM', symbol: 3409.34,symbol1: 3429.34,symbol2: "ze"},
-  {N_facture: 'Facture_45874e', status: 'Fluorine ly', Date_echeance: '6/15/15, 9:03 AM', symbol: 3409.34,symbol1:3429.34,symbol2: "ze"},
-  {N_facture: 'Facture_45874e', status: 'Neon ly', Date_echeance: '6/15/15, 9:03 AM', symbol: 3409.34,symbol1: 3429.34,symbol2: "ze"},
+  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
+  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
+  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
+  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
+  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
+  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
+  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
+  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
+  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
+  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne',symbol1: "ze",symbol2: "ze",symbol3: "zjs",symbol4: "za"},
 ];
 
 
@@ -73,15 +79,42 @@ const TREE_DATA: DonneeFacture[] = [
 })
 export class FacturesComponent implements OnInit {
   
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'symbol1', 'symbol2', 'symbol3'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'symbol1', 'symbol2', 'symbol3','symbol4'];
+  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  selection = new SelectionModel<PeriodicElement>(true, []);
   dataSource1 = TREE_DATA;
+  
+  // @ViewChild(MatPaginator) paginator: MatPaginator ;
 
+  // ngAfterViewInit() {
+  //   this.dataSource.paginator = this.paginator;
+  // }
 
   constructor(private router: Router) {     
   }
 
   ngOnInit(): void {
+  }
+  /** Whether the number of selected elements matches the total number of rows. */
+  isAllSelected() {
+    const numSelected = this.selection.selected.length;
+    const numRows = this.dataSource.data.length;
+    return numSelected === numRows;
+  }
+
+  /** Selects all rows if they are not all selected; otherwise clear selection. */
+  masterToggle() {
+    this.isAllSelected() ?
+        this.selection.clear() :
+        this.dataSource.data.forEach(row => this.selection.select(row));
+  }
+
+  /** The label for the checkbox on the passed row */
+  checkboxLabel(row?: PeriodicElement): string {
+    if (!row) {
+      return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
+    }
+    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
   }
   navTo(path:string) {
     this.router.navigate([path]);
