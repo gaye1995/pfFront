@@ -42,6 +42,7 @@ import { DevislisteComponent } from '../devisliste/devisliste.component';
 import { FacturesComponent } from '../factures/factures.component';
 import { CoordonneesComponent } from '../coordonnees/coordonnees.component';
 import { PaiementsComponent } from '../../paiements/paiements.component';
+import { ExemplefactureComponent } from '../exemplefacture/exemplefacture.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,8 @@ import { PaiementsComponent } from '../../paiements/paiements.component';
     ListeClientsComponent,
     CoordonneesComponent,
     PaiementsComponent,
+    ExemplefactureComponent,
+
   ],
   imports: [
     CommonModule,

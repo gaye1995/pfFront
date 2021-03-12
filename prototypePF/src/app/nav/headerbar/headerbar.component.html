@@ -3,7 +3,7 @@
         <button mat-icon-button (click)="toggleSideBar()">
             <mat-icon>menu</mat-icon>
         </button>
-        <img src="assets/img/logo.PNG" alt="Soufiane FADIL">
+        <!-- <img src="assets/img/logo.PNG" alt="Soufiane FADIL"> -->
         <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
             <ul fxLayout="row" fxLayoutGap="20px">
               <li>
@@ -26,9 +26,14 @@
                             Sign out
                         </button>
                         <button mat-menu-item>
-                            <mat-icon>exit_to_app</mat-icon>
+                            <mat-icon>account_circle</mat-icon>
                             Profile 
                         </button>
+                        <button mat-menu-item routerLink = "/register">
+                            <mat-icon>add</mat-icon>
+                            ajouter un comptable 
+                        </button>
+
                     </mat-menu>
                 </li>
             </ul>
