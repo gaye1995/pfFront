@@ -9,11 +9,8 @@ import { SharedModule } from '../../shared/shared.module';
 import { DefaultComponent } from './default.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { ChartsModule } from '@progress/kendo-angular-charts';
-import { RegisterComponent } from '../../shared/auth/register/register.component';
 import { DashbordComponent } from '../../shared/components/dashbord/dashbord.component';
 import { SocietelisteComponent } from '../../shared/components/societeliste/societeliste.component';
-import { LoginComponent } from '../../shared/auth/login/login.component';
-import { ForgetPasswordComponent } from '../../shared/auth/forget-password/forget-password.component';
 import { FinancesComponent } from '../../shared/components/finances/finances.component';
 import { ComptaComponent } from '../../shared/components/compta/compta.component';
 import {DashbordService} from '../../shared/components/dashbord.service';
@@ -40,17 +37,18 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { EmployeeListeComponent } from 'src/app/shared/components/employee-liste/employee-liste.component';
+import { ListebanqueComponent } from 'src/app/shared/components/listebanque/listebanque.component';
+import { BanqueComponent } from 'src/app/shared/components/banque/banque.component';
 @NgModule({
   declarations: [
     DefaultComponent,
-    LoginComponent,
-    RegisterComponent,
     DashbordComponent,
     SocietelisteComponent,
-    ForgetPasswordComponent,
     FinancesComponent,
     ComptaComponent,
     EmployeeListeComponent,
+    ListebanqueComponent,
+    BanqueComponent
 
   ],
   imports: [

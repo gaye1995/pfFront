@@ -6,19 +6,30 @@ import { AppComponent } from './app.component';
 import 'hammerjs';
 import {DefaultModule} from './layouts/default/default.module';
 import { ClientsModule } from './shared/components/donneesclient/clients/clients.module';
+import { RegisterComponent } from './shared/auth/register/register.component';
+import { LoginComponent } from './shared/auth/login/login.component';
+import { ForgetPasswordComponent } from './shared/auth/forget-password/forget-password.component';
+import { MatCardModule } from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    ForgetPasswordComponent,
   ],
   imports: [
     ClientsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DefaultModule
+    DefaultModule,
+    MatCardModule,
+    MatFormFieldModule,
+
     
   ],
   

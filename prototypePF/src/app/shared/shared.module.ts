@@ -17,7 +17,7 @@ import { AreacompteComponent } from './widgets/areacompte/areacompte.component';
 import { CardComponent } from './widgets/card/card.component';
 import { BanqueComponent } from './components/banque/banque.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { ListebanqueComponent } from './components/listebanque/listebanque.component';
+import { DiscussionComponent } from './components/discussion/discussion.component';
 
 // import { CardComponent } from './widgets/card/card.component';
 // import { PieComponent } from './widgets/pie/pie.component';
@@ -30,8 +30,7 @@ import { ListebanqueComponent } from './components/listebanque/listebanque.compo
     SidnavlisteComponent,
      AreacompteComponent,
      CardComponent,
-     BanqueComponent,
-     ListebanqueComponent,
+     DiscussionComponent,
     // PieComponent
   ],
   imports: [
@@ -54,6 +53,7 @@ import { ListebanqueComponent } from './components/listebanque/listebanque.compo
     FooterbarComponent,
     SidnavlisteComponent,
     AreacompteComponent,
+    DiscussionComponent,
     // SubheadclientsComponent,
     CardComponent,
     // PieComponent

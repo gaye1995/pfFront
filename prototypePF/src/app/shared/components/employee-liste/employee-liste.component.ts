@@ -20,16 +20,7 @@ import { Router } from '@angular/router';
 //           {name: 'Broccoli'},
 //           {name: 'Brussels sprouts'},
 //         ]
-//       }, {
-//         name: 'Orange',
-//         children: [
-//           {name: 'Pumpkins'},
-//           {name: 'Carrots'},
-//         ]
-//       },
-//     ]
-//   },
-// ];
+
 export interface PeriodicElement {
   name: string;
   position: number;

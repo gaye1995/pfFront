@@ -17,6 +17,8 @@ import { ListeClientsComponent } from './shared/components/liste-clients/liste-c
 import { ClientsComponent } from './shared/components/donneesclient/clients/clients.component';
 import { FacturesComponent } from './shared/components/donneesclient/factures/factures.component';
 import { BanqueComponent } from './shared/components/banque/banque.component';
+import { ListebanqueComponent } from './shared/components/listebanque/listebanque.component';
+import { DiscussionComponent } from './shared/components/discussion/discussion.component';
 export const routes: Routes = [
   {
     path: '',
@@ -31,6 +33,10 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'login',
+    component: DiscussionComponent
   },
   {
     path: 'clients',
@@ -68,6 +74,11 @@ export const routes: Routes = [
   {
     path: 'note-de-frais',
     component: NoteDeFraisComponent
+  }
+  ,
+  {
+    path: 'listebanque',
+    component: ListebanqueComponent,
   }
   ,
   {
