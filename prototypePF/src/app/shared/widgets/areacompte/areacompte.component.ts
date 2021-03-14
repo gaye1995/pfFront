@@ -22,10 +22,10 @@ export class AreacompteComponent implements OnInit {
         type: 'area'
       },
       title: {
-        text: 'Paiement annuelle'
+        text: 'Bilan N_1'
       },
       subtitle: {
-        text: 'Clients'
+        text: ''
       },
       xAxis:{
         categories:["Jan", "Feb", "Mar", "Apr", "May", "Jun",

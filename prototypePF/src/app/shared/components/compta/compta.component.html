@@ -1,95 +1,119 @@
-<!-- 
+<section id="pricing" class="bg-white">
+    <div class="container">
+        <h2 class="text-center">Recettes et Dépense</h2>
+        <div class="spacer spacer-line border-primary">&nbsp;</div>
+        <div class="spacer">&nbsp;</div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="pricing-table">
+                    <div class="pricing-table-title">
+                        <h5 class="pricing-title bg-info-hover text-white">Paiements Clients</h5>
+                    </div>
+                    <div class="pricing-table-price text-center bg-info">
+                        <p class="title-font">
+                            <!-- <span class="pricing-period text-white mr-1">From</span> -->
+                            <span class="pricing-currency text-white">€</span>
+                            <span class="pricing-price text-white">14000.99</span>
+                            <!-- <span class="pricing-period text-white">/ Mo.</span> -->
+                        </p>
+                    </div>
+                    <!-- <div class="pricing-table-content">
+                        <ul >
+                            <li><strong>Details</strong></li>
+                            <li><strong style="text-align: left;" >Janvier : 11000 €</strong></li>
+                            <li><strong style="text-align: left;" >Février : 11000 €</strong></li>
+                            <li><strong style="text-align: left;">Mars : 11000 €</strong></li>
+                            <li><strong style="text-align: left;" >Avril : 0.00 €</strong></li>
+                            <li><strong style="text-align: left; ">Mai : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Juin : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Juillet : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Aout : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Septembre : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Octobre : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Novembre : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Decembre : 0.00 €</strong></li>
+                        </ul>
+                    </div>/ pricing-table-content -->
+                </div><!-- / pricing-table -->
+            </div><!-- / column -->
 
-<mat-sidenav-container fullscreen>
-    <mat-sidenav mode="side"  #sidenav opened position="start"> 
-        <span class="toolbar-spacer"></span>
-    <mat-card-actions class="mb-2 center">
-        <mat-accordion>
-            <mat-expansion-panel hideToggle>
-                <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Bilan Compte de résultat Balance
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button >Bilan synthétique</button>
-                    </mat-card-actions>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button >Compte de résultat synthétique</button>
-                    </mat-card-actions>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button>Balance Général</button>
-                    </mat-card-actions>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button >Bilan Général</button>
-                    </mat-card-actions>  
-                </mat-expansion-panel>
-          </mat-accordion>
-          
-    </mat-card-actions>
-    <mat-card-actions class="mb-2 center">
-        <mat-accordion>
-            <mat-expansion-panel hideToggle>
-                <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Clients
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button >Encours Clients selon facturation </button>
-                    </mat-card-actions>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button >Statistique vente/clients/mois</button>
-                    </mat-card-actions>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button>Balance Général</button>
-                    </mat-card-actions>
-                </mat-expansion-panel>
-          </mat-accordion> 
-    </mat-card-actions>
-    <mat-card-actions class="mb-2 center">
-        <mat-accordion>
-            <mat-expansion-panel hideToggle>
-                <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Banques /  Caisse
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button >Soldes comptes bancaires </button>
-                    </mat-card-actions>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button >listes opérations bancaires</button>
-                    </mat-card-actions>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button>Solde Caisse</button>
-                    </mat-card-actions>
-                    <mat-card-actions class="mb-2 center">
-                        <button mat-button>Opération Caisse</button>
-                    </mat-card-actions>
-                </mat-expansion-panel>
-          </mat-accordion>   
-        </mat-card-actions>
-    <mat-card-actions class="mb-2 center">
-        <button mat-button>Clocture</button>
-    </mat-card-actions>
-    <mat-card-actions class="mb-2 center">
-        <button mat-button >societe</button>
-    </mat-card-actions>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <mat-toolbar>
-        <button mat-button (click)="navTo('/dashbord')" >Dashbord</button>
-        <span class="toolbar-spacer"></span>
-        <button mat-button (click)="navTo('/finances')" >Finances</button>
-        <button mat-button (click)="sidenav.toggle()">Compta</button>
-        <button mat-button (click)="navTo('/factures')">Factures</button>
-        <button mat-button (click)="navTo('/note-de-frais')" >Note de frais</button>
-        <button mat-button (click)="navTo('/clocture')">Clocture</button>
-        <button mat-button (click)="navTo('societeliste')" >societe</button>
-      </mat-toolbar> -->
-       <div >
-           dsfdgfhgj
+           <div class="col-md-4">
+                <div class="pricing-table bg-lightgrey">
+                    <div class="pricing-table-title">
+                        <h5 class="pricing-title bg-primary-hover text-white">Reste à payer</h5>
+                    </div>
+                    <div class="pricing-table-price text-center bg-primary">
+                        <p class="title-font">
+                            <!-- <span class="pricing-period text-white mr-1">From</span> -->
+                            <span class="pricing-currency text-white">€</span>
+                            <span class="pricing-price text-white">3000</span>
+                            <!-- <span class="pricing-period text-white">/ Mo.</span> -->
+                        </p>
+                    </div>
+                    <!-- <div class="pricing-table-content">
+                        <ul >
+                            <li><strong style="text-align: left;">Details</strong></li>
+                            <li><strong style="text-align: left;">Janvier : 1000.00 €</strong></li>
+                            <li><strong style="text-align: left;">Février : 1000.00 €</strong></li>
+                            <li><strong style="text-align: left;">Mars : 1000.00 €</strong></li>
+                            <li><strong style="text-align: left;">Avril : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Mai : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Juin : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Juillet : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Aout : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Septembre : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Octobre : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Novembre : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Decembre : 0.00 €</strong></li>
+                        </ul>
+                    </div>/ pricing-table-content -->
+                </div><!-- / pricing-table -->
+            </div><!-- / column -->
+
+            <div class="col-md-4">
+                <div class="pricing-table">
+                    <div class="pricing-table-title">
+                        <h5 class="pricing-title bg-info-hover text-white">Dépense</h5>
+                    </div>
+                    <div class="pricing-table-price text-center bg-info">
+                        <p class="title-font">
+                            <!-- <span class="pricing-period text-white mr-1">From</span> -->
+                            <span class="pricing-currency text-white">€</span>
+                            <span class="pricing-price text-white">5000.00</span>
+                            <!-- <span class="pricing-period text-white">/ Mo.</span> -->
+                        </p>
+                    </div>
+                    <!-- <div class="pricing-table-content">
+                        <ul >
+                            <li><strong style="text-align: left;">Details</strong></li>
+                            <li><strong style="text-align: left;">Janvier : 2000.00 €</strong></li>
+                            <li><strong style="text-align: left;">Février : 1500.00 €</strong></li>
+                            <li><strong style="text-align: left;">Mars : 1500.00 €</strong></li>
+                            <li><strong style="text-align: left;">Avril : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Mai : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Juin : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Juillet : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Aout : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Septembre : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Octobre : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Novembre : 0.00 €</strong></li>
+                            <li><strong style="text-align: left;">Decembre : 0.00 €</strong></li>
+                        </ul>
+                    </div>/ pricing-table-content -->
+                </div><!-- / pricing-table -->
+            </div><!-- / column -->
+        </div><!-- / row -->
+    </div><!-- / container -->
+</section>
+<div >
+      <kendo-chart [categoryAxis]='{ categories: categories }'>
+        <kendo-chart-title text='Graphique de Recettes et Dépense/ mois %/'></kendo-chart-title>
+        <kendo-chart-legend position='bottom' orientation='horizontal'></kendo-chart-legend>
+        <kendo-chart-tooltip format='{0}%'></kendo-chart-tooltip>
+        <kendo-chart-series>
+            <kendo-chart-series-item *ngFor='let item of series'
+                [data]='item.data' [name]='item.name'>
+            </kendo-chart-series-item>
+        </kendo-chart-series>
+      </kendo-chart>
     </div> 
-  
-  

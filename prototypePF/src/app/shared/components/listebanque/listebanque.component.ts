@@ -8,11 +8,10 @@ export interface PeriodicElement {
   symbol1: string;
   symbol2: string;
   symbol3: string;
-  symbol4: string;
 
 }
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Mboup Gaye', weight: "15 rue de l'arche", symbol: 'paris',symbol1: "75009",symbol2: "XXXXXX@gmail.com",symbol3: "salarié",symbol4: "za"},
+  {position: 1, name: 'Banque', weight: "Bnp", symbol: 'FR76 XXXXXXXXXX',symbol1: "512",symbol2: "512 Banque",symbol3: "compte actif"},
 ];
 @Component({
   selector: 'app-listebanque',
@@ -25,7 +24,7 @@ export class ListebanqueComponent implements OnInit {
 
   constructor(private router: Router) { }
  
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'symbol1', 'symbol2', 'symbol3'];
+  displayedColumns: string[] = [ 'name', 'weight', 'symbol', 'symbol1', 'symbol2', 'symbol3'];
   dataSource = ELEMENT_DATA;
 
   ngOnInit(): void {

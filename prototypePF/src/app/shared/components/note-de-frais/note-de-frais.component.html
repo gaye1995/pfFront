@@ -1,18 +1,37 @@
+<mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Début - Fin</mat-label>
+    <mat-date-range-input [formGroup]="campaignOne" [rangePicker]="campaignOnePicker"
+        [comparisonStart]="campaignTwo.value.start" [comparisonEnd]="campaignTwo.value.end">
+        <input matStartDate placeholder="Start date" formControlName="start">
+        <input matEndDate placeholder="End date" formControlName="end">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+    <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+</mat-form-field>
+<!-- <mat-card>
+            <mat-icon> attach_money</mat-icon>
+            <span></span>
+            <span class="example-spacer"></span>
+            <input class="form-control" type="search" placeholder="Rechercher une facture" aria-label="Rechercher">
+             <button class="btn my-2 my-sm-0 text-light bg_bouton_principal" type="submit"><i class="fas fa-search"></i></button>
+        </mat-card> -->
 
-        <mat-form-field class="example-form-field" appearance="fill">
-            <mat-label>Début - Fin</mat-label>
-            <mat-date-range-input
-            [formGroup]="campaignOne"
-            [rangePicker]="campaignOnePicker"
-            [comparisonStart]="campaignTwo.value.start"
-            [comparisonEnd]="campaignTwo.value.end">
-            <input matStartDate placeholder="Start date" formControlName="start">
-            <input matEndDate placeholder="End date" formControlName="end">
-            </mat-date-range-input>
-            <mat-datepicker-toggle matSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
-            <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
-        </mat-form-field>
-        <div class="container mb-4">
+<mat-card>
+    <div class="row">
+        <div class="col-md-8">
+            <span class="h3">Liste des notes de frais</span>
+        </div>
+        <span class="example-spacer"></span>
+    </div>
+</mat-card>
+<mat-card>
+    <div class="row justify-content-between">
+        <div class="col-md-2 mr-auto float-left">
+            <input class="form-control" type="search" placeholder="Rechercher une facture" aria-label="Rechercher">
+        </div>
+    </div>
+</mat-card>
+<!-- <div class="container mb-4">
             <div class="row">
               <div class="col-md-8">
                   <span class="h3">Liste des notes de frais</span> 
@@ -24,174 +43,171 @@
                     </form>  
               </div>
             </div>  
-          </div>
-                <table class="table  table-striped table-hover bg-light shadow">
-                    <thead>
-                      <tr>
-                        <th>N° de client</th>
-                        <th>Etat</th>
-                        <th>Date </th>
-                        <th>Montant dû € </th>
-                        <th>Montant payé €</th>
-                        <th >delete <i class="fas fa-ellipsis-v "></i></th>
-                        <th >save <i class="fas fa-ellipsis-v "></i></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                      <td> 
-                        <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
-                        </td>
-                        <td style="color: green;">payé  </td>
-                        <td>23/11/2020</td>
-                        <td>2 000,00</td>
-                        <td>2 000,00</td>
-                        <td>0,00</td>
-                        <td>
-                            <mat-icon >delete</mat-icon>
-                        </td>
-                        <td>
-                            <mat-icon class="fas fa-ellipsis-v ">get_app</mat-icon>
-                         </td>
-                      </tr>
-                      <tr>
-                        <td> 
-                          <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
-                          </td>
-                          <td style="color: green;">payé  </td>
-                        <td>23/11/2020</td>
-                        <td>2 000,00</td>
-                        <td>2 000,00</td>
-                        <td>0,00</td>
-                         
-                        <td>
-                            <mat-icon>delete</mat-icon>
-                        </td>
-                        <td>
-                            <mat-icon>get_app</mat-icon>
-                         </td>
-                      </tr>
-                      <tr>
-                        <td> 
-                          <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
-                          </td>
-                          <td style="color: darkorange;">avance  </td>
-                        <td>23/11/2020</td>
-                        <td>2 000,00</td>
-                        <td>1 000,00</td>
-                        <td>0,00</td>
-                         
-                        <td>
-                            <mat-icon>delete</mat-icon>
-                        </td>
-                        <td>
-                            <mat-icon>get_app</mat-icon>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td> 
-                          <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
-                          </td>
-                          <td style="color: darkorange;">avance  </td>
-                        <td>23/11/2020</td>
-                        <td>2 000,00</td>
-                        <td>1 000,00</td>
-                        <td>1 000,00</td>
-                        <td>
-                            <mat-icon>delete</mat-icon>
-                        </td>
-                        <td>
-                            <mat-icon>get_app</mat-icon>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td> 
-                          <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
-                          </td>
-                          <td style="color: red;"> impayé  </td>
-                        <td>23/11/2020</td>
-                        <td>2 000,00</td>
-                        <td>0,00</td>
-                        <td>2 000,00</td>
-                        <td>
-                            <mat-icon>delete</mat-icon>
-                        </td>
-                        <td>
-                            <mat-icon>get_app</mat-icon>
-                                <!-- <button id="remove" class="btn btn-danger" disabled>
+          </div> -->
+<table class="table  table-striped table-hover bg-light shadow">
+    <thead>
+        <tr>
+            <th>N° de client</th>
+            <th>Etat</th>
+            <th>Date </th>
+            <th>Montant dû € </th>
+            <th>Montant payé €</th>
+            <th>delete <i class="fas fa-ellipsis-v "></i></th>
+            <th>save <i class="fas fa-ellipsis-v "></i></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <a mat-list-item routerLinkActive="list-item-active" target="_blank"
+                    href="assets/img/facture.png">NOT_6_0237</a>
+            </td>
+            <td><span class="badge badge-success">Rembourser</span>
+            <td>23/11/2020</td>
+            <td>2 000,00</td>
+            <td>2 000,00</td>
+            <td>
+                <mat-icon>delete</mat-icon>
+            </td>
+            <td>
+                <mat-icon class="fas fa-ellipsis-v ">get_app</mat-icon>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a mat-list-item routerLinkActive="list-item-active" target="_blank"
+                    href="/img/facture.png">NOT_6_0237</a>
+            </td>
+            <td><span class="badge badge-success">Rembourser</span>
+            <td>23/11/2020</td>
+            <td>2 000,00</td>
+            <td>2 000,00</td>
+
+            <td>
+                <mat-icon>delete</mat-icon>
+            </td>
+            <td>
+                <mat-icon>get_app</mat-icon>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a mat-list-item routerLinkActive="list-item-active" target="_blank"
+                    href="assets/img/facture.png">NOT_6_0237</a>
+            </td>
+            <td><span class="badge badge-success">Rembourser</span>
+            <td>23/11/2020</td>
+            <td>2 000,00</td>
+            <td>1 000,00</td>
+
+            <td>
+                <mat-icon>delete</mat-icon>
+            </td>
+            <td>
+                <mat-icon>get_app</mat-icon>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a mat-list-item routerLinkActive="list-item-active" target="_blank"
+                    href="assets/img/facture.png">NOT_6_0237</a>
+            </td>
+            <td><span class="badge badge-warning">En cours</span>
+            <td>23/11/2020</td>
+            <td>2 000,00</td>
+            <td>0,00</td>
+            <td>
+                <mat-icon>delete</mat-icon>
+            </td>
+            <td>
+                <mat-icon>get_app</mat-icon>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a mat-list-item routerLinkActive="list-item-active" target="_blank"
+                    href="assets/img/facture.png">NOT_6_0237</a>
+            </td>
+            <td><span class="badge badge-danger">refuser</span>
+            <td>23/11/2020</td>
+            <td>2 000,00</td>
+            <td>0,00</td>
+            <td>
+                <mat-icon>delete</mat-icon>
+            </td>
+            <td>
+                <mat-icon>get_app</mat-icon>
+                <!-- <button id="remove" class="btn btn-danger" disabled>
                                     <i class="fa fa-trash"></i> Delete
                                   </button> -->
-                        </td>
-                      </tr>
-                      <tr>
-                        <td> 
-                          <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
-                          </td>
-                          <td style="color: red;"> impayé  </td>
-                        <td>23/11/2020</td>
-                        <td>2 000,00</td>
-                        <td>0,00</td>
-                        <td>2 000,00</td>
-                        <td>
-                            <mat-icon>delete</mat-icon>
-                        </td>
-                        <td>
-                            <mat-icon>get_app</mat-icon>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td> 
-                          <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
-                          </td>
-                        <td style="color: green;">payé  </td>
-                        <td>23/11/2020</td>
-                        <td>2 000,00</td>
-                        <td>2 000,00</td>
-                        <td>0,00</td>
-                         
-                        <td>
-                            <mat-icon>delete</mat-icon>
-                        </td>
-                        <td>
-                            <mat-icon>get_app</mat-icon>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td> 
-                          <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
-                          </td>
-                          <td style="color: green;">payé  </td>
-                          <td>23/11/2020</td>
-                          <td>2 000,00</td>
-                          <td>2 000,00</td>
-                          <td>0,00</td>
-                        <td>
-                                <mat-icon>delete</mat-icon>
-                            </td>
-                            <td>
-                                <mat-icon>get_app</mat-icon>
-                        </td>
-                      </tr>
-            
-                    </tbody>
-                </table>
-            <div class="row justify-content-center mt-3 ">
-                <nav aria-label="" >
-                    <ul class="pagination bg_container">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                    </ul>
-                </nav>
-            </div>
-            
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a mat-list-item routerLinkActive="list-item-active" target="_blank"
+                    href="assets/img/facture.png">NOT_6_0237</a>
+            </td>
+            <td><span class="badge badge-danger">Refuser</span>
+            <td>23/11/2020</td>
+            <td>2 000,00</td>
+            <td>2 000,00</td>
+            <td>
+                <mat-icon>delete</mat-icon>
+            </td>
+            <td>
+                <mat-icon>get_app</mat-icon>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
+            </td>
+            <td><span class="badge badge-success">Rembourser</span>
+            <td>23/11/2020</td>
+            <td>2 000,00</td>
+            <td>2 000,00</td>
+
+            <td>
+                <mat-icon>delete</mat-icon>
+            </td>
+            <td>
+                <mat-icon>get_app</mat-icon>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
+            </td>
+            <td><span class="badge badge-success">Rembourser</span>
+            <td>23/11/2020</td>
+            <td>2 000,00</td>
+            <td>2 000,00</td>
+            <td>
+                <mat-icon>delete</mat-icon>
+            </td>
+            <td>
+                <mat-icon>get_app</mat-icon>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+<div class="row justify-content-center mt-3 ">
+    <nav aria-label="">
+        <ul class="pagination bg_container">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

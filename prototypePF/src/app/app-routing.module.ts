@@ -19,6 +19,8 @@ import { FacturesComponent } from './shared/components/donneesclient/factures/fa
 import { BanqueComponent } from './shared/components/banque/banque.component';
 import { ListebanqueComponent } from './shared/components/listebanque/listebanque.component';
 import { DiscussionComponent } from './shared/components/discussion/discussion.component';
+import { CloctureComponent } from './shared/components/clocture/clocture.component';
+import { UtilisateursComponent } from './shared/components/utilisateurs/utilisateurs.component';
 export const routes: Routes = [
   {
     path: '',
@@ -35,7 +37,7 @@ export const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'login',
+    path: 'discussion',
     component: DiscussionComponent
   },
   {
@@ -72,6 +74,16 @@ export const routes: Routes = [
   }
   ,
   {
+    path: 'utilisateurs',
+    component: UtilisateursComponent
+  }
+  ,
+  {
+    path: 'clocture',
+    component: CloctureComponent
+  }
+  ,
+  {
     path: 'note-de-frais',
     component: NoteDeFraisComponent
   }
@@ -92,7 +104,7 @@ export const routes: Routes = [
   }]}];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

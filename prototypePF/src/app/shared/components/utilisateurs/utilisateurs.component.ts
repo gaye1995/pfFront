@@ -16,11 +16,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {modifier:'',identifiant:" xxxxx@gmail.com", position:'emilie', name: 'Hydrogen', weight: "L&K", symbol: "12-13-2021"},
 ];
 @Component({
-  selector: 'app-gerant',
-  templateUrl: './gerant.component.html',
-  styleUrls: ['./gerant.component.scss']
+  selector: 'app-utilisateurs',
+  templateUrl: './utilisateurs.component.html',
+  styleUrls: ['./utilisateurs.component.scss']
 })
-export class GerantComponent implements OnInit {
+export class UtilisateursComponent implements OnInit {
   displayedColumns: string[] = ['identifiant','position', 'name', 'weight', 'symbol','modifier'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
@@ -35,3 +35,10 @@ export class GerantComponent implements OnInit {
   }
 
 }
+
+
+
+
+
+
+

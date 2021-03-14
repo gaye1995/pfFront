@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
 import 'hammerjs';
 import {DefaultModule} from './layouts/default/default.module';
 import { ClientsModule } from './shared/components/donneesclient/clients/clients.module';
@@ -17,15 +18,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    ForgetPasswordComponent,
   ],
   imports: [
     ClientsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    CommonModule,
     DefaultModule,
     MatCardModule,
     MatFormFieldModule,

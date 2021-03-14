@@ -39,6 +39,12 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { EmployeeListeComponent } from 'src/app/shared/components/employee-liste/employee-liste.component';
 import { ListebanqueComponent } from 'src/app/shared/components/listebanque/listebanque.component';
 import { BanqueComponent } from 'src/app/shared/components/banque/banque.component';
+import { CloctureComponent } from 'src/app/shared/components/clocture/clocture.component';
+import { MatSortModule } from '@angular/material/sort' ;
+import { UtilisateursComponent } from 'src/app/shared/components/utilisateurs/utilisateurs.component';
+import { RegisterComponent } from 'src/app/shared/auth/register/register.component';
+import { ForgetPasswordComponent } from 'src/app/shared/auth/forget-password/forget-password.component';
+import { LoginComponent } from 'src/app/shared/auth/login/login.component';
 @NgModule({
   declarations: [
     DefaultComponent,
@@ -48,7 +54,12 @@ import { BanqueComponent } from 'src/app/shared/components/banque/banque.compone
     ComptaComponent,
     EmployeeListeComponent,
     ListebanqueComponent,
-    BanqueComponent
+    BanqueComponent,
+    CloctureComponent,
+    UtilisateursComponent,
+    LoginComponent,
+    RegisterComponent,
+    ForgetPasswordComponent,
 
   ],
   imports: [
@@ -58,6 +69,7 @@ import { BanqueComponent } from 'src/app/shared/components/banque/banque.compone
     MatDatepickerModule,
     MatToolbarModule,
     MatCheckboxModule,
+    MatSortModule,
     MatMenuModule,
     MatTableModule,
     ModalModule,

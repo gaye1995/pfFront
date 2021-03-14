@@ -1,15 +1,15 @@
-<div class="container mb-4">
+<mat-card>
   <div class="row">
     <div class="col-md-8">
-        <span class="h3">Liste mes clients</span> 
+        <span class="h3">Liste des factures</span> 
     </div>
-    <div class="col-md-4 ">
-        <form class="form-inline float-right">
-            <input class="form-control" type="search" placeholder="Rechercher une facture" aria-label="Rechercher">
-            <button class="btn my-2 my-sm-0 text-light bg_bouton_principal" type="submit"><i class="fas fa-search"></i></button>
-          </form>  
-    </div>
-  </div>  
+    <span class="example-spacer"></span>
+  </div>
+</mat-card>
+<mat-card>
+<div class="row">
+<div class="col-md-2  float-left">
+<input class="form-control" type="search" placeholder="Rechercher un facture" aria-label="Rechercher">
 </div>
       <table class="table  table-striped table-hover bg-light shadow">
           <thead>
@@ -28,10 +28,10 @@
           <tbody>
             <tr>
             <td> 
-              <a mat-list-item routerLinkActive="list-item-active" routerLink="/exemplefacture">FAC_6_0237</a>
+              <a mat-list-item routerLinkActive="list-item-active" href="assets/img/facture.pdf" target="_blank">FAC_6_0237</a>
               </td>
-              <td style="color: green;">payé  </td>
-              <td>23/11/2020</td>
+              <td><span class="badge badge-success">payée</span>
+                <td>23/11/2020</td>
               <td>2 000,00</td>
               <td>2 000,00</td>
               <td>0,00</td>
@@ -47,7 +47,8 @@
                 <a target="_blank" href="asset/img/facture.pdf" ng-click="(asset/img/facture.pdf)" style="line-height:20px">FAC_6_0237</a>
                 <!-- <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a> -->
                 </td>
-                <td style="color: green;">payé  </td>
+                <td><span class="badge badge-success">payée</span>
+                </td>
               <td>23/11/2020</td>
               <td>2 000,00</td>
               <td>2 000,00</td>
@@ -63,7 +64,8 @@
               <td> 
                 <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
                 </td>
-                <td style="color: darkorange;">avance  </td>
+                <td><span class="badge badge-warning">Avance</span>
+                </td>
               <td>23/11/2020</td>
               <td>2 000,00</td>
               <td>1 000,00</td>
@@ -79,8 +81,8 @@
               <td> 
                 <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
                 </td>
-                <td style="color: darkorange;">avance  </td>
-              <td>23/11/2020</td>
+                <td><span class="badge badge-warning">Avance</span>
+                  <td>23/11/2020</td>
               <td>2 000,00</td>
               <td>1 000,00</td>
               <td>1 000,00</td>
@@ -95,7 +97,7 @@
               <td> 
                 <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
                 </td>
-                <td style="color: red;"> impayé  </td>
+                <td><span class="badge badge-danger">impayé</span></td>
               <td>23/11/2020</td>
               <td>2 000,00</td>
               <td>0,00</td>
@@ -111,7 +113,7 @@
               <td> 
                 <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
                 </td>
-                <td style="color: red;"> impayé  </td>
+                <td><span class="badge badge-danger">impayé</span></td>
               <td>23/11/2020</td>
               <td>2 000,00</td>
               <td>0,00</td>
@@ -127,8 +129,8 @@
               <td> 
                 <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
                 </td>
-              <td style="color: green;">payé  </td>
-              <td>23/11/2020</td>
+                <td><span class="badge badge-success">payée</span>
+                  <td>23/11/2020</td>
               <td>2 000,00</td>
               <td>2 000,00</td>
               <td>0,00</td>
@@ -143,8 +145,8 @@
               <td> 
                 <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
                 </td>
-                <td style="color: green;">payé  </td>
-                <td>23/11/2020</td>
+                <td><span class="badge badge-success">payée</span>
+                  <td>23/11/2020</td>
                 <td>2 000,00</td>
                 <td>2 000,00</td>
                 <td>0,00</td>
@@ -177,4 +179,4 @@
           </ul>
       </nav>
   </div>
-  
+</mat-card>

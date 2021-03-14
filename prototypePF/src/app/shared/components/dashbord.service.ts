@@ -18,7 +18,7 @@ export class DashbordService {
   ];}
 
   cards() {
-    return [45, 245];
+    return [45, 60];
   }
 
   pieChart() {
