@@ -18,10 +18,8 @@ import { CardComponent } from './widgets/card/card.component';
 import { BanqueComponent } from './components/banque/banque.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { DiscussionComponent } from './components/discussion/discussion.component';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
-import { ForgetPasswordComponent } from './auth/forget-password/forget-password.component';
 import { MatCardModule } from '@angular/material/card';
+import { ComptederesultatComponent } from './components/comptederesultat/comptederesultat.component';
 
 // import { CardComponent } from './widgets/card/card.component';
 // import { PieComponent } from './widgets/pie/pie.component';

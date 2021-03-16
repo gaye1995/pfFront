@@ -1,44 +1,8 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-table {
-    width: 100%;
-  }
-  .companyName{
-    font-size: 150%;
-}
-div {
-    overflow: inherit;
-}
-a{
-    text-decoration: none;
-    font-size: 110%;
-    white-space: normal;
-}
-button{
-    font-size: 110%;
-    min-width: min-content;
-    color: #fff;
-}
-.example-icon {
-    padding: 0 14px;
-  }
-
-  .example-spacer {
-    flex: 1 1 auto;
-  }
- 
-  .example-tree-invisible {
-    display: none;
-  }
-  
-.example-tree ul,
-.example-tree li {
-    margin-top: 0;
-    margin-bottom: 0;
-    list-style-type: none;
-  }
-
-
+// table {
+//     width: 100%;
+//   }
   :host {
     display: flex;
     flex-direction: column;
@@ -55,4 +19,7 @@ button{
     background-color: #fff;
     background: #fff;
     position: relative;
+}
+.mat-icon {
+  vertical-align: middle;    
 }

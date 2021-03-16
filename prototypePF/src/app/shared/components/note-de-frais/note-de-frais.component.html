@@ -1,66 +1,85 @@
-<mat-form-field class="example-form-field" appearance="fill">
-    <mat-label>Début - Fin</mat-label>
-    <mat-date-range-input [formGroup]="campaignOne" [rangePicker]="campaignOnePicker"
-        [comparisonStart]="campaignTwo.value.start" [comparisonEnd]="campaignTwo.value.end">
-        <input matStartDate placeholder="Start date" formControlName="start">
-        <input matEndDate placeholder="End date" formControlName="end">
-    </mat-date-range-input>
-    <mat-datepicker-toggle matSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
-    <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
-</mat-form-field>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
 <!-- <mat-card>
             <mat-icon> attach_money</mat-icon>
-            <span></span>
-            <span class="example-spacer"></span>
-            <input class="form-control" type="search" placeholder="Rechercher une facture" aria-label="Rechercher">
-             <button class="btn my-2 my-sm-0 text-light bg_bouton_principal" type="submit"><i class="fas fa-search"></i></button>
         </mat-card> -->
 
 <mat-card>
+
     <div class="row">
-        <div class="col-md-8">
-            <span class="h3">Liste des notes de frais</span>
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-header text-light" style="background-color: #2865A2;">
+                    Traitements des notes de frais
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="exampleFormControlInput1" class="form-label">Montant </label>
+                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Montant">
+                    </div>
+                    <div class=" mb-3 col-md-4">
+                        <div class="form-group">
+                            <label for="form-select-lg" class="form-label">Note </label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="note-de-frais">
+                                <option selected value="">Etat</option>
+                                <option value="encours">En cours</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class=" mb-3 col-md-4">
+                        <div class="form-group mt-4">
+                            <button type="button" class="btn btn-primary text-light form-group"
+                                id="select-note">submit</button>
+                        </div>
+                    </div>
+                    <!-- <button class="btn text-light my-2 my-sm-0" type="submit"><mat-icon>submit</mat-icon></button> -->
+                </div>
+            </div>
         </div>
-        <span class="example-spacer"></span>
+        <div class="col-md-12  ">
+            <div class="col-md-8">
+                <span class="h3">Liste des notes de frais</span>
+            </div>
+            <mat-form-field class="example-form-field my-2 my-lg-0 d-flex flex-row float-right" appearance="fill">
+                <mat-label>Début - Fin</mat-label>
+                <mat-date-range-input [formGroup]="campaignOne" [rangePicker]="campaignOnePicker"
+                    [comparisonStart]="campaignTwo.value.start" [comparisonEnd]="campaignTwo.value.end">
+                    <input matStartDate placeholder="Start date" formControlName="start">
+                    <input matEndDate placeholder="End date" formControlName="end">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+                <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+            </mat-form-field>
+        </div>
+        <div class="col-md-12  ">
+            <form class="form-inline my-2 my-lg-0 d-flex flex-row float-right">
+                <input class="form-control mr-sm-0" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn text-light my-2 my-sm-0" type="submit">
+                    <mat-icon>search</mat-icon>
+                </button>
+            </form>
+        </div>
     </div>
 </mat-card>
-<mat-card>
-    <div class="row justify-content-between">
-        <div class="col-md-2 mr-auto float-left">
-            <input class="form-control" type="search" placeholder="Rechercher une facture" aria-label="Rechercher">
-        </div>
-    </div>
-</mat-card>
-<!-- <div class="container mb-4">
-            <div class="row">
-              <div class="col-md-8">
-                  <span class="h3">Liste des notes de frais</span> 
-              </div>
-              <div class="col-md-4 ">
-                  <form class="form-inline float-right">
-                      <input class="form-control" type="search" placeholder="Rechercher une facture" aria-label="Rechercher">
-                      <button class="btn my-2 my-sm-0 text-light bg_bouton_principal" type="submit"><i class="fas fa-search"></i></button>
-                    </form>  
-              </div>
-            </div>  
-          </div> -->
 <table class="table  table-striped table-hover bg-light shadow">
     <thead>
         <tr>
-            <th>N° de client</th>
+            <th>Justificatif</th>
             <th>Etat</th>
             <th>Date </th>
             <th>Montant dû € </th>
             <th>Montant payé €</th>
             <th>delete <i class="fas fa-ellipsis-v "></i></th>
-            <th>save <i class="fas fa-ellipsis-v "></i></th>
+            <th> <i class="fas fa-ellipsis-v "></i></th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>
-                <a mat-list-item routerLinkActive="list-item-active" target="_blank"
-                    href="assets/img/facture.png">NOT_6_0237</a>
+                <a mat-list-item routerLinkActive="list-item-active" target="_blank" href="assets/img/facture.png">
+                    <mat-icon> insert_photo</mat-icon> note1
+                </a>
             </td>
             <td><span class="badge badge-success">Rembourser</span>
             <td>23/11/2020</td>
@@ -75,8 +94,9 @@
         </tr>
         <tr>
             <td>
-                <a mat-list-item routerLinkActive="list-item-active" target="_blank"
-                    href="/img/facture.png">NOT_6_0237</a>
+                <a mat-list-item routerLinkActive="list-item-active" target="_blank" href="assets/img/facture.png">
+                    <mat-icon> insert_photo</mat-icon> note1
+                </a>
             </td>
             <td><span class="badge badge-success">Rembourser</span>
             <td>23/11/2020</td>
@@ -92,8 +112,9 @@
         </tr>
         <tr>
             <td>
-                <a mat-list-item routerLinkActive="list-item-active" target="_blank"
-                    href="assets/img/facture.png">NOT_6_0237</a>
+                <a mat-list-item routerLinkActive="list-item-active" target="_blank" href="assets/img/facture.png">
+                    <mat-icon> insert_photo</mat-icon> note1
+                </a>
             </td>
             <td><span class="badge badge-success">Rembourser</span>
             <td>23/11/2020</td>
@@ -109,8 +130,9 @@
         </tr>
         <tr>
             <td>
-                <a mat-list-item routerLinkActive="list-item-active" target="_blank"
-                    href="assets/img/facture.png">NOT_6_0237</a>
+                <a mat-list-item routerLinkActive="list-item-active" target="_blank" href="assets/img/facture.png">
+                    <mat-icon> insert_photo</mat-icon> note1
+                </a>
             </td>
             <td><span class="badge badge-warning">En cours</span>
             <td>23/11/2020</td>
@@ -125,8 +147,9 @@
         </tr>
         <tr>
             <td>
-                <a mat-list-item routerLinkActive="list-item-active" target="_blank"
-                    href="assets/img/facture.png">NOT_6_0237</a>
+                <a mat-list-item routerLinkActive="list-item-active" target="_blank" href="assets/img/facture.png">
+                    <mat-icon> insert_photo</mat-icon> note1
+                </a>
             </td>
             <td><span class="badge badge-danger">refuser</span>
             <td>23/11/2020</td>
@@ -144,8 +167,9 @@
         </tr>
         <tr>
             <td>
-                <a mat-list-item routerLinkActive="list-item-active" target="_blank"
-                    href="assets/img/facture.png">NOT_6_0237</a>
+                <a mat-list-item routerLinkActive="list-item-active" target="_blank" href="assets/img/facture.png">
+                    <mat-icon> insert_photo</mat-icon> note1
+                </a>
             </td>
             <td><span class="badge badge-danger">Refuser</span>
             <td>23/11/2020</td>
@@ -160,8 +184,9 @@
         </tr>
         <tr>
             <td>
-                <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
-            </td>
+                <a mat-list-item routerLinkActive="list-item-active" target="_blank" href="assets/img/facture.png">
+                    <mat-icon> insert_photo</mat-icon> note1
+                </a> </td>
             <td><span class="badge badge-success">Rembourser</span>
             <td>23/11/2020</td>
             <td>2 000,00</td>
@@ -176,7 +201,9 @@
         </tr>
         <tr>
             <td>
-                <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
+                <a mat-list-item routerLinkActive="list-item-active" target="_blank" href="assets/img/facture.png">
+                    <mat-icon> insert_photo</mat-icon> note1
+                </a>
             </td>
             <td><span class="badge badge-success">Rembourser</span>
             <td>23/11/2020</td>
@@ -211,3 +238,10 @@
         </ul>
     </nav>
 </div>
+
+
+<script>
+    $('#select-note').on("click", function () {
+        $('select[name=note-de-frais] option[value="encours"]').prop('selected', true);
+    });
+</script>

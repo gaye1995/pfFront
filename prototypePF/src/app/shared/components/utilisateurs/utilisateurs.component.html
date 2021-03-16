@@ -1,21 +1,20 @@
 
 <mat-card>
-    <div class="row">
-      <div class="col-md-8">
-          <span class="h3 float-right">Utilisateurs</span> 
-      </div>
-      <span class="example-spacer"></span>
+  <div class="row">
+    <div class="col-md-8">
+        <span class="h3">Utilisateurs</span> 
     </div>
-  </mat-card>
-  <mat-card>
-  <div class="row justify-content-between">
-    <div class="col-md-4 mr-auto"> 
-        <input class="form-control" type="search" placeholder="Rechercher une facture" aria-label="Rechercher">                     
-    </div>
-    <div class="col-md-4"><a mat-list-item routerLinkActive="list-item-active" routerLink="/register">
-        nouveau Utilisateur </a></div>
+    <span class="example-spacer"></span>
+  </div>
+  <div class="row">
+    <div class="col-md-12  ">
+      <form class="form-inline my-2 my-lg-0 d-flex flex-row float-right">
+        <input class="form-control mr-sm-0" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn text-light my-2 my-sm-0" type="submit"><mat-icon>search</mat-icon></button>
+      </form>  </div>
   </div>
 </mat-card>
+<mat-card>
   <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 <!-- Position Column -->
 <ng-container matColumnDef="identifiant">
@@ -53,4 +52,5 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+</mat-card>
   

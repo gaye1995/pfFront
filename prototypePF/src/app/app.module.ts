@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 import 'hammerjs';
 import {DefaultModule} from './layouts/default/default.module';
 import { ClientsModule } from './shared/components/donneesclient/clients/clients.module';
@@ -12,6 +12,7 @@ import { LoginComponent } from './shared/auth/login/login.component';
 import { ForgetPasswordComponent } from './shared/auth/forget-password/forget-password.component';
 import { MatCardModule } from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { ListearticleModule } from './shared/components/listearticle/listearticle.module';
 
 
 
@@ -21,6 +22,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   ],
   imports: [
     ClientsModule,
+    ListearticleModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -32,7 +34,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     
   ],
   
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

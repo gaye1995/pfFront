@@ -5,9 +5,9 @@ import { LoginRoutingModule } from '././shared/auth/login/login-routing.module';
 import { RegisterRoutingModule } from '././shared/auth/register/register-routing.module';
 import { RegisterComponent } from '././shared/auth/register/register.component';
 import { DashbordRoutingModule } from '././shared/components/dashbord/dashbord-routing.module';
-import {DashbordComponent } from '././shared/components/dashbord/dashbord.component';
-import {SocietelisteComponent } from '././shared/components/societeliste/societeliste.component';
-import {EmployeeListeComponent} from '././shared/components/employee-liste/employee-liste.component'
+import { DashbordComponent } from '././shared/components/dashbord/dashbord.component';
+import { SocietelisteComponent } from '././shared/components/societeliste/societeliste.component';
+import { EmployeeListeComponent } from '././shared/components/employee-liste/employee-liste.component'
 import { ForgetPasswordComponent } from '././shared/auth/forget-password/forget-password.component';
 import { ComptaComponent } from '././shared/components/compta/compta.component';
 import { FinancesComponent } from '././shared/components/finances/finances.component';
@@ -21,87 +21,116 @@ import { ListebanqueComponent } from './shared/components/listebanque/listebanqu
 import { DiscussionComponent } from './shared/components/discussion/discussion.component';
 import { CloctureComponent } from './shared/components/clocture/clocture.component';
 import { UtilisateursComponent } from './shared/components/utilisateurs/utilisateurs.component';
+import { ListearticleComponent } from './shared/components/listearticle/listearticle.component';
+import { BilanComponent } from './shared/components/bilan/bilan.component';
+import { DepenseComponent } from './shared/components/depense/depense.component';
+import { ComptederesultatComponent } from './shared/components/comptederesultat/comptederesultat.component';
+
+
 export const routes: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'forget-password',
+    component: ForgetPasswordComponent
+  },
+ 
   {
     path: '',
     component: DefaultComponent,
     children: [{
       path: '',
       component: DashbordComponent
-    },{
+    }, 
+    {
       path: 'employee-liste',
       component: EmployeeListeComponent
-  },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'discussion',
-    component: DiscussionComponent
-  },
-  {
-    path: 'clients',
-    component: ClientsComponent
-  },
-  {
-    path: 'register',
-    component: RegisterComponent
-  },
-  {
-    path: 'societeliste',
-    component: SocietelisteComponent
-  },
-  {
-    path: 'employee-liste',
-    component: EmployeeListeComponent
-  },
-  {
-    path: 'forget-password',
-    component: ForgetPasswordComponent
-  },
-  {
-    path: 'compta',
-    component: ComptaComponent
-  },
-  {
-    path: 'finances',
-    component: FinancesComponent
-  },
-  {
-    path: 'factures',
-    component: FacturesComponent
-  }
-  ,
-  {
-    path: 'utilisateurs',
-    component: UtilisateursComponent
-  }
-  ,
-  {
-    path: 'clocture',
-    component: CloctureComponent
-  }
-  ,
-  {
-    path: 'note-de-frais',
-    component: NoteDeFraisComponent
-  }
-  ,
-  {
-    path: 'listebanque',
-    component: ListebanqueComponent,
-  }
-  ,
-  {
-    path: 'banque',
-    component: BanqueComponent
-  }
-  ,
-  {
-    path: 'liste-clients',
-    component: ListeClientsComponent
-  }]}];
+    },
+    {
+      path: 'article',
+      component: ListearticleComponent,
+    },
+    {
+      path: 'Bilan',
+      component: BilanComponent,
+    },
+    {
+      path: 'depense',
+      component: DepenseComponent,
+    },
+    {
+      path: 'Comptederesultat',
+      component: ComptederesultatComponent,
+    },
+    {
+      path: 'discussion',
+      component: DiscussionComponent
+    },
+    {
+      path: 'clients',
+      component: ClientsComponent
+    },
+    {
+      path: 'societeliste',
+      component: SocietelisteComponent
+    },
+    {
+      path: 'employee-liste',
+      component: EmployeeListeComponent
+    },
+    {
+      path: 'compta',
+      component: ComptaComponent
+    },
+    {
+      path: 'finances',
+      component: FinancesComponent
+    },
+    {
+      path: 'factures',
+      component: FacturesComponent
+    }
+      ,
+    {
+      path: 'utilisateurs',
+      component: UtilisateursComponent
+    }
+      ,
+    {
+      path: 'clocture',
+      component: CloctureComponent
+    }
+      ,
+    {
+      path: 'note-de-frais',
+      component: NoteDeFraisComponent
+    }
+      ,
+    {
+      path: 'listebanque',
+      component: ListebanqueComponent,
+    }
+      ,
+    {
+      path: 'banque',
+      component: BanqueComponent
+    }
+      ,
+    {
+      path: 'liste-clients',
+      component: ListeClientsComponent
+    }]
+  }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],

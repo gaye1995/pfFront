@@ -5,6 +5,7 @@ import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 import { Router } from '@angular/router';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
+import { FormControl, FormGroup } from '@angular/forms';
 
 // Mes interfaces de donnéee
 export interface PeriodicElement {
@@ -81,14 +82,24 @@ export class FacturesComponent implements OnInit {
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
   dataSource1 = TREE_DATA;
-  
-  // @ViewChild(MatPaginator) paginator: MatPaginator ;
+  campaignOne: FormGroup;
+  campaignTwo: FormGroup;
 
-  // ngAfterViewInit() {
-  //   this.dataSource.paginator = this.paginator;
-  // }
 
-  constructor(private router: Router) {     
+  constructor(private router: Router) {    
+    const today = new Date();
+    const month = today.getMonth();
+    const year = today.getFullYear();
+
+    this.campaignOne = new FormGroup({
+      start: new FormControl(new Date(year, month, 13)),
+      end: new FormControl(new Date(year, month, 16))
+    });
+
+    this.campaignTwo = new FormGroup({
+      start: new FormControl(new Date(year, month, 15)),
+      end: new FormControl(new Date(year, month, 19))
+    }); 
   }
 
   ngOnInit(): void {
@@ -117,6 +128,7 @@ export class FacturesComponent implements OnInit {
   navTo(path:string) {
     this.router.navigate([path]);
 }
+
 
 }
 

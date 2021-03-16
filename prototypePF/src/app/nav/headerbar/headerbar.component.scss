@@ -6,7 +6,10 @@
 // }
 .mat-toolbar{
   background-color: #2B3D4F;
-  color:#fff
+  color:#fff;
+  .mat-toolbar-row {
+    height: 7.5vh;
+  }
 }
 // .toolbar-spacer {
 //     flex: 1 1 auto;

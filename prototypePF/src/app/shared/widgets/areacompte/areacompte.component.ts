@@ -22,7 +22,7 @@ export class AreacompteComponent implements OnInit {
         type: 'area'
       },
       title: {
-        text: 'Bilan N_1'
+        text: 'Bilan N-1'
       },
       subtitle: {
         text: ''
