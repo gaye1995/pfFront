@@ -43,6 +43,7 @@ import { FacturesComponent } from '../factures/factures.component';
 import { CoordonneesComponent } from '../coordonnees/coordonnees.component';
 import { PaiementsComponent } from '../../paiements/paiements.component';
 import { ExemplefactureComponent } from '../exemplefacture/exemplefacture.component';
+import { NewfactureComponent } from '../../newfacture/newfacture.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { ExemplefactureComponent } from '../exemplefacture/exemplefacture.compon
     CoordonneesComponent,
     PaiementsComponent,
     ExemplefactureComponent,
+    NewfactureComponent,
 
   ],
   imports: [

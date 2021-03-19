@@ -1,19 +1,22 @@
-   <form>
-            
+<mat-card>
+  <form>
+  <mat-card>
             <div class="form-group">
               <label for="exampleInputEmail1">Libellé du compte *</label>
               <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Libellé du compte">
             </div>
             <select class="form-select" aria-label=" Devise du compte">
-                <option selected> Devise du compte</option>
+                <option selected> Device du compte</option>
                 <option value="1">Euro</option>
                 <option value="2">Dollard</option>
               </select>
+              <br><br>
            
-            <div>
-                <h1 style="text-align: center;"> Plan  Comptable </h1>
-
-        </div>
+              <div class="card">
+                <div class="card-header text-light" style="background-color: #2865A2; text-align: center;">
+                  <b>Plan Comptable</b>
+              </div>
+            </div><br>
             <div class="row">
             <div class="col-sm-6">
                 <div class="form-group">
@@ -29,15 +32,19 @@
               </div>
             </div>
         </div>
-            <div>
-                <h1 style="text-align: center;"> Information bancaire </h1>
+              <div class="card">
+                <div class="card-header text-light" style="background-color: #2865A2; text-align: center;">
+                  <b>Information bancaire</b>
+                </div>
+                <!-- <h1 style="">  </h1> -->
             </div>
+          </mat-card>
         <div class="row">
                 <div class="col-sm-6">
+                  <mat-card>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nom de la banque *</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nom de la banque">
-                    <small id="libellé" class="form-text text-muted">Exemple : Compte Crédit Mutuel 1.</small>
                   </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">IBAN *</label>
@@ -63,8 +70,10 @@
                 <label for="exampleInputEmail1">Pays *</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Pays">
               </div>
+            </mat-card>
             </div>
             <div class="col-sm-6">
+            <mat-card>
               <div class="form-group">
                 <label for="exampleInputEmail1">Ville *</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ville">
@@ -93,13 +102,15 @@
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
+          </mat-card>
         </div>
     </div>
+    <br>
     <div>
-        <button type="submit" routerLink="/listebanque">Submit</button>
+      <button class="btn text-light my-2 my-sm-0" type="submit" routerLink="/listebanque">Submit</button>
     </div>
 </form>
-
+</mat-card>
               
  
          

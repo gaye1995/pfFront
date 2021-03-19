@@ -16,6 +16,16 @@ export class DashbordService {
     
        }
   ];}
+  bigChartrepport() {
+    return [{
+      name: 'Revenus',
+      data: [502, 635, 809, "", 0, 0, 0,0, 0, 0, 0, 0]
+    }, {
+      name: 'Dépenses',
+      data: [104, 150, 500, "", 0,0, 0, 0, 0, 0, 0, 0]
+    
+       }
+  ];}
 
   cards() {
     return [45, 60];

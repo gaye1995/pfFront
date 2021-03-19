@@ -38,6 +38,10 @@ import { CloctureComponent } from '../clocture/clocture.component';
 import { BilanComponent } from '../bilan/bilan.component';
 import { DepenseComponent } from '../depense/depense.component';
 import { ComptederesultatComponent } from '../comptederesultat/comptederesultat.component';
+import { RepportComponent } from '../repport/repport.component';
+import { ArearepportComponent } from '../../widgets/arearepport/arearepport.component';
+import { CardrepportComponent } from '../../widgets/cardrepport/cardrepport.component';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [
@@ -47,11 +51,15 @@ import { ComptederesultatComponent } from '../comptederesultat/comptederesultat.
     BilanComponent,
     DepenseComponent,
     ComptederesultatComponent,
+    RepportComponent,
+    ArearepportComponent,
+    CardrepportComponent,
+
 
   ],
   imports: [
     CommonModule,
-    CommonModule,
+    HighchartsChartModule,
     MatDialogModule,
     MatChipsModule,
     MatSliderModule,
@@ -92,8 +100,7 @@ import { ComptederesultatComponent } from '../comptederesultat/comptederesultat.
   ],
   exports: [
     HeaderarticleComponent,
-
-    // CardComponent,
+     CardrepportComponent,
     // PieComponent
   ]
 })

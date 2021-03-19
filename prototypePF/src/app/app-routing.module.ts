@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from '././shared/auth/login/login.component';
-import { LoginRoutingModule } from '././shared/auth/login/login-routing.module';
-import { RegisterRoutingModule } from '././shared/auth/register/register-routing.module';
 import { RegisterComponent } from '././shared/auth/register/register.component';
-import { DashbordRoutingModule } from '././shared/components/dashbord/dashbord-routing.module';
 import { DashbordComponent } from '././shared/components/dashbord/dashbord.component';
 import { SocietelisteComponent } from '././shared/components/societeliste/societeliste.component';
 import { EmployeeListeComponent } from '././shared/components/employee-liste/employee-liste.component'
@@ -25,6 +22,9 @@ import { ListearticleComponent } from './shared/components/listearticle/listeart
 import { BilanComponent } from './shared/components/bilan/bilan.component';
 import { DepenseComponent } from './shared/components/depense/depense.component';
 import { ComptederesultatComponent } from './shared/components/comptederesultat/comptederesultat.component';
+import { RepportComponent } from './shared/components/repport/repport.component';
+import { ProfileComponent } from './shared/components/profile/profile.component';
+import { NewfactureComponent } from './shared/components/newfacture/newfacture.component';
 
 
 export const routes: Routes = [
@@ -56,6 +56,15 @@ export const routes: Routes = [
       path: 'employee-liste',
       component: EmployeeListeComponent
     },
+    {
+      path: 'profile',
+      component: ProfileComponent,
+    },
+    {
+      path: 'newfacture',
+      component: NewfactureComponent,
+    },
+    
     {
       path: 'article',
       component: ListearticleComponent,
@@ -99,6 +108,11 @@ export const routes: Routes = [
     {
       path: 'factures',
       component: FacturesComponent
+    }
+    ,
+    {
+      path: 'repport',
+      component: RepportComponent,
     }
       ,
     {

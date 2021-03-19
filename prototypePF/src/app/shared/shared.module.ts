@@ -19,7 +19,7 @@ import { BanqueComponent } from './components/banque/banque.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { DiscussionComponent } from './components/discussion/discussion.component';
 import { MatCardModule } from '@angular/material/card';
-import { ComptederesultatComponent } from './components/comptederesultat/comptederesultat.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 // import { CardComponent } from './widgets/card/card.component';
 // import { PieComponent } from './widgets/pie/pie.component';
@@ -33,6 +33,7 @@ import { ComptederesultatComponent } from './components/comptederesultat/compted
      AreacompteComponent,
      CardComponent,
      DiscussionComponent,
+     ProfileComponent,
     // PieComponent
   ],
   imports: [
