@@ -1,58 +1,76 @@
 <form>
-<div class="main-div">
-<mat-card-content>
-    <mat-card >
-      <mat-card-header>
-        <mat-card-title>Inscription</mat-card-title>
-      </mat-card-header>
-      <mat-card-content fxLayout="column">
-        <mat-form-field appearance="fill">
-        <div class="mb-2 center">
-          <mat-label>matricule comptable</mat-label>
-            <input matInput placeholder="matricule comptable">
-        </div>
-        </mat-form-field>
-      </mat-card-content>
-      <mat-card-content fxLayout="column">
-        <mat-form-field appearance="fill">
-        <div class="mb-2 center">
-          <mat-label>Email</mat-label>
-            <input matInput placeholder="email">
-        </div>
-        </mat-form-field>
-      </mat-card-content>
-      <mat-card-content fxLayout="column">
-        <mat-form-field appearance="fill">
-        <div class="mb-2 center">
-          <mat-label>Société</mat-label>
+  <div class="main-div w-100">
+  <mat-card-content style=" background-color: #2865A2;">
+      <mat-card  >
+        <mat-card-header>
+          <img mat-card-image src="assets/img/logo.PNG" alt="background image" >
+        </mat-card-header>
+        <mat-card-header>
+          <mat-card-title >Inscription</mat-card-title>
+        </mat-card-header>
+        <mat-card-content fxLayout="column">
+          <mat-form-field appearance="fill">
+          <div class="mb-2 center">
+            <mat-icon class="float-left mb-2 center">account_circle</mat-icon>
+              <input matInput placeholder="email">
+          </div>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-content fxLayout="column">
+          <mat-form-field appearance="fill">
+          <div class="mb-2 center">
+            <mat-icon class="float-left"> business</mat-icon>
             <input matInput placeholder="société">
-        </div>
-        </mat-form-field>
-      </mat-card-content>
-      <mat-card-content fxLayout="column">
-        <mat-form-field appearance="fill">
-            <div class="mb-2 center">
-            <mat-label>Password</mat-label>
-            <input type="password" matInput placeholder="password">
-            </div>
-        </mat-form-field>
-      </mat-card-content>
-      <mat-card-content fxLayout="column">
-        <mat-form-field appearance="fill">
-            <div class="mb-2 center">
-            <mat-label>Confirm Password</mat-label>
-            <input type="password" matInput placeholder="Confirm password">
-            </div>
-        </mat-form-field>
-      </mat-card-content>
-      <mat-card-actions class="mb-2 center">
-        <button mat-raised-button color="primary" (click)="navTo('')">S'inscrire</button>
-      </mat-card-actions>
-    <div class="center">
-        <span class="register-text">Vous avez déja un compte ?</span>
-        <span class="password-lost-text pointer" (click)="navTo('/login')">Se connecter</span>
-    </div>
-  </mat-card >
-</mat-card-content>
-</div>
-</form>
+          </div>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-content fxLayout="column">
+          <mat-form-field appearance="fill">
+              <div class="mb-2 center">
+                <mat-icon class="float-left">add_to_home_screen</mat-icon>
+                <input type="text" matInput placeholder="Siret">
+              </div>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-content fxLayout="column">
+          <mat-form-field appearance="fill">
+              <div class="mb-2 center">
+                <mat-icon class="float-left"> vpn_key</mat-icon>
+              <input type="password" matInput placeholder="password">
+              </div>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-content fxLayout="column">
+          <mat-form-field appearance="fill">
+              <div class="mb-2 center">
+                <mat-icon class="float-left"> vpn_key</mat-icon>
+              <input type="password" matInput placeholder="Confirm password">
+              </div>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions class="mb-2 center">
+          <button mat-raised-button color="primary" (click)="navTo('')">S'inscrire</button>
+        </mat-card-actions>
+      <div class="center">
+          <span class="register-text">Vous avez déja un compte ?</span>
+          <span class="password-lost-text pointer" (click)="navTo('/')">Se connecter</span>
+      </div>
+    </mat-card >
+  </mat-card-content>
+  </div>
+  </form>
+    <!-- <form>
+      <mat-card>
+          <div class="row">
+                  <div class="col-sm-6">
+                  </div>
+      </div>
+      <br>
+      <div>
+        <button class="btn text-light my-2 my-sm-0" type="submit" routerLink="/listebanque">Submit</button>
+      </div>
+    </mat-card>           
+  </form>
+    -->
+           
+          

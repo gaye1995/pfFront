@@ -29,16 +29,12 @@ import { NewfactureComponent } from './shared/components/newfacture/newfacture.c
 
 export const routes: Routes = [
   {
-    path: 'login',
+    path: '',
     component: LoginComponent,
   },
   {
     path: 'register',
     component: RegisterComponent,
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
   },
   {
     path: 'forget-password',
@@ -49,7 +45,7 @@ export const routes: Routes = [
     path: '',
     component: DefaultComponent,
     children: [{
-      path: '',
+      path: 'dashbord',
       component: DashbordComponent
     }, 
     {

@@ -1,31 +1,31 @@
 :host {
-    .mat-icon {
-      vertical-align: middle;
-      margin-right: 20px;
-    }
-    .mat-nav-list{
-      background-color: #355270;
-      height: 100%;
-      color:#fff   
-    }.mat-panel-title{
-      color: #fff;
-    }.mat-expansion-panel-header {
-      background-color: #355270;
-      color:#fff ;
-    }
-    .mat-expansion-panel {
-     background-color:#355270 ;
-     color: #fff;
-    }
-   
-    .profile-card {
-      text-align: center;
-      padding: 0 20px 20px 20px;
-      img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 50%;
-      }
+  .mat-icon {
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+  .mat-nav-list{
+    background-color: #355270;
+    height: 100%;
+    color:#fff   
+  }.mat-panel-title{
+    color: #fff;
+  }.mat-expansion-panel-header {
+    background-color: #355270;
+    color:#fff ;
+  }
+  .mat-expansion-panel {
+   background-color:#355270 ;
+   color: #fff;
+  }
+ 
+  .profile-card {
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
     }
   }
+}
