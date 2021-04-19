@@ -4,7 +4,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
-import 'hammerjs';
 import {DefaultModule} from './layouts/default/default.module';
 import { ClientsModule } from './shared/components/donneesclient/clients/clients.module';
 import { RegisterComponent } from './shared/auth/register/register.component';
@@ -13,6 +12,7 @@ import { ForgetPasswordComponent } from './shared/auth/forget-password/forget-pa
 import { MatCardModule } from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ListearticleModule } from './shared/components/listearticle/listearticle.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -30,7 +30,7 @@ import { ListearticleModule } from './shared/components/listearticle/listearticl
     DefaultModule,
     MatCardModule,
     MatFormFieldModule,
-
+    HttpClientModule,
     
   ],
   

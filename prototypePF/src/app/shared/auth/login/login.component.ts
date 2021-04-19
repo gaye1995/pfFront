@@ -20,16 +20,17 @@ export class LoginComponent implements OnInit {
  
   }
   login(){
-    if(this.email && this.password) {
+      if(this.email && this.password) {
       const mailUser = this.email.trim();
       const passwordUser = this.password.trim();
       this.authService.login(mailUser, passwordUser).subscribe({
-        next: (data: any) => { this.router.navigate(['/']) }, // Quand ca marche
+        next: () => { this.router.navigate(['/dashbord'])}, // Quand ca marche
         error: (error: any) => { console.log(error); }, // Quand ca marche pas
         complete: () => { }, // Quand il n'y aura plus aucun changement
       });
     }
   }
+  
 navTo(path:string) {
   this.router.navigate([path]);
 }
