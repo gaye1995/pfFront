@@ -27,7 +27,7 @@
           </mat-form-field>
         </mat-card-content>
         <mat-card-actions class="mb-2 center">
-          <button mat-raised-button color="primary" (click)="navTo('dashbord')">connexion</button>
+          <button mat-raised-button color="primary" (click)="login()">connexion</button>
         </mat-card-actions>
         <div class="center">
           <span class="password-lost-text pointer" (click)="navTo('/forget-password')">Mot de passe oublié</span>
@@ -47,7 +47,7 @@
     </div>
       <div class="center">
           <span class="register-text">Vous n'avez pas encore de compte ?</span>
-          <span class="password-lost-text pointer" (click)="navTo('/register')">Inscription</span>
+          <span class="password-lost-text pointer" (click)=login()>Inscription</span>
       </div>
     </mat-card >
   </mat-card-content> 
