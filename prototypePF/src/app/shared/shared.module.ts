@@ -20,6 +20,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { DiscussionComponent } from './components/discussion/discussion.component';
 import { MatCardModule } from '@angular/material/card';
 import { ProfileComponent } from './components/profile/profile.component';
+import { FormsModule } from '@angular/forms';
 
 // import { CardComponent } from './widgets/card/card.component';
 // import { PieComponent } from './widgets/pie/pie.component';
@@ -51,6 +52,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     MatIconModule,
     MatMenuModule,
     MatToolbarModule,
+    FormsModule
     // HighchartsChartModule,
   ],
   exports: [

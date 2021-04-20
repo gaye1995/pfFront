@@ -24,5 +24,12 @@ export class AuthService {
   forgetPassword(email: string){
     return this.http.post<any>(this.url + `auth/forget-password`, { email })
   }
+  updateuser(name: string, password: string, confirm: string, societe: string, siret: string,adresse: string,codepostal: string,ville: string, telephone: string, ){
+    return this.http.put<any>(this.url + `auth/update-user`, { name, password, confirm, societe, siret, adresse, codepostal, ville, telephone })
+  }
+  disconnect(){
+    return this.http.delete<any>(this.url + `auth/user/deconnect`);
+  }
+
 }
 
