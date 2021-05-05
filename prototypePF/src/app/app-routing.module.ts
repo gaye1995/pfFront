@@ -25,6 +25,7 @@ import { ComptederesultatComponent } from './shared/components/comptederesultat/
 import { RepportComponent } from './shared/components/repport/repport.component';
 import { ProfileComponent } from './shared/components/profile/profile.component';
 import { NewfactureComponent } from './shared/components/newfacture/newfacture.component';
+import { DetailsbanqueComponent } from './shared/components/banque/banque/detailsbanque/detailsbanque.component';
 
 
 export const routes: Routes = [
@@ -129,6 +130,10 @@ export const routes: Routes = [
     {
       path: 'listebanque',
       component: ListebanqueComponent,
+    } ,
+    {
+      path: 'detailsbanque',
+      component: DetailsbanqueComponent,
     }
       ,
     {

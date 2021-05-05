@@ -23,8 +23,12 @@ export class HeaderbarComponent implements OnInit {
   }
   disconnect(){
     this.authService.disconnect().subscribe({
-      next: () => { this.router.navigate(['/'])}, // Quand ca marche
-      error: (error: any) => { console.log(error); }, // Quand ca marche pas
+      next: () => {
+      // localStorage.removeItem("token");
+      this.router.navigate(['/'])
+     localStorage.removeItem("token");
+    }, // Quand ca marche
+      error: (error: any) => { localStorage.removeItem("token")}, // Quand ca marche pas
       complete: () => { }, // Quand il n'y aura plus aucun changement
     });
 }

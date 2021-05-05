@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
     const mailUser = this.email.trim();
     const passwordUser = this.password.trim();
     this.authService.register(this.name, mailUser, passwordUser, this.confirm, this.role, this.societe, this.siret).subscribe({
-      next: () => { this.router.navigate(['/dashbord'])}, // Quand ca marche
+      next: () => { this.router.navigate(['/'])}, // Quand ca marche
       error: (error: any) => { console.log(error); }, // Quand ca marche pas
       complete: () => { }, // Quand il n'y aura plus aucun changement
     });

@@ -21,6 +21,8 @@ import { DiscussionComponent } from './components/discussion/discussion.componen
 import { MatCardModule } from '@angular/material/card';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FormsModule } from '@angular/forms';
+import { Interceptor } from '../../app/services/interceptor/inspector';
+import { UpdateComponent } from './components/banque/updatebanque/update/update.component';
 
 // import { CardComponent } from './widgets/card/card.component';
 // import { PieComponent } from './widgets/pie/pie.component';
@@ -35,6 +37,7 @@ import { FormsModule } from '@angular/forms';
      CardComponent,
      DiscussionComponent,
      ProfileComponent,
+     UpdateComponent,
     // PieComponent
   ],
   imports: [
@@ -54,6 +57,9 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     FormsModule
     // HighchartsChartModule,
+  ],
+  providers: [
+    
   ],
   exports: [
     HeaderbarComponent,

@@ -9,12 +9,10 @@ export class ClientService {
 
   constructor(private http: HttpClient) { }
   getCostomers() {
-    return this.http.post<any>(this.url + `client/all`, {})
+    return this.http.get<any>(this.url + `client/all`)
   }
   getOneCostomers(id: string){
-    return this.http.post<any>(this.url + `client/:`+id , {})
+    return this.http.get<any>(this.url + `client/:`+id )
   }
-  deleteCustomers(email: string){
-    return this.http.post<any>(this.url + `auth/forget-password`, { email })
-  }
+ 
 }

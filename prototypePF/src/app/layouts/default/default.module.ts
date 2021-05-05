@@ -44,6 +44,7 @@ import { UtilisateursComponent } from 'src/app/shared/components/utilisateurs/ut
 import { RegisterComponent } from 'src/app/shared/auth/register/register.component';
 import { ForgetPasswordComponent } from 'src/app/shared/auth/forget-password/forget-password.component';
 import { LoginComponent } from 'src/app/shared/auth/login/login.component';
+import { DetailsbanqueComponent } from 'src/app/shared/components/banque/banque/detailsbanque/detailsbanque.component';
 @NgModule({
   declarations: [
     DefaultComponent,
@@ -54,6 +55,7 @@ import { LoginComponent } from 'src/app/shared/auth/login/login.component';
     EmployeeListeComponent,
     ListebanqueComponent,
     BanqueComponent,
+    DetailsbanqueComponent,
     UtilisateursComponent,
     LoginComponent,
     RegisterComponent,

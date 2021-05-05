@@ -13,6 +13,9 @@ import { MatCardModule } from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ListearticleModule } from './shared/components/listearticle/listearticle.module';
 import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthService } from '../app/services/auth/auth.service';
+import { AuthInterceptor } from './services/interceptor/http.inspector';
 
 
 
@@ -34,7 +37,10 @@ import { HttpClientModule } from '@angular/common/http';
     
   ],
   
-  providers: [{
+  providers: [
+    AuthService,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true } ,
+    { 
     provide: LocationStrategy,
     useClass: HashLocationStrategy
   }],

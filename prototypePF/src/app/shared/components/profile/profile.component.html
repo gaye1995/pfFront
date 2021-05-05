@@ -1,65 +1,64 @@
-   <div class="container mt-5  pt-1  mb-3 ml-2 mr-5  float-left ml-2" >
-    <div class="card shadow w-75 mr-5 ">
-        <div class="card-body">
-<div class="row">
- <div class="col-sm-6">
-    <mat-card>
-        <div class="card-header text-light" style="background-color: #2865A2;">
-            Gaye
-          </div>
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input class="form-control" id="name" aria-describedby="emailHelp" placeholder="" value={{name}} [(ngModel)]="name" name="name">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email</label>
-            <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" value="gayegayemboup@gmail">
-          </div>
-          <div class="form-group">
+<mat-card>
+  <div class="container mt-5  pt-1  mb-3 ml-2 mr-5  float-left ml-2 ">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card-header text-light" style="background-color: #2865A2;">
+              Gaye
+            </div>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input class="form-control" id="name" aria-describedby="emailHelp" value={{name}} [(ngModel)]="name"
+                name="name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="">
+            </div>
+            <!-- <div class="form-group">
             <label for="password">password</label>
-            <input type="password" class="form-control" id="password" placeholder="password" [(ngModel)]="password" name="password">
+            <input type="password" class="form-control" id="password" value={{password}} [(ngModel)]="password" name="password">
           </div>
           <div class="form-group">
             <label for="confirm">confirm</label>
             <input type="password" class="form-control" placeholder="confirm" [(ngModel)]="confirm" name="confirm">
+          </div> -->
+            <div class="form-group">
+              <label for="exampleInputPassword1">société</label>
+              <input class="form-control" value={{societe}} [(ngModel)]="societe" name="societe">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">siret</label>
+              <input class="form-control" value={{siret}} [(ngModel)]="siret" name="siret">
+            </div>
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">société</label>
-            <input  class="form-control"  placeholder="société" [(ngModel)]="societe" name="societe">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">siret</label>
-            <input class="form-control"  placeholder="siret" [(ngModel)]="siret" name="siret">
-          </div>
-    </mat-card>
-</div>
-       <div class="col-sm-6">
-        <mat-card>
+          <div class="col-sm-6">
             <div class="card-header text-light" style="background-color: #2865A2;">
-                Ajouter les info complémentaire
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Adresse</label>
-                <input class="form-control"  placeholder="" [(ngModel)]="adresse" name="adresse">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Code postal</label>
-                <input class="form-control"  placeholder="" [(ngModel)]="codepostal" name="codepostal">
-              </div>
+              Ajouter les info complémentaire
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Adresse</label>
+              <input class="form-control" value={{adresse}} [(ngModel)]="adresse" name="adresse">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Code postal</label>
+              <input class="form-control" value={{codepostal}} [(ngModel)]="codepostal" name="codepostal">
+            </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Ville *</label>
-              <input class="form-control" aria-describedby="emailHelp" placeholder="ville" [(ngModel)]="ville" name="ville">
+              <input class="form-control" aria-describedby="emailHelp" placeholder="ville" [(ngModel)]="ville"
+                name="ville">
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Téléphone</label>
-              <input class="form-control" aria-describedby="emailHelp" placeholder="Téléphone" [(ngModel)]="telephone" name="telephone">
-            </div>     
-        </mat-card>
-       </div>
-       </div>
-       <div>
-        <button class="btn text-light my-2 my-sm-0" (click)="updateUser()" >Modifier</button>
-    </div>
+              <input class="form-control" aria-describedby="emailHelp" placeholder="Téléphone" [(ngModel)]="telephone"
+                name="phone">
+            </div>
+          </div>
         </div>
-      </div> 
-</div>
+        <div>
+          <button class="btn text-light my-2 my-sm-0" (click)="updateUser()">Modifier</button>
+        </div>
+      </div>
+  </div>
+</mat-card>

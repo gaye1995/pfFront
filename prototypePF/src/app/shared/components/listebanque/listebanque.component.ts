@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BanqueService } from 'src/app/services/banque/banque.service';
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -20,15 +22,25 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class ListebanqueComponent implements OnInit {
 
- 
+  public url = 'https://business-cloud-logiciel-api.herokuapp.com/'
 
-  constructor(private router: Router) { }
+
+  constructor(private router: Router, private banqueService: BanqueService,private http: HttpClient) { }
  
   displayedColumns: string[] = [ 'name', 'weight', 'symbol', 'symbol1', 'symbol2', 'symbol3'];
   dataSource = ELEMENT_DATA;
 
   ngOnInit(): void {
   }
+  banques =  this.http.get<any[]>(this.url + `banque/all`);
+
+  // getbanque(){
+  //     const banque = this.banqueService.getbanque().subscribe({
+  //       next: () => { console.log(banque)}, // Quand ca marche
+  //       error: (error: any) => { console.log(error); }, // Quand ca marche pas
+  //       complete: () => { }, // Quand il n'y aura plus aucun changement
+  //     });
+  //   }
   navTo(path:string) {
     this.router.navigate([path]);
 }
