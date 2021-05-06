@@ -1,11 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import{SubheadclientsComponent} from '../../../nav/subheadclients/subheadclients.component'
-import { DefaultModule } from 'src/app/layouts/default/default.module';
 import { ClientsComponent } from './clients.component';
-import { FacturesComponent } from '../factures/factures.component';
-import { NoteDeFraisComponent } from '../note-de-frais/note-de-frais.component';
-import { DevislisteComponent } from '../devisliste/devisliste.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatTreeModule} from '@angular/material/tree';
 import {MatSelectModule} from '@angular/material/select';
@@ -35,23 +30,33 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { EmployeeListeComponent } from '../employee-liste/employee-liste.component';
-import { GerantComponent } from '../gerant/gerant.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatSliderModule} from '@angular/material/slider';
-import { ListeClientsComponent } from '../liste-clients/liste-clients.component';
+import { NoteDeFraisComponent } from '../../note-de-frais/note-de-frais.component';
+import { ListeClientsComponent } from '../../liste-clients/liste-clients.component';
+import { EmployeeListeComponent } from '../../employee-liste/employee-liste.component';
+import { GerantComponent } from '../gerant/gerant.component';
+import { SubheadclientsComponent } from 'src/app/nav/subheadclients/subheadclients.component';
+import { DevislisteComponent } from '../devisliste/devisliste.component';
+import { FacturesComponent } from '../factures/factures.component';
+import { CoordonneesComponent } from '../coordonnees/coordonnees.component';
+import { PaiementsComponent } from '../../paiements/paiements.component';
+import { ExemplefactureComponent } from '../exemplefacture/exemplefacture.component';
 
 @NgModule({
   declarations: [
     ClientsComponent,
     SubheadclientsComponent ,
-    EmployeeListeComponent,
     FacturesComponent,
     NoteDeFraisComponent,
     DevislisteComponent,
     GerantComponent,
-    ListeClientsComponent
+    ListeClientsComponent,
+    CoordonneesComponent,
+    PaiementsComponent,
+    ExemplefactureComponent,
+
   ],
   imports: [
     CommonModule,

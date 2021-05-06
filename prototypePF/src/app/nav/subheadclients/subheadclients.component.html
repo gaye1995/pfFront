@@ -1,70 +1,42 @@
-<!-- 
-    <mat-toolbar > 
-        <mat-toolbar-row>
-            <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
-                <ul fxLayout="row" fxLayoutGap="20px">
-                    <li>
-                        <a mat-list-item routerLinkActive="list-item-active" routerLink="/Gérants"> Gérants</a>
-                    </li>
-                    <li>
-                        <a mat-list-item routerLinkActive="list-item-active" routerLink="/factures"> Factures</a>
-                    </li>
-                    <li>
-                        <a mat-list-item routerLinkActive="list-item-active" routerLink="/Paiements">Paiements</a>
-                    </li>
-                    <li>
-                        <a mat-list-item routerLinkActive="list-item-active" routerLink="/devisliste">Devis</a>
-                    </li>
-                </ul>
-            </div>
-        </mat-toolbar-row>
-    </mat-toolbar> -->
+
    <div class="body">
     <mat-tab-group #tabGroup (selectedTabChange)="handleTabChange($event)">
-        <mat-tab aria-label="Containers">
+        <mat-tab >
             <ng-template mat-tab-label>
-              <span matTooltip="General containers, like tables/dialogs">Liste Clients</span>
+              <span matTooltip="General containers, like tables/dialogs">Coordonnées</span>
             </ng-template>
-            <app-liste-clients >
-            </app-liste-clients>
+            <app-coordonnees >
+            </app-coordonnees>
           </mat-tab>
-        <mat-tab aria-label="Containers">
+          <mat-tab aria-label="Containers">
+            <ng-template mat-tab-label>
+              <span matTooltip="Example of controls in use">
+                Gérants
+              </span>
+            </ng-template>
+            <app-gerant></app-gerant>
+          </mat-tab>
+        <mat-tab >
             <ng-template mat-tab-label>
               <span matTooltip="General containers, like tables/dialogs">Paiements</span>
             </ng-template>
-            <app-factures >
-            </app-factures>
+            <app-paiements >
+            </app-paiements>
           </mat-tab>
-          <mat-tab aria-label="Containers">
-        <ng-template mat-tab-label>
-          <span matTooltip="Example of controls in use">
-            Gérants
-          </span>
-        </ng-template>
-        <app-gerant></app-gerant>
-      </mat-tab>
-      <mat-tab aria-label="Containers">
+      <mat-tab >
         <ng-template mat-tab-label>
           <span matTooltip="General containers, like tables/dialogs">factures</span>
         </ng-template>
-        <app-factures *ngIf="activeTab === 'Containers'">
+        <app-factures >
         </app-factures>
       </mat-tab>
       <mat-tab>
         <ng-template mat-tab-label>
           <span matTooltip="Preview of factures ">
-            devis
+            Devis
           </span>
         </ng-template>
         <app-devisliste></app-devisliste>
-      </mat-tab>
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <span matTooltip="Preview of devisliste">
-            Note de frais
-          </span>
-        </ng-template>
-        <app-note-de-frais></app-note-de-frais>
       </mat-tab>
     </mat-tab-group>
   </div>

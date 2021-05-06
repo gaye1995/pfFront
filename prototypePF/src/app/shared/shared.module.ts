@@ -14,6 +14,10 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { AreacompteComponent } from './widgets/areacompte/areacompte.component';
+import { CardComponent } from './widgets/card/card.component';
+import { BanqueComponent } from './components/banque/banque.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { ListebanqueComponent } from './components/listebanque/listebanque.component';
 
 // import { CardComponent } from './widgets/card/card.component';
 // import { PieComponent } from './widgets/pie/pie.component';
@@ -25,8 +29,9 @@ import { AreacompteComponent } from './widgets/areacompte/areacompte.component';
     FooterbarComponent,
     SidnavlisteComponent,
      AreacompteComponent,
-     
-    // CardComponent,
+     CardComponent,
+     BanqueComponent,
+     ListebanqueComponent,
     // PieComponent
   ],
   imports: [
@@ -37,6 +42,7 @@ import { AreacompteComponent } from './widgets/areacompte/areacompte.component';
     FlexLayoutModule,
     MatExpansionModule,
     RouterModule,
+    MatFormFieldModule,
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
@@ -49,7 +55,7 @@ import { AreacompteComponent } from './widgets/areacompte/areacompte.component';
     SidnavlisteComponent,
     AreacompteComponent,
     // SubheadclientsComponent,
-    // CardComponent,
+    CardComponent,
     // PieComponent
   ]
 })

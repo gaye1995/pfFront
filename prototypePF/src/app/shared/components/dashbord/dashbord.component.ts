@@ -11,9 +11,8 @@ import { DashbordService } from '../dashbord.service';
 export class DashbordComponent implements OnInit {
   //bigChart: any;
   bigChart ={};
-
-  cards ={};
   pieChart ={};
+  cards :any;
 
  
  

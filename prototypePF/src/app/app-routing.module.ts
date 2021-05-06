@@ -11,11 +11,12 @@ import {EmployeeListeComponent} from '././shared/components/employee-liste/emplo
 import { ForgetPasswordComponent } from '././shared/auth/forget-password/forget-password.component';
 import { ComptaComponent } from '././shared/components/compta/compta.component';
 import { FinancesComponent } from '././shared/components/finances/finances.component';
-import { FacturesComponent } from '././shared/components/factures/factures.component';
 import { NoteDeFraisComponent } from '././shared/components/note-de-frais/note-de-frais.component';
 import { DefaultComponent } from './layouts/default/default.component';
-import { ClientsComponent } from './shared/components/clients/clients.component';
 import { ListeClientsComponent } from './shared/components/liste-clients/liste-clients.component';
+import { ClientsComponent } from './shared/components/donneesclient/clients/clients.component';
+import { FacturesComponent } from './shared/components/donneesclient/factures/factures.component';
+import { BanqueComponent } from './shared/components/banque/banque.component';
 export const routes: Routes = [
   {
     path: '',
@@ -67,6 +68,11 @@ export const routes: Routes = [
   {
     path: 'note-de-frais',
     component: NoteDeFraisComponent
+  }
+  ,
+  {
+    path: 'banque',
+    component: BanqueComponent
   }
   ,
   {

@@ -33,3 +33,12 @@ mat-sidenav {
 .mat-accordion{
   color: rgb(207, 188, 188);
 }
+.stats-cards {
+  .mat-card {
+    overflow: hidden;
+  }
+}
+
+table {
+  width: 100%;
+}

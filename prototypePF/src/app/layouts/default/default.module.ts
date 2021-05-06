@@ -39,6 +39,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { EmployeeListeComponent } from 'src/app/shared/components/employee-liste/employee-liste.component';
 @NgModule({
   declarations: [
     DefaultComponent,
@@ -49,7 +50,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     ForgetPasswordComponent,
     FinancesComponent,
     ComptaComponent,
- 
+    EmployeeListeComponent,
+
   ],
   imports: [
     CommonModule,
