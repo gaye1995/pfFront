@@ -29,6 +29,9 @@ export class AuthService {
   updateuser(name: string, password: string, confirm: string, societe: string, siret: string,adresse: string,codepostal: string,ville: string, telephone: string, ){
     return this.http.put<any>(this.url + `auth/update-user`, { name, password, confirm, societe, siret, adresse, codepostal, ville, telephone })
   }
+  getOneUser(id: string){
+    return this.http.get<any>(this.url + `auth/user/`+id)
+  }
   disconnect(){
     return this.http.delete<any>(this.url + `auth/user/deconnect`);
   }

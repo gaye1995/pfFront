@@ -14,5 +14,15 @@ export class SidnavlisteComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  getCurrent(){
+    
+  }
+  getOneUser(id: string){
+    this.authService.getOneUser(id).subscribe({
+      next: () => { console.log('dd')}, // Quand ca marche
+      error: (error: any) => { console.log(error); }, // Quand ca marche pas
+      complete: () => { }, // Quand il n'y aura plus aucun changement
+    });
+  }
 
 }

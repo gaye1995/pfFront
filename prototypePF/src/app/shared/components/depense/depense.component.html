@@ -15,7 +15,7 @@
         </form>  </div>
     </div>
   <mat-card>
-        <table class="table  table-striped table-hover bg-light shadow">
+        <table class="table  table-striped table-hover bg-light shadow" *ngFor="let expenses of expense" >
             <thead>
               <tr>
                 <th>N°Compte </th>
@@ -29,9 +29,9 @@
             </thead>
             <tbody>
               <tr>
-                <td >607000</td>
-                <td >AMELI</td>
-                <td>200,00</td>
+                <td >{{expense.expenseNum}}</td>
+                <td >{{expense.category}}</td>
+                <td>{{expense.price}}</td>
                 <td>Gaye</td>
                 <td> 200,00</td>
                 <td>11-11-2020</td>

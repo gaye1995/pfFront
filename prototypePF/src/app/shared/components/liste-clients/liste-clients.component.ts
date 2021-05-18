@@ -26,15 +26,16 @@ export class ListeClientsComponent implements OnInit {
   }
   initData() {
     this.clientService.getCostomers().subscribe({
-      next: (data: { error: false, client: ClientInterfaceJson }) => {
-        this.client = data.client;
+      next: (data: { error: false, Client: ClientInterfaceJson }) => {
+        this.client = data.Client;
        },
         error: (error: any) => { console.log(error);}
-   
     });
 
   }
-
+  navTo(path:string) {
+    this.router.navigate([path]);
+  }
   sortFiles(count: number) {
     if (count === 2) {
       this.updateFile = false;
