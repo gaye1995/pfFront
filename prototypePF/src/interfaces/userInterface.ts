@@ -30,6 +30,7 @@ export interface UsersInterfaceJson {
     zip?: string;
     city?: string;
     country?: string;
+    createdAt: Date | string ;
 }
 export interface ClientInterface {
 _id: string;

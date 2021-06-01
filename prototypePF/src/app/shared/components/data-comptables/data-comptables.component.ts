@@ -5,11 +5,12 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 import { UsersInterfaceJson } from 'src/interfaces/userInterface';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss']
+  selector: 'app-data-comptables',
+  templateUrl: './data-comptables.component.html',
+  styleUrls: ['./data-comptables.component.scss']
 })
-export class ProfileComponent implements OnInit {
+export class DataComptablesComponent implements OnInit {
+
   current :any;
   usercurrent : any;
   user : any;
@@ -49,6 +50,9 @@ export class ProfileComponent implements OnInit {
       error: (error: any) => { console.log(error); }, // Quand ca marche pas
       complete: () => { }, // Quand il n'y aura plus aucun changement
     });
+  }
+  navTo(path:string) {
+    this.router.navigate([path]);
   }
 }
 

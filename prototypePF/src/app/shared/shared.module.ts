@@ -23,6 +23,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { Interceptor } from '../../app/services/interceptor/inspector';
 import { UpdateComponent } from './components/banque/updatebanque/update/update.component';
+import { DataComptablesComponent } from './components/data-comptables/data-comptables.component';
 
 // import { CardComponent } from './widgets/card/card.component';
 // import { PieComponent } from './widgets/pie/pie.component';
@@ -37,7 +38,9 @@ import { UpdateComponent } from './components/banque/updatebanque/update/update.
      CardComponent,
      DiscussionComponent,
      ProfileComponent,
+     DataComptablesComponent,
      UpdateComponent,
+     DataComptablesComponent,
     // PieComponent
   ],
   imports: [

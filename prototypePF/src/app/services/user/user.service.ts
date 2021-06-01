@@ -12,5 +12,12 @@ export class UserService {
     return this.http.get<any>(this.url + `employee/all`)
   }
   getOneEmployee(id: string){
-    return this.http.get<any>(this.url + `employee/`+id )
-  }}
+    return this.http.get<any>(this.url + `employee/` + id )
+  }
+  getOneUser(id: string){
+    return this.http.get<any>(this.url + `auth/user/` + id )
+  }
+  getUsers(){
+    return this.http.get<any>(this.url + `auth/user/all`)
+  }
+}

@@ -12,7 +12,7 @@ export interface BillInterface {
     deadline: string;
     amountPaid?: number;
     payementDate?: Date;
-    createdAt: Date;
+    createdAt: Date | string;
     updatedAt: Date;
 }
 

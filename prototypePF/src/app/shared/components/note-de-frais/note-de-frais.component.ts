@@ -1,40 +1,39 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup, FormControl} from '@angular/forms';
-import { Router } from '@angular/router';
-interface Food {
-  value: string;
-  viewValue: string;
-}
+import { FormGroup, FormControl } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserExpenseService } from 'src/app/services/userExpense/user-expense.service';
+import { ExpenseInterfaceJson } from 'src/interfaces/userExpenseInterface';
+
 @Component({
   selector: 'app-note-de-frais',
   templateUrl: './note-de-frais.component.html',
   styleUrls: ['./note-de-frais.component.scss']
 })
 export class NoteDeFraisComponent implements OnInit {
-  foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
-  ];
-  campaignOne: FormGroup;
-  campaignTwo: FormGroup;
-  constructor(private router: Router) {   const today = new Date();
-    const month = today.getMonth();
-    const year = today.getFullYear();
+  id: string | null = '';
 
-    this.campaignOne = new FormGroup({
-      start: new FormControl(new Date(year, month, 13)),
-      end: new FormControl(new Date(year, month, 16))
+  userexpense: ExpenseInterfaceJson | undefined;
+  constructor(
+    private router: Router,
+    private userExpenseService: UserExpenseService,
+    private route: ActivatedRoute) {
+  }
+
+  initData() {
+    this.userExpenseService.getUserExpense(this.id).subscribe({
+      next: (data: { error: false, userexpense: ExpenseInterfaceJson }) => {
+        this.userexpense = data.userexpense;
+      },
+      error: (error: any) => { console.log(error); }
     });
 
-    this.campaignTwo = new FormGroup({
-      start: new FormControl(new Date(year, month, 15)),
-      end: new FormControl(new Date(year, month, 19))
-    });}
-
-  ngOnInit(): void {
   }
-  navTo(path:string) {
+  ngOnInit() {
+    this.id = this.route.snapshot.paramMap.get('id');
+    if (this.id) { this.initData(); }
+
+  }
+  navTo(path: string) {
     this.router.navigate([path]);
-}
+  }
 }

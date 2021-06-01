@@ -6,23 +6,25 @@
             <div class="card-header text-light" style="background-color: #2865A2;">
               Gaye
             </div>
+            <div class="card-header w-100 h-100" style="background-color: whitesmoke;">
+            <div class="form-group">
+              <br />
+              <div class="col-sm-6">
+                <b>Email :</b>
+              </div>
+              <div class="col-sm-6">
+                  {{usercurrent.email}}
+              </div>            
+            </div> <br /><br />
             <div class="form-group">
               <label for="name">Name</label>
               <input class="form-control" id="name" aria-describedby="emailHelp" value={{name}} [(ngModel)]="name"
                 name="name">
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Email</label>
-              <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="">
-            </div>
-            <!-- <div class="form-group">
             <label for="password">password</label>
             <input type="password" class="form-control" id="password" value={{password}} [(ngModel)]="password" name="password">
           </div>
-          <div class="form-group">
-            <label for="confirm">confirm</label>
-            <input type="password" class="form-control" placeholder="confirm" [(ngModel)]="confirm" name="confirm">
-          </div> -->
             <div class="form-group">
               <label for="exampleInputPassword1">société</label>
               <input class="form-control" value={{societe}} [(ngModel)]="societe" name="societe">
@@ -32,10 +34,12 @@
               <input class="form-control" value={{siret}} [(ngModel)]="siret" name="siret">
             </div>
           </div>
+          </div>
           <div class="col-sm-6">
             <div class="card-header text-light" style="background-color: #2865A2;">
               Ajouter les info complémentaire
             </div>
+            <div class="card-header w-100 h-100" style="background-color: whitesmoke;">
             <div class="form-group">
               <label for="exampleInputPassword1">Adresse</label>
               <input class="form-control" value={{adresse}} [(ngModel)]="adresse" name="adresse">
@@ -55,6 +59,7 @@
                 name="phone">
             </div>
           </div>
+        </div>
         </div>
         <div>
           <button class="btn text-light my-2 my-sm-0" (click)="updateUser()">Modifier</button>

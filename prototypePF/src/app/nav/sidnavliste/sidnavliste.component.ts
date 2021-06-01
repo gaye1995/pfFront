@@ -1,6 +1,7 @@
 import { Component, OnInit ,Output, EventEmitter} from '@angular/core';
 import { AuthService } from 'src/app/services/auth/auth.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UsersInterfaceJson } from 'src/interfaces/userInterface';
 
 @Component({
   selector: 'app-sidnavliste',
@@ -8,21 +9,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidnavliste.component.scss']
 })
 export class SidnavlisteComponent implements OnInit {
+  usercurrent : any;
+  id :string = '' ;
+  user :any;
+  curentuser: any;
   panelOpenState = false;
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(private router: Router, private authService: AuthService,private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.curentuser =  (localStorage.getItem('currentUser'));
+    this.usercurrent = JSON.parse(this.curentuser);
   }
-  getCurrent(){
-    
-  }
-  getOneUser(id: string){
-    this.authService.getOneUser(id).subscribe({
-      next: () => { console.log('dd')}, // Quand ca marche
-      error: (error: any) => { console.log(error); }, // Quand ca marche pas
-      complete: () => { }, // Quand il n'y aura plus aucun changement
-    });
-  }
+  initData() {
+      // this.curentuser = localStorage.getItem('currentUser'); 
+    }
 
 }
