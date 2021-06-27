@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BillService } from 'src/app/services/bill/bill.service';
 import { ClientService } from 'src/app/services/client/client.service';
-import { BillInterface } from 'src/interfaces/billInterface';
 import { ClientInterfaceJson } from 'src/interfaces/userInterface';
 
 @Component({
@@ -11,7 +10,7 @@ import { ClientInterfaceJson } from 'src/interfaces/userInterface';
   styleUrls: ['./clients.component.scss']
 })
 export class ClientsComponent implements OnInit {
-  id = '';
+  id :string | null= '';
   user: any ;
 
   files: any[] = [];
@@ -19,9 +18,13 @@ export class ClientsComponent implements OnInit {
   requestEnd = 0;
 
   updateFile = false;
-  constructor(private router: Router, private clientService : ClientService, private billService :BillService) { }
+  constructor(private router: Router, private clientService : ClientService, private billService :BillService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.paramMap.get('id');
+    if (this.id) { this.initData(); 
+    console.log(this.id)}
+    this.initData();
   }
   initData() {
     this.clientService.getOneCostomers(this.id).subscribe({

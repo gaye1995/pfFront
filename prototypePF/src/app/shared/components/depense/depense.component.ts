@@ -41,25 +41,4 @@ export class DepenseComponent implements OnInit {
       error: (error: any) => { console.log(error); }
     });
   }
-  // async initData() {
-  //   const loading = await this.loadingController.create({ cssClass: 'loading-div', message: 'Récupération...' });
-  //   await loading.present();
-  //   this.billService.getOneBill(this.id).subscribe({
-  //     next: (data: { error: false, bill: BillI }) => {
-  //       data.bill.createdAt = formatDate(data.bill.createdAt, 'yyyy-MM-dd', 'fr-FR', 'Europe/France');
-  //       data.bill.deadline = formatDate(data.bill.deadline, 'yyyy-MM-dd', 'fr-FR', 'Europe/France');
-  //       this.bill = data.bill;
-  //       this.userService.getUser(this.bill.clientId as string).subscribe({
-  //         next: async (data2: { error: false, user: UserJsonI }) => {
-  //           this.client = data2.user;
-  //           await loading.dismiss();
-  //         }
-  //       });
-  //     },
-  //     error: async (error: HttpErrorResponse) => {
-  //       await loading.dismiss();
-  //       this.toasterService.presentErrorToast('Impossible de récupérer cette facture.', { error });
-  //     }
-  //   });
-  // }
 }

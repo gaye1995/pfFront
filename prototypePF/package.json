@@ -13,7 +13,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^11.2.4",
+    "@angular/animations": "^11.2.14",
     "@angular/cdk": "^11.2.3",
     "@angular/common": "~11.2.4",
     "@angular/compiler": "~11.2.4",
@@ -44,6 +44,7 @@
     "highcharts-angular": "^2.10.0",
     "jquery": "^3.6.0",
     "lstat": "^1.0.0",
+    "ngx": "^2.4.0",
     "ngx-bootstrap": "^6.2.0",
     "ngx-electron": "^2.2.0",
     "node-sass": "^5.0.0",

@@ -11,7 +11,7 @@ export class ClientService {
   getCostomers() {
     return this.http.get<any>(this.url + `client/all`)
   }
-  getOneCostomers(id: string){
+  getOneCostomers(id: string | null){
     return this.http.get<any>(this.url + `client/:`+id )
   }
  

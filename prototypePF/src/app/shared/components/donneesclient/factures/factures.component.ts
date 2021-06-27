@@ -1,19 +1,12 @@
-import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
-import {SelectionModel} from '@angular/cdk/collections';
-import {FlatTreeControl} from '@angular/cdk/tree';
-import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
-import { ActivatedRoute, Router } from '@angular/router';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatTableDataSource} from '@angular/material/table';
-import { FormControl, FormGroup } from '@angular/forms';
-import { BillService } from 'src/app/services/bill/bill.service';
-import { UserService } from 'src/app/services/user/user.service';
-import { ArticleService } from 'src/app/services/article/article.service';
 import { formatDate } from '@angular/common';
-import { BillInterface } from 'src/interfaces/billInterface';
-import { ClientService } from 'src/app/services/client/client.service';
-import { ClientInterfaceJson } from 'src/interfaces/userInterface';
 import { HttpErrorResponse } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ArticleService } from 'src/app/services/article/article.service';
+import { BillService } from 'src/app/services/bill/bill.service';
+import { ClientService } from 'src/app/services/client/client.service';
+import { BillInterface } from 'src/interfaces/billInterface';
+import { ClientInterfaceJson } from 'src/interfaces/userInterface';
 
 // Mes interfaces de donnéee
 
@@ -41,7 +34,6 @@ export class FacturesComponent implements OnInit {
   client: any;
   constructor(
     private router: Router,
-    private location: Location,
     private route: ActivatedRoute,
     private billService: BillService,
     private clientService: ClientService,

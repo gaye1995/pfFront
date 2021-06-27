@@ -88,7 +88,7 @@ export const routes: Routes = [
       component: DiscussionComponent
     },
     {
-      path: 'clients',
+      path: 'clients/:id',
       component: ClientsComponent
     },
     {
