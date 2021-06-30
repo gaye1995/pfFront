@@ -28,19 +28,12 @@ export class ListeClientsComponent implements OnInit {
      private userService: UserService) { }
 
   ngOnInit() {
-    this.id = this.route.snapshot.paramMap.get('id');
-    if (this.id) { this.initData(); }
     this.initData();
   }
   initData() {
     this.clientService.getCostomers().subscribe({
       next: (data: { error: false, Client: ClientInterfaceJson }) => {
         this.client = data.Client;
-        this.clientService.getOneCostomers(this.client.Id as string).subscribe({
-          next: async (data2: { error: false, user: ClientInterfaceJson }) => {
-            this.oneClient = data2.user;
-          }
-        });
        },
         error: (error: any) => { console.log(error);}
     });

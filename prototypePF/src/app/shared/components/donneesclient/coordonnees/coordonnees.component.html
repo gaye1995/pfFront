@@ -10,11 +10,11 @@
               Clients
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item"><b>Nom de la Société :</b><p class="float-right"> {{client.email}} </p></li>
-              <li class="list-group-item"><b>Email: </b><p class="float-right">{{client.email}}</p></li>
-              <li class="list-group-item"><b>Domaine: </b><p class="float-right">Informatique</p> </li>
-              <li class="list-group-item"><b>N°TVA: </b><p class="float-right">FR234567678</p> </li>
-              <li class="list-group-item"><b>Téléphone: </b> <p class="float-right">23456789056</p></li>
+              <li class="list-group-item" *ngIf="client"><b>Nom de la Société :</b><p class="float-right"> {{client.name}} </p></li>
+              <li class="list-group-item" *ngIf="client && client.name"><b>Email: </b><p class="float-right">{{client.email}}</p></li>
+              <li class="list-group-item"><b>Domaine: </b><p class="float-right"></p> </li>
+              <li class="list-group-item"><b>N°TVA: </b><p class="float-right">}</p> </li>
+              <li class="list-group-item"><b>Téléphone: </b> <p class="float-right"></p></li>
               <li class="list-group-item"><b>Adresse: </b> <p class="float-right">16 rue chartre</p></li>
               <li class="list-group-item"><b>Code postale: </b><p class="float-right">98765</p></li>
               <li class="list-group-item"><b>Ville: </b><p class="float-right">Paris</p></li>

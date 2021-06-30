@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BillService } from 'src/app/services/bill/bill.service';
 import { ClientService } from 'src/app/services/client/client.service';
@@ -21,11 +21,10 @@ export class SubheadclientsComponent implements OnInit {
     this.activeTab = tab.tab.ariaLabel;
   }
   constructor(private router: Router, private clientService : ClientService, private billService :BillService, private route: ActivatedRoute) { }
-
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
     if (this.id) { this.initData(); 
-    console.log(this.id)}
+    }
     this.initData();
   }
   initData() {

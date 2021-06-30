@@ -51,6 +51,10 @@ export const routes: Routes = [
       component: DashbordComponent
     }, 
     {
+      path: 'employee/:id',
+      component: EmployeeListeComponent
+    },
+    {
       path: 'employee-liste',
       component: EmployeeListeComponent
     },

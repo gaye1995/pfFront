@@ -3,15 +3,14 @@
     <mat-tab-group #tabGroup (selectedTabChange)="handleTabChange($event)">
         <mat-tab >
             <ng-template mat-tab-label>
-              <span matTooltip="General containers, like tables/dialogs">Coordonnées</span>
+              <span matTooltip="General containers, like tables/dialogs" >Coordonnées </span>
             </ng-template>
-            <app-coordonnees >
-            </app-coordonnees>
+            <app-coordonnees ></app-coordonnees>
           </mat-tab>
           <mat-tab aria-label="Containers">
             <ng-template mat-tab-label>
               <span matTooltip="Example of controls in use">
-                Gérants
+                Gérants 
               </span>
             </ng-template>
             <app-gerant></app-gerant>
