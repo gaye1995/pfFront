@@ -4,7 +4,7 @@
       <div class="col-md w-100">
           <div class="card">
               <div class="card-header text-light" style="background-color: #2865A2;">
-                  <p class="h3"><b>Factures du client Gaye</b></p>
+                  <p class="h3" ><b>Factures du client BBBB</b></p>
               </div>
               <div class="row">
                   <div class="mb-3 col-md-4">
@@ -58,123 +58,21 @@
 
             </tr>
           </thead>
-          <tbody>
-            <tr>
+          <tbody *ngFor="let bills of bill">
+            <tr > 
             <td> 
-              <a mat-list-item routerLinkActive="list-item-active" href="assets/img/facture.pdf" target="_blank">FAC_6_0237</a>
+              <a mat-list-item routerLinkActive="list-item-active" href="assets/img/facture.pdf" target="_blank" *ngIf='bills && bills.billNum'>{{ bills.billNum}}</a>
               </td>
-              <td><span class="badge badge-success">payée</span>
-                <td>23/11/2020</td>
-              <td>2 000,00</td>
-              <td>2 000,00</td>
-              <td>0,00</td>
+              <td><span class="badge badge-success" *ngIf='bills && bills.status'>{{ bills.status }}</span>
+              <td *ngIf='bills '>{{ bills.deadline }}</td>
+              <td *ngIf='bills '>{{ bills.totalTTC }}</td>
+              <td *ngIf='bills '>{{ bills.amountPaid }}</td>
+              <td *ngIf='bills '>{{ bills.totalTTC  - bills.amountPaid }} </td>
               <td>
                 <button class="btn text-light my-2 my-sm-0" type="submit" style="background-color: red;"><mat-icon >delete</mat-icon></button>
                 <button class="btn text-light my-2 my-sm-0" type="submit"><mat-icon> insert_drive_file</mat-icon></button>
             </td>
             </tr>
-            <tr>
-              <td> 
-                <a target="_blank" href="asset/img/facture.pdf" ng-click="(asset/img/facture.pdf)" style="line-height:20px">FAC_6_0237</a>
-                <!-- <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a> -->
-                </td>
-                <td><span class="badge badge-success">payée</span>
-                </td>
-              <td>23/11/2020</td>
-              <td>2 000,00</td>
-              <td>2 000,00</td>
-              <td>0,00</td>
-              <td>
-                <button class="btn text-light my-2 my-sm-0" type="submit" style="background-color: red;"><mat-icon >delete</mat-icon></button>
-                <button class="btn text-light my-2 my-sm-0" type="submit"><mat-icon> insert_drive_file</mat-icon></button>
-            </td>
-            </tr>
-            <tr>
-              <td> 
-                <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
-                </td>
-                <td><span class="badge badge-warning">Avance</span>
-                </td>
-              <td>23/11/2020</td>
-              <td>2 000,00</td>
-              <td>1 000,00</td>
-              <td>0,00</td>
-              <td>
-                <button class="btn text-light my-2 my-sm-0" type="submit" style="background-color: red;"><mat-icon >delete</mat-icon></button>
-                <button class="btn text-light my-2 my-sm-0" type="submit"><mat-icon> insert_drive_file</mat-icon></button>
-            </td>
-            </tr>
-            <tr>
-              <td> 
-                <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
-                </td>
-                <td><span class="badge badge-warning">Avance</span>
-                  <td>23/11/2020</td>
-              <td>2 000,00</td>
-              <td>1 000,00</td>
-              <td>1 000,00</td>
-              <td>
-                <button class="btn text-light my-2 my-sm-0" type="submit" style="background-color: red;"><mat-icon >delete</mat-icon></button>
-                <button class="btn text-light my-2 my-sm-0" type="submit"><mat-icon> insert_drive_file</mat-icon></button>
-            </td>   
-            </tr>
-            <tr>
-              <td> 
-                <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
-                </td>
-                <td><span class="badge badge-danger">impayé</span></td>
-              <td>23/11/2020</td>
-              <td>2 000,00</td>
-              <td>0,00</td>
-              <td>2 000,00</td>
-              <td>
-                <button class="btn text-light my-2 my-sm-0" type="submit" style="background-color: red;"><mat-icon >delete</mat-icon></button>
-                <button class="btn text-light my-2 my-sm-0" type="submit"><mat-icon> insert_drive_file</mat-icon></button>
-            </td>
-            </tr>
-            <tr>
-              <td> 
-                <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
-                </td>
-                <td><span class="badge badge-danger">impayé</span></td>
-              <td>23/11/2020</td>
-              <td>2 000,00</td>
-              <td>0,00</td>
-              <td>2 000,00</td>
-              <td>
-                <button class="btn text-light my-2 my-sm-0" type="submit" style="background-color: red;"><mat-icon >delete</mat-icon></button>
-                <button class="btn text-light my-2 my-sm-0" type="submit"><mat-icon> insert_drive_file</mat-icon></button>
-            </td>
-            </tr>
-            <tr>
-              <td> 
-                <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
-                </td>
-                <td><span class="badge badge-success">payée</span>
-                  <td>23/11/2020</td>
-              <td>2 000,00</td>
-              <td>2 000,00</td>
-              <td>0,00</td>
-              <td>
-                <button class="btn text-light my-2 my-sm-0" type="submit" style="background-color: red;"><mat-icon >delete</mat-icon></button>
-                <button class="btn text-light my-2 my-sm-0" type="submit"><mat-icon> insert_drive_file</mat-icon></button>
-            </td>
-            </tr>
-            <tr>
-              <td> 
-                <a mat-list-item routerLinkActive="list-item-active" routerLink="/clients">FAC_6_0237</a>
-                </td>
-                <td><span class="badge badge-success">payée</span>
-                  <td>23/11/2020</td>
-                <td>2 000,00</td>
-                <td>2 000,00</td>
-                <td>0,00</td>
-                <td>
-                  <button class="btn text-light my-2 my-sm-0" type="submit" style="background-color: red;"><mat-icon >delete</mat-icon></button>
-                  <button class="btn text-light my-2 my-sm-0" type="submit"><mat-icon> insert_drive_file</mat-icon></button>
-              </td>
-            </tr>
-  
           </tbody>
       </table>
   <div class="row justify-content-center mt-3 ">

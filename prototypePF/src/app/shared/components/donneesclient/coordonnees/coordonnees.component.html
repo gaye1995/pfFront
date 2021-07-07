@@ -4,35 +4,22 @@
      <div class="card shadow w-75 mr-5 ">
          <div class="card-body">
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm">
           <div class="card">
-            <div class="card-header text-light" style="background-color: #2865A2;">
-              Clients
+            <div class="card-header text-light" style="background-color: #2865A2;" *ngIf="client">
+              {{client.name}}
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item" *ngIf="client"><b>Nom de la Société :</b><p class="float-right"> {{client.name}} </p></li>
               <li class="list-group-item" *ngIf="client && client.name"><b>Email: </b><p class="float-right">{{client.email}}</p></li>
-              <li class="list-group-item"><b>Domaine: </b><p class="float-right"></p> </li>
-              <li class="list-group-item"><b>N°TVA: </b><p class="float-right">}</p> </li>
-              <li class="list-group-item"><b>Téléphone: </b> <p class="float-right"></p></li>
-              <li class="list-group-item"><b>Adresse: </b> <p class="float-right">16 rue chartre</p></li>
-              <li class="list-group-item"><b>Code postale: </b><p class="float-right">98765</p></li>
-              <li class="list-group-item"><b>Ville: </b><p class="float-right">Paris</p></li>
-              <li class="list-group-item"><b>Pays: </b> <p class="float-right">France</p></li>
-              <li class="list-group-item"><b>Adresse: </b><p class="float-right">16 rue chartreInformatique</p></li>
+              <li class="list-group-item" *ngIf="client && client.numTVA"><b>N°TVA: </b><p class="float-right">{{client.numTVA}}</p> </li>
+              <li class="list-group-item" *ngIf="client && client.phone"><b>Téléphone: </b> <p class="float-right">{{client.phone}}</p></li>
+              <li class="list-group-item" *ngIf="client && client.address"><b>Adresse: </b> <p class="float-right">{{client.address}}</p></li>
+              <li class="list-group-item" *ngIf="client && client.zip"><b>Code postale: </b><p class="float-right">{{client.zip}}</p></li>
+              <li class="list-group-item" *ngIf="client && client.city"><b>Ville: </b><p class="float-right">{{client.city}}</p></li>
+              <li class="list-group-item" *ngIf="client && client.country"><b>Pays: </b> <p class="float-right">{{client.country}}</p></li>
+              <li class="list-group-item" *ngIf="client && client.numRCS"><b>RCS: </b><p class="float-right">{{client.numRCS}}</p></li>
             </ul>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-header text-light " style="background-color: #2865A2;;">
-              Information complémentaire
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><b>Numéro de SIRET:</b><p class="float-right"> 789 098 456 0978 </p></li>
-              <li class="list-group-item"><b>Skype: </b><p class="float-right">ssdasssssss</p></li>
-              <li class="list-group-item"><b>LinkedIn: </b><p class="float-right">sssssssssssss</p> </li>
-              <li class="list-group-item"><b>RCS: </b><p class="float-right">RCS 33546784950</p> </li></ul>
           </div>
         </div>
         </div>

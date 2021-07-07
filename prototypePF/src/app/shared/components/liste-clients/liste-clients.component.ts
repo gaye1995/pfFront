@@ -33,6 +33,7 @@ export class ListeClientsComponent implements OnInit {
   initData() {
     this.clientService.getCostomers().subscribe({
       next: (data: { error: false, Client: ClientInterfaceJson }) => {
+        console.log(data.Client)
         this.client = data.Client;
        },
         error: (error: any) => { console.log(error);}

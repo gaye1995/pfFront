@@ -6,7 +6,7 @@ import { ArticleService } from 'src/app/services/article/article.service';
 import { BillService } from 'src/app/services/bill/bill.service';
 import { ClientService } from 'src/app/services/client/client.service';
 import { BillInterface } from 'src/interfaces/billInterface';
-import { ClientInterfaceJson } from 'src/interfaces/userInterface';
+
 
 // Mes interfaces de donnéee
 
@@ -29,7 +29,7 @@ interface ExampleFlatNode {
   styleUrls: ['./factures.component.scss']
 })
 export class FacturesComponent implements OnInit {
-  id = '';
+  id :string | null= '';
   bill: any;
   client: any;
   constructor(
@@ -41,18 +41,24 @@ export class FacturesComponent implements OnInit {
   
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.paramMap.get('id');
+    if (this.id) {
+       this.initData();
   }
-  async initData() {
-    this.billService.getOneBill(this.id).subscribe({
-      next: (data: { error: false, bill: BillInterface }) => {
-        data.bill.createdAt = formatDate(data.bill.createdAt, 'yyyy-MM-dd', 'fr-FR', 'Europe/France');
-        data.bill.deadline = formatDate(data.bill.deadline, 'yyyy-MM-dd', 'fr-FR', 'Europe/France');
-        this.bill = data.bill;
-        this.clientService.getOneCostomers(this.bill.clientId as string).subscribe({
-          next: async (data2: { error: false, client: ClientInterfaceJson }) => {
-            this.client = data2.client;
-          }
-        });
+  this.initData()
+}
+initData() {
+    this.billService.getBillbyClient(this.id).subscribe({
+      next: (data: { error: false, Bill: BillInterface }) => {
+        // data.Bill.createdAt = formatDate(data.Bill.createdAt, 'yyyy-MM-dd', 'fr-FR', 'Europe/France');
+        this.bill = data.Bill;
+        console.log(data.Bill)
+        // this.bill.deadline = formatDate(data.Bill.deadline, 'yyyy-MM-dd', 'fr-FR', 'Europe/France');
+        // this.clientService.getOneCostomers(this.bill.clientId as string).subscribe({
+        //   next: async (data2: { error: false, Client: ClientInterfaceJson }) => {
+        //     this.client = data2.Client;
+        //   }
+        // });
       },
       error: async (error: HttpErrorResponse) => {
         return error;

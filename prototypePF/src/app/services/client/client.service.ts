@@ -14,5 +14,11 @@ export class ClientService {
   getOneCostomers(id: string | null){
     return this.http.get<any>(this.url + `client/`+id )
   }
+  getOneEstimate(id: string | null){
+    return this.http.get<any>(this.url + `client/` + id + `devis`+id )
+  }
+  getEstimateByClient(id: string | null){
+    return this.http.get<any>(this.url + `client/`+ id + `/devis` )
+  }
  
 }

@@ -27,6 +27,7 @@ import { ProfileComponent } from './shared/components/profile/profile.component'
 import { NewfactureComponent } from './shared/components/newfacture/newfacture.component';
 import { DetailsbanqueComponent } from './shared/components/banque/banque/detailsbanque/detailsbanque.component';
 import { DataComptablesComponent } from './shared/components/data-comptables/data-comptables.component';
+import { DevislisteComponent } from './shared/components/donneesclient/devisliste/devisliste.component';
 
 
 export const routes: Routes = [
@@ -112,8 +113,13 @@ export const routes: Routes = [
       component: FinancesComponent
     },
     {
-      path: 'factures',
+      path: 'clients/:id/factures',
       component: FacturesComponent
+    }
+    ,
+    {
+      path: 'clients/:id/devis',
+      component: DevislisteComponent
     }
     ,
     {

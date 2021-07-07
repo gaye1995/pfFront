@@ -16,6 +16,9 @@ export class BillService {
   getOneBill(id: string) {
     return this.http.get<any>(this.url + `client/facture` + id);
   }
+  getBillbyClient(id: string | null) {
+    return this.http.get<any>(this.url + `client/` + id + `/factures` );
+  }
 
   // create(data: BillCreateI) {
   //   return this.http.post<any>(this.url + `bill`, data);
