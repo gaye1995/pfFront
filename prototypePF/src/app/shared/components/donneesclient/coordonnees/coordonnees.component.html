@@ -1,6 +1,112 @@
- 
+<mat-card>
+  <div class="container mt-5  pt-1  mb-3 ml-2 mr-5  float-left ml-2 ">
+      <div class="card-body">
+          <div class="row">
+              <div class="col-sm-6" *ngIf="client">
+                  <div class="card-header text-light" style="background-color: #2865A2;">
+                      Information Personnel
+                  </div>
+                  <br />
+                  <div class="card-header w-100 h-100" style="background-color: whitesmoke;">
+                      <div class="form-group">
+                          <div class="row">
+                              <br />
+                              <div class="col-sm-6">
+                                  Nom et Prénom :
+                              </div>
+                              <div class="col-sm-6">
+                                {{client.name}}
+                              </div>
+                              <br />
+                              <br />
+                              <div class="col-sm-6">
+                                  email :
+                              </div>
+                              <div class="col-sm-6">
+                                {{client.email}}
+                              </div>
+                              <br />
+                              <br />
+                              <div class="col-sm-6">
+                                  Adresse :
+                              </div>
+                              <div class="col-sm-6">
+                                  {{client.address}}
+                              </div>
+                              <br />
+                              <br />
+                              <div class="col-sm-6">
+                                  Code postal :
+                              </div>
+                              <div class="col-sm-6">
+                                  {{client.zip}}
+                              </div>
+                              <br />
+                              <br />
+                              <div class="col-sm-6">
+                                  Ville :
+                              </div>
+                              <div class="col-sm-6">
+                                  {{client.city}}
+                              </div>
+                              <br />
+                              <br />
+                          </div>
+                      </div>
+                      <div class="form-group">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-6">
+                  <div class="card-header text-light" style="background-color: #2865A2;">
+                      <b>Informations complémentaires</b>
+                  </div>
+                  <br />
+                  <div class="card-header w-100 h-100" style="background-color: whitesmoke;">
+                      <div class="form-group">
+                          <div class="row">
+                              <div class="col-sm-6">
+                                  Tva :
+                              </div>
+                              <div class="col-sm-6" *ngIf='client && client.numTVA'>
+                                {{client.numTVA}}
+                              </div>
+                              <br />
+                              <br />
+                              <div class="col-sm-6">
+                                  Téléphone :
+                              </div>
+                              <div class="col-sm-6" *ngIf='client && client.phone'>
+                                  {{client.phone}}
+                              </div>
+                              <br />
+                              <br />
+                              <div class="col-sm-6">
+                                  Société :
+                              </div>
+                              <div class="col-sm-6" *ngIf='client && client.numRCS'>
+                                {{client.numRCS}}
+                              </div>
+                              <br />
+                              <br />
+                              <div class="col-sm-6">
+                                  Siret :
+                              </div>
+                              <div class="col-sm-6">
+                                  <!-- {{usercurrent.siret}} -->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</mat-card>
    
-   <div class="container mt-5  pt-1  mb-3 ml-2 mr-5  float-left ml-2" >
+
+
+   <!-- <div class="container mt-5  pt-1  mb-3 ml-2 mr-5  float-left ml-2" >
      <div class="card shadow w-75 mr-5 ">
          <div class="card-body">
 <div class="row">
@@ -26,4 +132,4 @@
              
          </div>
        </div> 
- </div>
+ </div> -->

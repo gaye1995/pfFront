@@ -36,15 +36,17 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { EmployeeListeComponent } from 'src/app/shared/components/employee-liste/employee-liste.component';
+import { EmployeeListeComponent } from 'src/app/shared/components/donneesEmployees/employee-liste/employee-liste.component';
 import { ListebanqueComponent } from 'src/app/shared/components/listebanque/listebanque.component';
 import { BanqueComponent } from 'src/app/shared/components/banque/banque.component';
 import { MatSortModule } from '@angular/material/sort' ;
-import { UtilisateursComponent } from 'src/app/shared/components/utilisateurs/utilisateurs.component';
+import { UtilisateursComponent } from 'src/app/shared/components/donneesComptable/utilisateurs/utilisateurs.component';
 import { RegisterComponent } from 'src/app/shared/auth/register/register.component';
 import { ForgetPasswordComponent } from 'src/app/shared/auth/forget-password/forget-password.component';
 import { LoginComponent } from 'src/app/shared/auth/login/login.component';
 import { DetailsbanqueComponent } from 'src/app/shared/components/banque/banque/detailsbanque/detailsbanque.component';
+import { DetailsEmployeeComponent } from 'src/app/shared/components/donneesEmployees/details-employee/details-employee.component';
+import { NoteDeFraisComponent } from 'src/app/shared/components/donneesEmployees/note-de-frais/note-de-frais.component';
 @NgModule({
   declarations: [
     DefaultComponent,
@@ -53,6 +55,7 @@ import { DetailsbanqueComponent } from 'src/app/shared/components/banque/banque/
     FinancesComponent,
     ComptaComponent,
     EmployeeListeComponent,
+    DetailsEmployeeComponent,
     ListebanqueComponent,
     BanqueComponent,
     DetailsbanqueComponent,
@@ -60,6 +63,7 @@ import { DetailsbanqueComponent } from 'src/app/shared/components/banque/banque/
     LoginComponent,
     RegisterComponent,
     ForgetPasswordComponent,
+    NoteDeFraisComponent,
 
   ],
   imports: [

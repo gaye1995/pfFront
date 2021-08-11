@@ -16,7 +16,18 @@ export interface BillComptableInterface {
     createdAt: Date;
     updatedAt: Date;
 }
-
+export interface CreateBill {
+    billNum: string;
+    status: string;
+    userId: string;
+    enterpriseId: string;
+    services: BillServiceI[];
+    totalHT: number;
+    totalTTC: number;
+    deadline: Date;
+    amountPaid?: number;
+    payementDate?: Date;
+}
 export interface BillServiceI {
     serviceId: string;
     duree: number;

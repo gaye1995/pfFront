@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
+import { CreateBill } from 'src/interfaces/BillComptambleInterface';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +35,9 @@ export class AuthService {
   }
   disconnect(){
     return this.http.delete<any>(this.url + `auth/user/deconnect`);
+  }
+  createFacture(data: CreateBill){
+    return this.http.post<any>(this.url + `/auth/user/createfacture`, data);
   }
 
 }

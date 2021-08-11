@@ -1,41 +1,31 @@
 
-   <div class="body">
+   <div class="body overflow-hidden">
     <mat-tab-group #tabGroup (selectedTabChange)="handleTabChange($event)">
-        <mat-tab >
-            <ng-template mat-tab-label>
-              <span matTooltip="General containers, like tables/dialogs" >Coordonnées </span>
-            </ng-template>
-            <app-coordonnees ></app-coordonnees>
-          </mat-tab>
           <mat-tab aria-label="Containers">
             <ng-template mat-tab-label>
               <span matTooltip="Example of controls in use">
-                Gérants 
+                Facture
               </span>
             </ng-template>
-            <app-gerant></app-gerant>
+            <app-factures-comptable></app-factures-comptable>
           </mat-tab>
         <mat-tab >
             <ng-template mat-tab-label>
-              <span matTooltip="General containers, like tables/dialogs">Paiements</span>
+              <span matTooltip="General containers, like tables/dialogs">Nouvelle factures</span>
             </ng-template>
-            <app-paiements >
-            </app-paiements>
+            <app-newfacture></app-newfacture>
           </mat-tab>
       <mat-tab >
         <ng-template mat-tab-label>
-          <span matTooltip="General containers, like tables/dialogs">factures</span>
+          <span matTooltip="General containers, like tables/dialogs">Compte de resultat</span>
         </ng-template>
-        <app-factures >
-        </app-factures>
       </mat-tab>
       <mat-tab>
         <ng-template mat-tab-label>
           <span matTooltip="Preview of factures ">
-            Devis
+            Repport
           </span>
         </ng-template>
-        <app-devisliste></app-devisliste>
       </mat-tab>
     </mat-tab-group>
   </div>

@@ -36,8 +36,8 @@ export class DataComptablesComponent implements OnInit {
   initData() {
     console.log(localStorage.getItem('currentUser'));
     this.authService.getOneUser(this.id).subscribe({
-          next:(data :{error : false, comptatable: UsersInterfaceJson}) => {
-          this.user = data.comptatable;
+          next:(data :{error : false, comptable: UsersInterfaceJson}) => {
+          this.user = data.comptable;
           },
           error: (error: any) => { console.log(error); }, // Quand ca marche pas
           complete: () => { }, // Quand il n'y aura plus aucun changement

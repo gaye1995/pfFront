@@ -19,6 +19,9 @@ export class BillService {
   getBillbyClient(id: string | null) {
     return this.http.get<any>(this.url + `client/` + id + `/factures` );
   }
+  getBillbyComptable(id: string | null) {
+    return this.http.get<any>(this.url + `auth/user/` + id + `/factures` );
+  }
 
   // create(data: BillCreateI) {
   //   return this.http.post<any>(this.url + `bill`, data);

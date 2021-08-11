@@ -20,5 +20,8 @@ export class ClientService {
   getEstimateByClient(id: string | null){
     return this.http.get<any>(this.url + `client/`+ id + `/devis` )
   }
+  getDeleteCostomers(id: string | null) {
+    return this.http.delete<any>(this.url + `client/` + id)
+  }
  
 }

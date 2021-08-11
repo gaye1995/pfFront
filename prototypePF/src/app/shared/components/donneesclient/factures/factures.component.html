@@ -64,7 +64,7 @@
               <a mat-list-item routerLinkActive="list-item-active" href="assets/img/facture.pdf" target="_blank" *ngIf='bills && bills.billNum'>{{ bills.billNum}}</a>
               </td>
               <td><span class="badge badge-success" *ngIf='bills && bills.status'>{{ bills.status }}</span>
-              <td *ngIf='bills '>{{ bills.deadline }}</td>
+              <td *ngIf='bills '>{{ bills.deadline | date:'yyyy-MM-dd'}}</td>
               <td *ngIf='bills '>{{ bills.totalTTC }}</td>
               <td *ngIf='bills '>{{ bills.amountPaid }}</td>
               <td *ngIf='bills '>{{ bills.totalTTC  - bills.amountPaid }} </td>

@@ -24,5 +24,4 @@ export class SidnavlisteComponent implements OnInit {
   initData() {
       // this.curentuser = localStorage.getItem('currentUser'); 
     }
-
 }

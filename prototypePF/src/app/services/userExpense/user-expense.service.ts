@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,6 @@ export class UserExpenseService {
 
   constructor(private http: HttpClient) { }
   getUserExpense(id: string | null) {
-    return this.http.get<any>(this.url + `/employee/note-de-frais/`+ id)
+    return this.http.get<any>(this.url + `employee/`+ id +`/note-de-frais`)
   }
 }

@@ -6,9 +6,6 @@ import { AppComponent } from './app.component';
 import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 import {DefaultModule} from './layouts/default/default.module';
 import { ClientsModule } from './shared/components/donneesclient/clients/clients.module';
-import { RegisterComponent } from './shared/auth/register/register.component';
-import { LoginComponent } from './shared/auth/login/login.component';
-import { ForgetPasswordComponent } from './shared/auth/forget-password/forget-password.component';
 import { MatCardModule } from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ListearticleModule } from './shared/components/listearticle/listearticle.module';
@@ -16,7 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from '../app/services/auth/auth.service';
 import { AuthInterceptor } from './services/interceptor/http.inspector';
-
+import { ToastContainerModule, ToastrModule } from 'ngx-toastr';
+import { ComptableModule } from './shared/components/donneesComptable/comptable/comptable.module';
 
 
 @NgModule({
@@ -26,6 +24,7 @@ import { AuthInterceptor } from './services/interceptor/http.inspector';
   imports: [
     ClientsModule,
     ListearticleModule,
+    ComptableModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -34,7 +33,9 @@ import { AuthInterceptor } from './services/interceptor/http.inspector';
     MatCardModule,
     MatFormFieldModule,
     HttpClientModule,
-    
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    ToastContainerModule , 
   ],
   
   providers: [

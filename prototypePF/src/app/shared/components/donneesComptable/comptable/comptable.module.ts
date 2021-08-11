@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ClientsComponent } from './clients.component';
+import { HeaderarticleComponent } from 'src/app/nav/headerarticle/headerarticle.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatTreeModule} from '@angular/material/tree';
 import {MatSelectModule} from '@angular/material/select';
@@ -33,32 +33,23 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatSliderModule} from '@angular/material/slider';
-import { NoteDeFraisComponent } from '../../donneesEmployees/note-de-frais/note-de-frais.component';
-import { ListeClientsComponent } from '../liste-clients/liste-clients.component';
-import { GerantComponent } from '../gerant/gerant.component';
-import { SubheadclientsComponent } from 'src/app/nav/subheadclients/subheadclients.component';
-import { DevislisteComponent } from '../devisliste/devisliste.component';
-import { FacturesComponent } from '../factures/factures.component';
-import { CoordonneesComponent } from '../coordonnees/coordonnees.component';
-import { PaiementsComponent } from '../../paiements/paiements.component';
-import { ExemplefactureComponent } from '../exemplefacture/exemplefacture.component';
-import { NewfactureComponent } from '../../donneesComptable/newfacture/newfacture.component';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { HeaderComptableComponent } from 'src/app/nav/header-comptable/header-comptable.component';
+import { ComptableComponent } from './comptable.component';
+import { FacturesComptableComponent } from '../factures-comptable/factures-comptable.component';
+import { NewfactureComponent } from '../newfacture/newfacture.component';
 
 @NgModule({
   declarations: [
-    ClientsComponent,
-    SubheadclientsComponent ,
-    FacturesComponent,
-    DevislisteComponent,
-    GerantComponent,
-    ListeClientsComponent,
-    CoordonneesComponent,
-    PaiementsComponent,
-    ExemplefactureComponent,
+    HeaderComptableComponent,
+    ComptableComponent,
+    FacturesComptableComponent,
+    NewfactureComponent,
 
   ],
   imports: [
     CommonModule,
+    HighchartsChartModule,
     MatDialogModule,
     MatChipsModule,
     MatSliderModule,
@@ -96,13 +87,9 @@ import { NewfactureComponent } from '../../donneesComptable/newfacture/newfactur
       FormsModule,
       ReactiveFormsModule,
       BsDropdownModule,
-  
   ],
   exports: [
-    SubheadclientsComponent,
-   
-    // CardComponent,
-    // PieComponent
+    HeaderComptableComponent,
   ]
 })
-export class ClientsModule { }
+export class ComptableModule { }

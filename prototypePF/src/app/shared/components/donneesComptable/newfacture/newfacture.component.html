@@ -1,29 +1,36 @@
 <mat-card>
-  
-<mat-card class=" w-100">
-    <div class="row w-75">
-        <div class="col-md w-100">
-            <div class="card">
-                <div class="card-header text-light" style="background-color: #2865A2;">
-                    <p class="h2"><b>Factures du Comptable Gaye au client Gaye</b></p>
+    <div class="container mt-5  pt-1  mb-3 ml-2 mr-5  float-left ml-2 ">
+        <div class="card-body">
+            <div class="row">
+                <div class="card-header w-100 h-100" style="background-color: whitesmoke;">
+                    <div class="form-group">
+                        <label for="billNum">Numéro facture</label>
+                        <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Entrer un numéro..." >
+                    </div>
+                    <div class="form-group">
+                        <label for="comptable">Comptable</label>
+                        <input type="text" class="form-control"  placeholder="Selectionner un comptable"  id="comptable">
+                    </div>
+                    <div class="form-group">
+                        <label for="dateEche">Date d'échéance</label>
+                        <input type="date" class="form-control" id="dateEche" >
+                    </div>
+                    <div class="form-group">
+                        <label for="reduction">Réduction</label>
+                        <input class="form-control" type="number" id="reduction" step="0.1" placeholder="réduction...">
+                    </div>
                 </div>
-                <div class="row" style="position: center;">
-                    <div class="mb-3 col-md-6">
-                        <div class="form-group">
-                            <label for="form-select-lg" class="form-label">Client </label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="note-de-frais">
-                                <option selected value="">Client </option>
-                                <option value="encours"> client A</option>
-                                <option value="encours">client B</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="form-select-lg" class="form-label">Etat </label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="note-de-frais">
-                                <option selected value="">payé </option>
-                                <option value="encours"> impayé </option>
-                                <option value="encours">Avance </option>
-                            </select>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button class="btn text-light my-2 my-sm-0 float-right" >Créer</button>
+    </div>
+</mat-card>
+
+<!-- <mat-card>
+  
+
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1" class="form-label">Libellé de compte </label>
@@ -75,14 +82,7 @@
                             id="select-note">Ajouter un Article</button>
                     </div>
                    
-                    <!-- <div class=" mb-3 col-md-4">
-                        <div class="form-group mt-4">
-                            <button type="button" class="btn btn-primary text-light form-group"
-                                id="select-note"><mat-icon>search</mat-icon></button>
-                        </div>
-                    </div> -->
-                    <!-- <button class="btn text-light my-2 my-sm-0" type="submit"><mat-icon>submit</mat-icon></button> -->
-                </div>
+                   </div>
             </div>
             <div class="form-group mt-4">
                 <button type="button" class="btn btn-primary text-light form-group"
@@ -93,4 +93,7 @@
         
     </div>
   </mat-card>
-           
+            -->
+
+
+            

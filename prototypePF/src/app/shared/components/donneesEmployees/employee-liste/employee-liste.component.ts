@@ -25,11 +25,11 @@ export class EmployeeListeComponent implements OnInit {
     this.userService.getEmployees().subscribe({
       next: (data: { error: false, employées: EmployeeInterfaceJson }) => {
         this.employee = data.employées;
-        this.userService.getOneEmployee(this.employee.Id as string).subscribe({
-          next: async (data2: { error: false, employe: EmployeeInterfaceJson }) => {
-            this.oneEmployee = data2.employe;
-          }
-       });
+        // this.userService.getOneEmployee(this.employee.Id as string).subscribe({
+        //   next: async (data2: { error: false, employe: EmployeeInterfaceJson }) => {
+        //     this.oneEmployee = data2.employe;
+      //     }
+      //  });
       },
         error: (error: any) => { console.log(error);}
     });

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth/auth.service';
+import { NotificationService } from 'src/app/services/notification.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   password: string = '';
 
 
-  constructor(private router: Router, private authService: AuthService) { 
+  constructor(private router: Router, private authService: AuthService, private notifyService : NotificationService) { 
   }
   ngOnInit(): void {
  
@@ -24,7 +25,10 @@ export class LoginComponent implements OnInit {
       const mailUser = this.email.trim();
       const passwordUser = this.password.trim();
       this.authService.login(mailUser, passwordUser).subscribe({
-        next: () => { this.router.navigate(['/dashbord'])}, // Quand ca marche
+        next: () => {
+          // this.notifyService.showSuccess("Connexion sucessifully!!", "ItSolutionStuff.com")
+          this.router.navigate(['/dashbord'])
+      }, // Quand ca marche
         error: (error: any) => { console.log(error); }, // Quand ca marche pas
         complete: () => { }, // Quand il n'y aura plus aucun changement
       });

@@ -30,7 +30,6 @@ export class UtilisateursComponent implements OnInit {
   initData() {
     this.userService.getUsers().subscribe({
       next: (data: { error: false, user: UsersInterfaceJson }) => {
-        data.user.createdAt = formatDate(data.user.createdAt, 'yyyy-MM-dd', 'fr-FR', 'Europe/France');
         this.user = data.user;
        },
         error: (error: any) => { console.log(error);}

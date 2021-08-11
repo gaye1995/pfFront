@@ -5,8 +5,14 @@
   }
   .mat-nav-list{
     background-color: #355270;
-    height: 100%;
-    color:#fff   
+    color:#fff;
+    min-height: inherit;
+    max-height: inherit; 
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: auto;
+    outline: 0;
+    height: 650px;  
   }.mat-panel-title{
     color: #fff;
   }.mat-expansion-panel-header {

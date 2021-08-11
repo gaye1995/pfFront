@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserExpenseService } from 'src/app/services/userExpense/user-expense.service';
 import { ExpenseInterfaceJson } from 'src/interfaces/userExpenseInterface';
@@ -11,14 +10,18 @@ import { ExpenseInterfaceJson } from 'src/interfaces/userExpenseInterface';
 })
 export class NoteDeFraisComponent implements OnInit {
   id: string | null = '';
-
-  userexpense: ExpenseInterfaceJson | undefined;
+  userexpense: any ;
   constructor(
     private router: Router,
     private userExpenseService: UserExpenseService,
     private route: ActivatedRoute) {
   }
+  ngOnInit() {
+    this.id = this.route.snapshot.paramMap.get('id');
+    if (this.id) { this.initData();
+    }
 
+  }
   initData() {
     this.userExpenseService.getUserExpense(this.id).subscribe({
       next: (data: { error: false, userexpense: ExpenseInterfaceJson }) => {
@@ -28,11 +31,7 @@ export class NoteDeFraisComponent implements OnInit {
     });
 
   }
-  ngOnInit() {
-    this.id = this.route.snapshot.paramMap.get('id');
-    if (this.id) { this.initData(); }
 
-  }
   navTo(path: string) {
     this.router.navigate([path]);
   }

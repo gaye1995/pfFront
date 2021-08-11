@@ -15,15 +15,14 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { AreacompteComponent } from './widgets/areacompte/areacompte.component';
 import { CardComponent } from './widgets/card/card.component';
-import { BanqueComponent } from './components/banque/banque.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { DiscussionComponent } from './components/discussion/discussion.component';
 import { MatCardModule } from '@angular/material/card';
-import { ProfileComponent } from './components/profile/profile.component';
+import { ProfileComponent } from './components/donneesComptable/profile/profile.component';
 import { FormsModule } from '@angular/forms';
-import { Interceptor } from '../../app/services/interceptor/inspector';
 import { UpdateComponent } from './components/banque/updatebanque/update/update.component';
-import { DataComptablesComponent } from './components/data-comptables/data-comptables.component';
+import { DataComptablesComponent } from './components/donneesComptable/data-comptables/data-comptables.component';
+import { ToastrModule } from 'ngx-toastr';
 
 // import { CardComponent } from './widgets/card/card.component';
 // import { PieComponent } from './widgets/pie/pie.component';
@@ -58,7 +57,8 @@ import { DataComptablesComponent } from './components/data-comptables/data-compt
     MatIconModule,
     MatMenuModule,
     MatToolbarModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot()
     // HighchartsChartModule,
   ],
   providers: [

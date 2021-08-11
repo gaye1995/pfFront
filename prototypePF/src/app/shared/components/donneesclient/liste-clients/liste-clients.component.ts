@@ -40,6 +40,13 @@ export class ListeClientsComponent implements OnInit {
     });
 
   }
+  deleteUser=() => {
+    this.clientService.getDeleteCostomers(this.id).subscribe({
+      next: (data: { error: false, message: 'success' }) => {
+       },
+        error: (error: any) => { console.log(error);}
+    });
+  }
   navTo(path:string) {
     this.router.navigate([path]);
   }
