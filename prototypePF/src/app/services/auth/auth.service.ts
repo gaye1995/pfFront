@@ -37,7 +37,7 @@ export class AuthService {
     return this.http.delete<any>(this.url + `auth/user/deconnect`);
   }
   createFacture(data: CreateBill){
-    return this.http.post<any>(this.url + `/auth/user/createfacture`, data);
+    return this.http.post<any>(this.url + `auth/user/createfacture`, data);
   }
 
 }

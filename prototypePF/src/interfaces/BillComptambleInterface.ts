@@ -19,8 +19,8 @@ export interface BillComptableInterface {
 export interface CreateBill {
     billNum: string;
     status: string;
-    userId: string;
-    enterpriseId: string;
+    userId: string |null;
+    entrepriseId: string;
     services: BillServiceI[];
     totalHT: number;
     totalTTC: number;

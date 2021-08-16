@@ -14,13 +14,12 @@ import { ClientInterfaceJson} from 'src/interfaces/userInterface';
 export class ListeClientsComponent implements OnInit {
   id :string | null= '';
   client: any ;
-
   files: any[] = [];
-
   requestEnd = 0;
-
   updateFile = false;
   oneClient: any;
+  private searchQuery: string = '';
+  private items: string[] = [];
   constructor(private router: Router,
      private clientService : ClientService, 
      private billService :BillService, 
@@ -30,11 +29,29 @@ export class ListeClientsComponent implements OnInit {
   ngOnInit() {
     this.initData();
   }
+  initializeItems() {
+    this.items = this.client;
+  }
+  getItems(ev: any) {
+    // Reset items back to all of the items
+    this.initializeItems();
+
+    // set val to the value of the searchbar
+    let val = ev.target.value;
+
+    // if the value is an empty string don't filter the items
+    if (val && val.trim() != '') {
+      this.items = this.items.filter((item) => {
+        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+  }
   initData() {
     this.clientService.getCostomers().subscribe({
       next: (data: { error: false, Client: ClientInterfaceJson }) => {
         console.log(data.Client)
         this.client = data.Client;
+        this.initializeItems()
        },
         error: (error: any) => { console.log(error);}
     });

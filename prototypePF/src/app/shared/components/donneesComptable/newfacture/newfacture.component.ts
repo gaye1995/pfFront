@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { BillService } from 'src/app/services/bill/bill.service';
 import { UserService } from 'src/app/services/user/user.service';
@@ -17,15 +17,18 @@ export class NewfactureComponent implements OnInit {
   billNum = 'FAC000011';
   selectedUser = { name: '', selectedId: '' };
   deadline = '';
+  id: string | null = '';
 
   constructor(
     private router: Router,
     private authService: AuthService,
     private userService: UserService,
-    private billService: BillService)
+    private billService: BillService,
+    private route: ActivatedRoute)
     { } 
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.paramMap.get('id');
     this.initData();
   }
   initData() {
@@ -36,38 +39,28 @@ export class NewfactureComponent implements OnInit {
     error: (error: any) => { console.log(error);}
     });
   }
-  filterCustomer(event?: any) {
-    if (event) {
-      this.selectedUser.selectedId = event.option.value;
-      this.listUser.map((customer: { id: any; name: string; }) => {
-        if (customer.id === event.option.value) { this.selectedUser.name = customer.name; }
-      });
-    } else {
-      this.selectedUser.selectedId = '';
-    }
-  }
+  
   async createBill() {
-    if (!this.billNum.trim() || !this.selectedUser.selectedId || !this.deadline) {
+    if (!this.billNum.trim() || !this.id || !this.deadline) {
       console.log('Données obligatoires manquantes');
     } else {
-
       const creationData: CreateBill = {
-        billNum: this.billNum.trim(),
-        userId: this.selectedUser.selectedId,
-        enterpriseId: '606de2cd8522d42a44aa9a9b',
         status: 'Non payée',
+        userId: this.id,
+        entrepriseId: '60cdc2cfc8189d2314c24efb',
+        billNum: this.billNum.trim(),
         deadline: new Date(this.deadline),
         services: [],
         totalHT: 0,
         totalTTC: 0,
       };
-
+      console.log(creationData)
       this.authService.createFacture(creationData).subscribe({
-        next: async (data: { error: false, Bill: BillComptableInterface }) => {
-          this.router.navigate(['/tabs/show-bill/', data.Bill.id]).then(() => {
-            console.log('Création réussie');
-          });
-        },
+        next: (data: { error: false, bill: BillInterface }) => {
+          console.log("sucess")
+          this.router.navigate(['/comptables/'+this.id ])
+          },
+        error: (error: any) => { console.log(error); }
       });
     }
   }

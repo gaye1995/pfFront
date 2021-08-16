@@ -4,17 +4,17 @@
         <div class="col-md w-100">
             <div class="card">
                 <div class="card-header text-light" style="background-color: #2865A2;">
-                    <p class="h3" ><b>Factures du Comptable BBBB</b></p>
+                    <p class="h3" ><b>Factures du Comptable </b></p>
                 </div>
                 <div class="row">
                     <div class="mb-3 col-md-4">
                         <label for="exampleFormControlInput1" class="form-label">Montant </label>
                         <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Montant">
                     </div>
-                    <div class=" mb-3 col-md-4">
+                    <div class=" col-sm-4">
                         <div class="form-group">
                             <label for="form-select-lg" class="form-label">Note </label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="note-de-frais">
+                            <select class="form-control"  name="note-de-frais">
                                 <option selected value="">Payée</option>
                                 <option value="encours">Avance</option>
                                 <option value="encours">impayé</option>
@@ -64,7 +64,7 @@
                 <a mat-list-item routerLinkActive="list-item-active" href="assets/img/facture.pdf" target="_blank" *ngIf='bills && bills.billNum'>{{ bills.billNum}}</a>
                 </td>
                 <td><span class="badge badge-success" *ngIf='bills && bills.status'>{{ bills.status }}</span>
-                <td *ngIf='bills '>{{ bills.deadline }}</td>
+                <td *ngIf='bills '>{{ bills.deadline| date:'yyyy-MM-dd' }}</td>
                 <td *ngIf='bills '>{{ bills.totalTTC }}</td>
                 <td *ngIf='bills '>{{ bills.amountPaid }}</td>
                 <td *ngIf='bills '>{{ bills.totalTTC  - bills.amountPaid }} </td>
