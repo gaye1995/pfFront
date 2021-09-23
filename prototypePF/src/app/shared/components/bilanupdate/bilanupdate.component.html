@@ -1,0 +1,35 @@
+    <div class="container mt-5  pt-1  mb-3 ml-2 mr-5  float-left ml-2 ">
+        <div class="card-body">
+          <div class="row">
+              <div class="card-header text-light" style="background-color: #2865A2;">
+                Passif
+              </div>
+              <div class="card-header w-100 h-100" style="background-color: whitesmoke;">
+              <div class="form-group">
+                <label for="exampleInputPassword1">Emprunts</label>
+                <input class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Dettes fournisseurs</label>
+                <input class="form-control" >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">autres dettes</label>
+                <input class="form-control" aria-describedby="emailHelp" 
+                  name="autresdettes">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">capital</label>
+                <input class="form-control" aria-describedby="emailHelp" placeholder="capital"
+                  type="number" name="capital">
+              </div>
+          </div>
+          </div>
+          <div>
+            <button class="btn btn-primary text-light my-2 my-sm-0 float-left" >Modifier</button>
+          </div>
+          <div>
+            <button class="btn btn-primary text-light my-2 my-sm-0 float-left" (click)="updateBilanActif()" >Modifier</button>
+          </div>
+        </div>
+    </div>

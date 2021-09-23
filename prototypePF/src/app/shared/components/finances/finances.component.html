@@ -1,6 +1,3 @@
-<!-- <mat-card>
-            <mat-icon> attach_money</mat-icon>
-        </mat-card> -->
 
 <mat-card class=" w-100">
     <div class="row ">
@@ -9,28 +6,28 @@
                 <div class="card-header text-light" style="background-color: #2865A2;">
                     Traitements des notes de frais
                 </div>
-                <div class="row">
-                    <div class="mb-3 col-md-4">
-                        <label for="exampleFormControlInput1" class="form-label">Montant </label>
-                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Montant">
-                    </div>
-                    <div class=" mb-3 col-md-4">
-                        <div class="form-group">
-                            <label for="form-select-lg" class="form-label">Note </label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="note-de-frais">
-                                <option selected value="">Etat</option>
-                                <option value="encours">En cours</option>
-                            </select>
+                <div class="row ">
+                    <div class="col-md w-100">
+                        <div class="card">
+                            <div class="row pull-right">
+                                <div class=" mb-3 col-md-2  ">
+                                    <mat-card-content fxLayout="column">
+                                        <mat-form-field >
+                                        <div class="mb-2 pull-right">
+                                          <input matInput placeholder="client..."  >
+                                        </div>
+                                        </mat-form-field>
+                                      </mat-card-content>
+                                </div>
+                                <div class=" mb-3 col-md-4  ">
+                                    <div class="form-group mt-4">
+                                        <button type="button" class="btn btn-primary text-light form-group"  id="select-note" ><mat-icon>search</mat-icon></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class=" mb-3 col-md-4">
-                        <div class="form-group mt-4">
-                            <button type="button" class="btn btn-primary text-light form-group"
-                                id="select-note"><mat-icon>search</mat-icon></button>
-                        </div>
-                    </div>
-                    <!-- <button class="btn text-light my-2 my-sm-0" type="submit"><mat-icon>submit</mat-icon></button> -->
-                </div>
+                  </div>
             </div>
         </div>
         

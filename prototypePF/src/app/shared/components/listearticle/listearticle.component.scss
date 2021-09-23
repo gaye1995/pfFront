@@ -1,3 +1,40 @@
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.select,
+#locale {
+  width: 100%;
+}
+.like {
+  margin-right: 10px;
+}
+.mat-drawer { 
+    background-color: #023075;
+    color:#fff
+}
+.mat-toolbar{
+  background-color: #2B3D4F;
+  color:#fff
+}
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+  .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+ul li {
+  list-style: none;
+}
+  .mat-icon {
+    vertical-align: middle;
+  }
+  .a{
+    text-align: center;
+  }
+  mat-card{
+    background-color: #2865A2;
+
+}
 button{
     background-color: #2865A2;
     align-content: right;

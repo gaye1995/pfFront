@@ -3,9 +3,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { BillService } from 'src/app/services/bill/bill.service';
 import { UserService } from 'src/app/services/user/user.service';
-import { BillComptableInterface, CreateBill } from 'src/interfaces/BillComptambleInterface';
+import { CreateBill } from 'src/interfaces/BillComptambleInterface';
 import { BillInterface } from 'src/interfaces/billInterface';
-import { ClientInterfaceJson, UsersInterfaceJson } from 'src/interfaces/userInterface';
+import {  UsersInterfaceJson } from 'src/interfaces/userInterface';
 
 @Component({
   selector: 'app-newfacture',
@@ -29,16 +29,16 @@ export class NewfactureComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
-    this.initData();
+    // this.initData();
   }
-  initData() {
-  this.userService.getUsers().subscribe({
-    next: (data: { error: false, User: UsersInterfaceJson[] }) => {
-      this.listUser = data.User;
-    },
-    error: (error: any) => { console.log(error);}
-    });
-  }
+  // initData() {
+  // this.userService.getUsers().subscribe({
+  //   next: (data: { error: false, User: UsersInterfaceJson[] }) => {
+  //     this.listUser = data.User;
+  //   },
+  //   error: (error: any) => { console.log(error);}
+  //   });
+  // }
   
   async createBill() {
     if (!this.billNum.trim() || !this.id || !this.deadline) {

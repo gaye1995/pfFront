@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth/auth.service';
-import { NotificationService } from 'src/app/services/notification.service';
+import { NotificationService, ToasterPosition } from 'src/app/services/notification.service';
 
 
 @Component({
@@ -26,8 +26,8 @@ export class LoginComponent implements OnInit {
       const passwordUser = this.password.trim();
       this.authService.login(mailUser, passwordUser).subscribe({
         next: () => {
-          // this.notifyService.showSuccess("Connexion sucessifully!!", "ItSolutionStuff.com")
           this.router.navigate(['/dashbord'])
+          this.notifyService.showSuccess("Bienvenue sur Business-cloud-logiciel !", "vous êtes bien authentifié",ToasterPosition.bottomRight)
       }, // Quand ca marche
         error: (error: any) => { console.log(error); }, // Quand ca marche pas
         complete: () => { }, // Quand il n'y aura plus aucun changement

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { CreateBill } from 'src/interfaces/BillComptambleInterface';
+import { CreateService } from 'src/interfaces/ServiceComptableInterface';
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +39,12 @@ export class AuthService {
   }
   createFacture(data: CreateBill){
     return this.http.post<any>(this.url + `auth/user/createfacture`, data);
+  }
+  createService(data: CreateService){
+    return this.http.post<any>(this.url + `auth/user/createservice`, data);
+  }
+  getService(){
+    return this.http.get<any>(this.url + `services`);
   }
 
 }

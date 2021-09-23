@@ -1,4 +1,4 @@
-<mat-card>
+  <div class="container bg_container  pt-1">
   <div class="row">
     <div class="col-md-8">
         <span class="h3">Liste des utilisateurs</span> 
@@ -8,8 +8,8 @@
 <div class="row">
   <div class="col-md-12  ">
     <form class="form-inline my-2 my-lg-0 d-flex flex-row float-right">
-      <input class="form-control " type="search" placeholder="Search" aria-label="Search">
-      <button class="btn text-light my-2 my-sm-0" type="submit"><mat-icon>search</mat-icon></button>
+      <input class="form-control p-4 " type="search" placeholder="Search" aria-label="Search">
+      <button class="btn text-light my-2 my-sm-0 " type="submit"><mat-icon>search</mat-icon></button>
     </form> 
    </div>
 </div>
@@ -30,7 +30,7 @@
               </td>
               <td >{{users.email}}</td>
               <td>{{users.role}}</td>
-              <td  >{{users.createdAt}}</td>
+              <td  >{{users.createdAt| date:'yyyy-MM-dd'}}</td>
               <td>
                 <button class="btn text-light my-2 my-sm-0" type="submit" style="background-color: red;"><mat-icon >delete</mat-icon></button>
             </td>
@@ -44,4 +44,4 @@
           </ul>
       </nav>
   </div>
-</mat-card>
+</div>

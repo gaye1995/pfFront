@@ -17,10 +17,10 @@ export class NotificationService {
   constructor(private toastr: ToastrService) { }
   
   showSuccess(message: string , title: string, positionClass: ToasterPosition ){
-    console.log(message, title);
       this.toastr.success(message, title, {
         timeOut : 3000,
         progressAnimation: "increasing",
+        positionClass: 'toast-top-right'
       } )
   }
   

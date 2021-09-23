@@ -1,27 +1,35 @@
-<mat-card>
-    <div class="container mt-5  pt-1  mb-3 ml-2 mr-5  float-left ml-2 ">
-        <div class="card-body">
-            <div class="row">
-                <div class="card-header w-100 h-100" style="background-color: whitesmoke;">
-                    <div class="form-group">
-                        <label for="billNum">Numéro facture</label>
-                        <input type="text" [(ngModel)]="billNum" class="form-control"  aria-describedby="emailHelp" placeholder="Entrer un numéro..." >
-                    </div>
-                    <div class="form-group">
-                        <label for="dateEche">Date d'échéance</label>
-                        <input [(ngModel)]="deadline" type="date" class="form-control" id="dateEche" >
-                    </div>
+<!DOCTYPE html>
+ <html>
+     <body>
+        <div class="container">
+             <h1>Creation d'une facture</h1>
+             <form>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="input-group input-group-lg">
+                      <input type="text" [(ngModel)]="billNum" class="form-control p-4" aria-label="Groupe d'input de grande taille" aria-describedby="inputGroup-lg"  placeholder="Numero de facture">
+                      <div class="input-group-prepend"><span class="input-group-text" id="inputGroup-lg">N°FAC</span></div>
+                  </div>
                 </div>
-            </div>
+                <div class="col-sm-6">
+                  <div class="input-group input-group-lg">
+                    <input [(ngModel)]="deadline" type="date" class="form-control" aria-label="Groupe d'input de grande taille" aria-describedby="inputGroup-lg" placeholder="date ...">
+                    <div class="input-group-prepend"><span class="input-group-text" id="inputGroup-lg">Date d'écheance</span></div>
+                  </div>
+                </div>
+                <div class=" col-sm-12 float-right">
+                    <button (click)="createBill()" class="btn text-light my-2 my-sm-0 float-right" >Créer</button>
+                </div>
+              </div>
+             </form>
         </div>
+    </body>
+</html>
+<!-- <mat-card> -->
+   
+    <div>   
     </div>
-    <div>
-        <button (click)="createBill()" class="btn text-light my-2 my-sm-0 float-right" >Créer</button>
-    </div>
-    <div>
-        
-    </div>
-</mat-card>
+<!-- </mat-card> -->
 
 
 

@@ -38,6 +38,7 @@ import { HeaderComptableComponent } from 'src/app/nav/header-comptable/header-co
 import { ComptableComponent } from './comptable.component';
 import { FacturesComptableComponent } from '../factures-comptable/factures-comptable.component';
 import { NewfactureComponent } from '../newfacture/newfacture.component';
+import { NewserviceComponent } from '../newservice/newservice.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { NewfactureComponent } from '../newfacture/newfacture.component';
     ComptableComponent,
     FacturesComptableComponent,
     NewfactureComponent,
+    NewserviceComponent,
 
   ],
   imports: [

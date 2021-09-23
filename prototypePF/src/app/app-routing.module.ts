@@ -31,6 +31,9 @@ import { DevislisteComponent } from './shared/components/donneesclient/devislist
 import { ComptableComponent } from './shared/components/donneesComptable/comptable/comptable.component';
 import { FacturesComptableComponent } from './shared/components/donneesComptable/factures-comptable/factures-comptable.component';
 import { DetailsEmployeeComponent } from './shared/components/donneesEmployees/details-employee/details-employee.component';
+import { NewserviceComponent } from './shared/components/donneesComptable/newservice/newservice.component';
+import { ListeserviceComponent } from './shared/components/donneesComptable/listeservice/listeservice.component';
+import { BilanupdateComponent } from './shared/components/bilanupdate/bilanupdate.component';
 
 export const routes: Routes = [
   {
@@ -73,14 +76,25 @@ export const routes: Routes = [
       path: 'newfacture',
       component: NewfactureComponent,
     },
-    
+    {
+      path: 'newservice',
+      component: NewserviceComponent,
+    },
+    {
+      path: 'service',
+      component: ListeserviceComponent,
+    },
     {
       path: 'article',
       component: ListearticleComponent,
     },
     {
-      path: 'Bilan',
+      path: 'bilan',
       component: BilanComponent,
+    },
+    {
+      path: 'bilan/:id',
+      component: BilanupdateComponent,
     },
     {
       path: 'depense',

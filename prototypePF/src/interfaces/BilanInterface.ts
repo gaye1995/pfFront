@@ -1,6 +1,23 @@
 
+export interface BilanInterface {
+    id: string;
+    actif: {
+        immobilisation?: Array<Object>,
+        creance?: Array<Object>
+    };
+    passif: Object;
+    dateBilan: Date;
+}
 export interface ActifInterface {
-    _id: string;
+    immobilisation?: ActifArticleInterface[];
+    totalI?: Number;
+    creance?:  ActifBillInterface[];
+    totalII?: Number;
+    disponibilite?: [];
+    totalIII?: Number;
+    totalActif?: number;
+}
+export interface createActif {
     immobilisation?: ActifArticleInterface[];
     totalI?: Number;
     creance?:  ActifBillInterface[];
@@ -8,8 +25,7 @@ export interface ActifInterface {
     disponibilite?: ActifBanqueInterface[];
     totalIII?: Number;
     totalActif?: number;
-    actifDateDebut?: Date;
-    actifDateFin?: Date;
+    actifDate: Date;
 
 }
 export interface ActifInterfaceJson {
@@ -20,6 +36,7 @@ export interface ActifInterfaceJson {
     disponibilite?: ActifBanqueInterface[];
     totalIII?: Number;
     totalActif?: number;
+    actifDate: Date;
 }
 export interface EditActif {
     immobilisation?: ActifArticleInterface[];
@@ -41,7 +58,11 @@ export interface ActifBanqueInterface {
     banqueId: string;
 }
 export interface PassifInterface {
-    _id: string;
+    capitauxPropres?: Array<Object>,
+    dettes?: Array<Object>,
+    totalPassif?: number;
+}
+export interface createPassif {
     capitauxPropres?: Array<Object>,
     dettes?: Array<Object>,
     totalPassif?: number;

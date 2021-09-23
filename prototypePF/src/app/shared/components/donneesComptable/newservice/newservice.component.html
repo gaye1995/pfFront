@@ -1,0 +1,33 @@
+<mat-card>
+    <div class="container mt-5  pt-1  mb-3 ml-2 mr-5  float-left ml-2 ">
+        <div class="card-body">
+            <div class="row">
+                <div class="card-header w-100 h-100" style="background-color: whitesmoke;">
+                    <div class="form-group">
+                        <label for="nom-service">Nom Service</label>
+                        <input type="text" [(ngModel)]="name" class="form-control"  aria-describedby="emailHelp" placeholder="Entrer un nom..."  id="nom-service">
+                    </div>
+                    <div class="form-group">
+                        <label for="nbre-heure">Nombre heure</label>
+                        <input  type="number" [(ngModel)]="nbheure" class="form-control" id="nbre-heure"  >
+                    </div>
+                    <div class="form-group">
+                        <label for="taux">Taux horaire</label>
+                        <input  type="decimal" [(ngModel)]="price" class="form-control" id="taux" >
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input  type="decimal" [(ngModel)]="description" class="form-control" id="description" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button (click)="createService()" class="btn btn-primary text-light my-2 my-sm-0 float-right" >Créer</button>
+    </div>
+    <div>
+        
+    </div>
+</mat-card>
+

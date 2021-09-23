@@ -15,6 +15,7 @@ import { AuthService } from '../app/services/auth/auth.service';
 import { AuthInterceptor } from './services/interceptor/http.inspector';
 import { ToastContainerModule, ToastrModule } from 'ngx-toastr';
 import { ComptableModule } from './shared/components/donneesComptable/comptable/comptable.module';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { ComptableModule } from './shared/components/donneesComptable/comptable/
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     ToastContainerModule , 
+    AngularFireStorageModule,
   ],
   
   providers: [

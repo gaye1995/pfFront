@@ -34,6 +34,9 @@ export class EmployeeListeComponent implements OnInit {
         error: (error: any) => { console.log(error);}
     });
   }
+  async Delete(){
+
+  }
   navTo(path:string) {
     this.router.navigate([path]);
 }

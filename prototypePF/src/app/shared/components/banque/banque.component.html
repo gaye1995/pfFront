@@ -1,117 +1,111 @@
-<mat-card>
-  <form>
-  <mat-card>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Libellé du compte *</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Libellé du compte">
-            </div>
-            <select class="form-select" aria-label=" Devise du compte">
-                <option selected> Device du compte</option>
-                <option value="1">Euro</option>
-                <option value="2">Dollard</option>
-              </select>
-              <br><br>
-           
-              <div class="card">
-                <div class="card-header text-light" style="background-color: #2865A2; text-align: center;">
-                  <b>Plan Comptable</b>
-              </div>
-            </div><br>
-            <div class="row">
-            <div class="col-sm-6">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Libellé comptable du compte *</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Libellé comptable du compte">
-                    <small id="libellé" class="form-text text-muted">(conseil : même libellé que le compte bancaire)*	.</small>
-                </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                <label for="exampleInputPassword1">Référence comptable du compte</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Référence comptable du compte">
-              </div>
-            </div>
+<div class = "main-div">
+  <div class="container" >
+      <mat-card-header>
+      <h1  style="float:none;margin:auto; text-align: center;">Création de compte</h1>
+    </mat-card-header>
+  <div class="row">
+    <div class="col-sm-6">
+      <mat-card-content fxLayout="column">
+        <mat-form-field appearance="fill">
+        <div class="mb-2 center">
+          <mat-icon class="float-left mb-2 center">details</mat-icon>
+            <input matInput placeholder="Libellé du compte *" name="Libellecompte *">
         </div>
-              <div class="card">
-                <div class="card-header text-light" style="background-color: #2865A2; text-align: center;">
-                  <b>Information bancaire</b>
-                </div>
-                <!-- <h1 style="">  </h1> -->
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-content fxLayout="column">
+        <mat-form-field appearance="fill">
+            <div class="mb-2 center">
+              <mat-icon class="float-left"> vpn_key</mat-icon>
+            <input type="text" matInput placeholder="Référence comptable du compte *" name="refComptable" >
             </div>
-          </mat-card>
-        <div class="row">
-                <div class="col-sm-6">
-                  <mat-card>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Nom de la banque *</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nom de la banque">
-                  </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">IBAN *</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="IBAN">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1"> BIC *</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="BIC">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Domiciliation bancaire *</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Domiciliation bancaire">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">N° rue</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Référence">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Code postale</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="N° rue">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Pays *</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Pays">
-              </div>
-            </mat-card>
-            </div>
-            <div class="col-sm-6">
-            <mat-card>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Ville *</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ville">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Téléphone</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Téléphone">
-              </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Mobile</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mobile">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Email</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Nom contact</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nom contact">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Prénom contact</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Prénom contact">
-              </div>
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-          </mat-card>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-content fxLayout="column">
+        <mat-form-field appearance="fill">
+        <div class="mb-2 center">
+          <mat-icon class="float-left mb-2 center">credit_card</mat-icon>
+            <input matInput placeholder="Nom de la banque" name="name" >
         </div>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-content fxLayout="column">
+        <mat-form-field appearance="fill">
+            <div class="mb-2 center">
+              <mat-icon class="float-left"> vpn_key</mat-icon>
+            <input type="text" matInput placeholder="IBAN" name="IBAN" >
+            </div>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-content fxLayout="column">
+        <mat-form-field appearance="fill">
+            <div class="mb-2 center">
+              <mat-icon class="float-left">email</mat-icon>
+              <input type="text" matInput placeholder="Email" name="email" >
+            </div>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-content fxLayout="column">
+        <mat-form-field appearance="fill">
+            <div class="mb-2 center">
+              <mat-icon class="float-left">perm_phone_msg</mat-icon>
+              <input type="text" matInput placeholder="phone" name="phone" >
+            </div>
+        </mat-form-field>
+      </mat-card-content>
     </div>
-    <br>
-    <div>
-      <button class="btn text-light my-2 my-sm-0" type="submit" (click)="createbanque()">Créer</button>
+    <div class="col-sm-6">
+      <mat-card-content fxLayout="column">
+        <mat-form-field appearance="fill">
+        <div class="mb-2 center">
+          <mat-icon class="float-left"> business</mat-icon>
+          <input matInput placeholder="BIC" name="BIC" >
+        </div>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-content fxLayout="column">
+        <mat-form-field appearance="fill">
+        <div class="mb-2 center">
+          <mat-icon class="float-left"> account_balance_walle</mat-icon>
+          <input matInput placeholder="Domiciliation bancaire *" name="Domiciliationbancaire" >
+        </div>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-content fxLayout="column">
+        <mat-form-field appearance="fill">
+            <div class="mb-2 center">
+              <mat-icon class="float-left">home</mat-icon>
+              <input type="text" matInput placeholder="N° rue" name="rue" >
+            </div>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-content fxLayout="column">
+        <mat-form-field appearance="fill">
+            <div class="mb-2 center">
+              <mat-icon class="float-left">home</mat-icon>
+              <input type="text" matInput placeholder="Code postal" name="postal" >
+            </div>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-content fxLayout="column">
+        <mat-form-field appearance="fill">
+            <div class="mb-2 center">
+              <mat-icon class="float-left">location_city</mat-icon>
+              <input type="text" matInput placeholder="ville" name="ville" >
+            </div>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-content fxLayout="column">
+        <mat-form-field appearance="fill">
+            <div class="mb-2 center">
+              <mat-icon class="float-left">add_to_home_screen</mat-icon>
+              <input type="text" matInput placeholder="pays" name="pays" >
+            </div>
+        </mat-form-field>
+      </mat-card-content>
     </div>
-</form>
-</mat-card>
-              
- 
-         
-        
+  </div>
+    <div class="mb-2" style="float:none;margin:auto; text-align: center;">
+        <button mat-raised-button style="text-align: center;" color="primary" (click)="createbanque()"> Créer </button>
+    </div>
+</div>

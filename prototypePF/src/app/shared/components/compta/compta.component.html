@@ -1,117 +1,58 @@
 <section id="pricing" class="bg-white">
     <div class="container">
-        <h2 class="text-center">Recettes et Dépense</h2>
+        <h2 class="text-center">Recettes </h2>
         <div class="spacer spacer-line border-primary">&nbsp;</div>
         <div class="spacer">&nbsp;</div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="pricing-table">
+        <div class="row" >
+            <div class="col-md-4" *ngFor='let item of series; let i=index;'>
+                <div class="pricing-table" [class.bg-success]="i === 2">
                     <div class="pricing-table-title">
-                        <h5 class="pricing-title bg-info-hover text-white">Paiements Clients</h5>
+                        <h5 class="pricing-title text-white" [class.bg-danger]="i === 1" [class.bg-warning]="i === 0">{{item.name}}</h5>
                     </div>
-                    <div class="pricing-table-price text-center bg-info">
+                    <div class="pricing-table-price text-center bg-dark">
                         <p class="title-font">
-                            <!-- <span class="pricing-period text-white mr-1">From</span> -->
                             <span class="pricing-currency text-white">€</span>
-                            <span class="pricing-price text-white">14000.99</span>
-                            <!-- <span class="pricing-period text-white">/ Mo.</span> -->
+                            <span class="pricing-price text-white" >{{item.somme}}</span>
                         </p>
                     </div>
-                    <!-- <div class="pricing-table-content">
-                        <ul >
-                            <li><strong>Details</strong></li>
-                            <li><strong style="text-align: left;" >Janvier : 11000 €</strong></li>
-                            <li><strong style="text-align: left;" >Février : 11000 €</strong></li>
-                            <li><strong style="text-align: left;">Mars : 11000 €</strong></li>
-                            <li><strong style="text-align: left;" >Avril : 0.00 €</strong></li>
-                            <li><strong style="text-align: left; ">Mai : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Juin : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Juillet : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Aout : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Septembre : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Octobre : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Novembre : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Decembre : 0.00 €</strong></li>
-                        </ul>
-                    </div>/ pricing-table-content -->
-                </div><!-- / pricing-table -->
-            </div><!-- / column -->
-
-           <div class="col-md-4">
+                </div>
+            </div>
+           <!-- <div class="col-md-4" *ngIf='i === 1'>
                 <div class="pricing-table bg-lightgrey">
                     <div class="pricing-table-title">
                         <h5 class="pricing-title bg-primary-hover text-white">Reste à payer</h5>
                     </div>
                     <div class="pricing-table-price text-center bg-primary">
                         <p class="title-font">
-                            <!-- <span class="pricing-period text-white mr-1">From</span> -->
                             <span class="pricing-currency text-white">€</span>
-                            <span class="pricing-price text-white">3000</span>
-                            <!-- <span class="pricing-period text-white">/ Mo.</span> -->
+                            <span class="pricing-price text-white" *ngIf='item.name == "Non payée"' >{{item.somme}}</span>
                         </p>
                     </div>
-                    <!-- <div class="pricing-table-content">
-                        <ul >
-                            <li><strong style="text-align: left;">Details</strong></li>
-                            <li><strong style="text-align: left;">Janvier : 1000.00 €</strong></li>
-                            <li><strong style="text-align: left;">Février : 1000.00 €</strong></li>
-                            <li><strong style="text-align: left;">Mars : 1000.00 €</strong></li>
-                            <li><strong style="text-align: left;">Avril : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Mai : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Juin : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Juillet : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Aout : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Septembre : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Octobre : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Novembre : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Decembre : 0.00 €</strong></li>
-                        </ul>
-                    </div>/ pricing-table-content -->
-                </div><!-- / pricing-table -->
-            </div><!-- / column -->
-
-            <div class="col-md-4">
+                </div>
+            </div>
+            <div class="col-md-4" *ngIf='i === 0'>
                 <div class="pricing-table">
                     <div class="pricing-table-title">
-                        <h5 class="pricing-title bg-info-hover text-white">Dépense</h5>
+                        <h5 class="pricing-title bg-info-hover text-white">En retard</h5>
                     </div>
                     <div class="pricing-table-price text-center bg-info">
                         <p class="title-font">
-                            <!-- <span class="pricing-period text-white mr-1">From</span> -->
                             <span class="pricing-currency text-white">€</span>
-                            <span class="pricing-price text-white">5000.00</span>
-                            <!-- <span class="pricing-period text-white">/ Mo.</span> -->
+                            <span class="pricing-price text-white" *ngIf='item.name == "En retard"'>{{item.somme}}</span>
                         </p>
                     </div>
-                    <!-- <div class="pricing-table-content">
-                        <ul >
-                            <li><strong style="text-align: left;">Details</strong></li>
-                            <li><strong style="text-align: left;">Janvier : 2000.00 €</strong></li>
-                            <li><strong style="text-align: left;">Février : 1500.00 €</strong></li>
-                            <li><strong style="text-align: left;">Mars : 1500.00 €</strong></li>
-                            <li><strong style="text-align: left;">Avril : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Mai : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Juin : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Juillet : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Aout : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Septembre : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Octobre : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Novembre : 0.00 €</strong></li>
-                            <li><strong style="text-align: left;">Decembre : 0.00 €</strong></li>
-                        </ul>
-                    </div>/ pricing-table-content -->
-                </div><!-- / pricing-table -->
-            </div><!-- / column -->
-        </div><!-- / row -->
-    </div><!-- / container -->
+                </div>
+            </div> -->
+        </div>
+    </div>
 </section>
 <div >
       <kendo-chart [categoryAxis]='{ categories: categories }'>
-        <kendo-chart-title text='Graphique de Recettes et Dépense/ mois %/'></kendo-chart-title>
+        <kendo-chart-title text='Graphique de Recettes et Dépense/ mois'></kendo-chart-title>
         <kendo-chart-legend position='bottom' orientation='horizontal'></kendo-chart-legend>
-        <kendo-chart-tooltip format='{0}%'></kendo-chart-tooltip>
+        <kendo-chart-tooltip format='{0}€'></kendo-chart-tooltip>
         <kendo-chart-series>
-            <kendo-chart-series-item *ngFor='let item of series'
+            <kendo-chart-series-item *ngFor='let item of series ' 
                 [data]='item.data' [name]='item.name'>
             </kendo-chart-series-item>
         </kendo-chart-series>

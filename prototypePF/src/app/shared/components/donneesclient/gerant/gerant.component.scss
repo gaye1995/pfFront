@@ -1,6 +1,7 @@
 td{
     text-align: right;
-}table {
+}
+table {
     width: 100%;
   }
   
@@ -9,6 +10,10 @@ td{
   }
   .example-spacer {
     flex: 1 1 auto;
-  }button{
+  }
+  button{
       align-content: right;
+  }
+  .card-body{
+    width: 800px;
   }

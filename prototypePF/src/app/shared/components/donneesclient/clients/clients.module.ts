@@ -42,7 +42,6 @@ import { FacturesComponent } from '../factures/factures.component';
 import { CoordonneesComponent } from '../coordonnees/coordonnees.component';
 import { PaiementsComponent } from '../../paiements/paiements.component';
 import { ExemplefactureComponent } from '../exemplefacture/exemplefacture.component';
-import { NewfactureComponent } from '../../donneesComptable/newfacture/newfacture.component';
 
 @NgModule({
   declarations: [

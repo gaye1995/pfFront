@@ -42,6 +42,8 @@ import { RepportComponent } from '../repport/repport.component';
 import { ArearepportComponent } from '../../widgets/arearepport/arearepport.component';
 import { CardrepportComponent } from '../../widgets/cardrepport/cardrepport.component';
 import { HighchartsChartModule } from 'highcharts-angular';
+import { ListeserviceComponent } from '../donneesComptable/listeservice/listeservice.component';
+import { BilanupdateComponent } from '../bilanupdate/bilanupdate.component';
 
 @NgModule({
   declarations: [
@@ -54,8 +56,8 @@ import { HighchartsChartModule } from 'highcharts-angular';
     RepportComponent,
     ArearepportComponent,
     CardrepportComponent,
-
-
+    ListeserviceComponent,
+    BilanupdateComponent,
   ],
   imports: [
     CommonModule,
